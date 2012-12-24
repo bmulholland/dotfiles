@@ -6,17 +6,24 @@ let mapleader = ","
 syntax on
 
 " Pretty fonts
-set guifont=Inconsolata-dz:h10
+set guifont=Inconsolata-dz\ for\ Powerline:h10
 
 " Pretty status line
 source /usr/local/lib/python2.7/site-packages/powerline/ext/vim/powerline.vim
 set laststatus=2
+
+" Highlight maxlength
+highlight OverLength ctermbg=red ctermfg=white guibg=#592930
+match OverLength /\%81v.\+/
 
 " Indentation
 set smartindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+" Searching
+set incsearch
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>
