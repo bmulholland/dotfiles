@@ -1,1 +1,35 @@
 call pathogen#infect() 
+
+let mapleader = ","
+
+" Pretty colours
+syntax on
+
+" Pretty fonts
+set guifont=Inconsolata-dz:h10
+
+" Pretty status line
+source /usr/local/lib/python2.7/site-packages/powerline/ext/vim/powerline.vim
+set laststatus=2
+
+" Indentation
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" Use ctrl-[hjkl] to select the active split!
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+
+" Move the splits arround!
+" Doesn't work :(
+"nmap <silent> <c-s-k> <C-W>K
+"nmap <silent> <c-s-j> <C-W>J
+"nmap <silent> <c-s-h> <C-W>H
+"nmap <silent> <c-s-l> <C-W>L
+
+" Open Nerd Tree
+nmap <leader>ne :NERDTree<cr>
