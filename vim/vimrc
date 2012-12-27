@@ -17,8 +17,7 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592930
 match OverLength /\%81v.\+/
 
 " Indentation
-set smartindent
-set autoindent
+filetype indent on
 set tabstop=2
 set shiftwidth=2
 set expandtab
