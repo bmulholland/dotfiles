@@ -13,7 +13,7 @@ source /usr/local/lib/python2.7/site-packages/powerline/ext/vim/powerline.vim
 set laststatus=2
 
 " Highlight maxlength
-highlight OverLength ctermbg=red ctermfg=white guibg=#592930
+highlight OverLength ctermbg=red ctermfg=white guibg=red
 match OverLength /\%81v.\+/
 
 " Indentation
@@ -39,4 +39,7 @@ nmap <silent> <c-l> :wincmd l<CR>
 "nmap <silent> <c-s-l> <C-W>L
 
 " Open Nerd Tree
-nmap <leader>ne :NERDTree<cr>
+nmap <leader>n :NERDTree<cr>
+
+" Open tagbar
+nmap <leader>s :TagbarToggle<CR>
