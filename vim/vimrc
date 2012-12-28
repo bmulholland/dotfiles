@@ -22,6 +22,10 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" No trailing spaces
+" See http://vim.wikia.com/wiki/Remove_unwanted_spaces
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Searching
 set incsearch
 
