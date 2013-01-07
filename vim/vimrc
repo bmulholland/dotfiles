@@ -1,9 +1,10 @@
-call pathogen#infect() 
+call pathogen#infect()
 
 let mapleader = ","
 
 " Pretty colours
 syntax on
+colorscheme molokai
 
 " Pretty fonts
 set guifont=Inconsolata-dz\ for\ Powerline:h10
