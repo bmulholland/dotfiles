@@ -48,3 +48,6 @@ nmap <leader>n :NERDTree<cr>
 
 " Open tagbar
 nmap <leader>s :TagbarToggle<CR>
+
+" Close current buffer
+nmap <leader>w :bd<CR>
