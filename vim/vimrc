@@ -46,4 +46,4 @@ nmap <leader>n :NERDTree<cr>
 nmap <leader>s :TagbarToggle<CR>
 
 " Close current buffer
-nmap <leader>w :bd<CR>
+nmap <leader>q :bd<CR>
