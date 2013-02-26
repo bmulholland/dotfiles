@@ -13,10 +13,6 @@ set guifont=Inconsolata-dz\ for\ Powerline:h10
 source /usr/local/lib/python2.7/site-packages/powerline/ext/vim/powerline.vim
 set laststatus=2
 
-" Highlight maxlength
-highlight OverLength ctermbg=red ctermfg=white guibg=red
-match OverLength /\%81v.\+/
-
 " Indentation
 filetype indent on
 set tabstop=2
