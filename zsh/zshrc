@@ -51,3 +51,6 @@ RAILS_ENV=development
 alias be="bundle exec"
 alias bi="bundle install"
 alias bu="bundle update"
+
+alias gs="git status"
+alias gd="git diff"
