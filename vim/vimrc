@@ -32,6 +32,9 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
+" More natural split opening position
+set splitright
+
 " Move the splits arround!
 " Doesn't work :(
 "nmap <silent> <c-s-k> <C-W>K
