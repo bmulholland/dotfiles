@@ -1,2 +1,8 @@
 .netrwhist
 .DS_Store
+*.swp
+
+# Ignore all vim bundles
+vim/bundle/*
+# ... except for vundle, which sets everything up
+!vim/bundle/vundle

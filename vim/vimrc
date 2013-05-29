@@ -1,4 +1,24 @@
-call pathogen#infect()
+" Vundle!
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+" My bundles
+Bundle 'groenewege/vim-less'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'majutsushi/tagbar'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-haml'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'git://git.wincent.com/command-t.git'
 
 let mapleader = ","
 
@@ -14,7 +34,7 @@ source /usr/local/lib/python2.7/site-packages/powerline/ext/vim/powerline.vim
 set laststatus=2
 
 " Indentation
-filetype indent on
+filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set expandtab
