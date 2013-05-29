@@ -15,8 +15,10 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-cucumber', {'rtp': 'vim/'}
 Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-bundler'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'git://git.wincent.com/command-t.git'
 
@@ -38,13 +40,24 @@ filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set smarttab
+
+" Force the indentation to be correct when shifting
+set shiftround
+
+" Backspace through lines too
+set backspace=indent,eol,start
 
 " No trailing spaces
 " See http://vim.wikia.com/wiki/Remove_unwanted_spaces
-autocmd BufWritePre * :%s/\s\+$//e
+" Commented out because I think this is really slowing down my saves
+" autocmd BufWritePre * :%s/\s\+$//e
 
-" Searching
+" Make searching be incremental (e.g. search as you type)
 set incsearch
+
+" Show the matching brace when a new one is added
+set showmatch
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>
