@@ -21,12 +21,13 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'flazz/vim-colorschemes'
 
 let mapleader = ","
 
 " Pretty colours
 syntax on
-colorscheme molokai
+colorscheme made_of_code
 
 " Pretty fonts
 set guifont=Inconsolata-dz\ for\ Powerline:h10
