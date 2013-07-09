@@ -22,6 +22,7 @@ Bundle 'tpope/vim-bundler'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'Valloric/YouCompleteMe'
 
 let mapleader = ","
 
