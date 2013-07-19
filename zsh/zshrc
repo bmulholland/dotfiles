@@ -47,6 +47,9 @@ export PATH=/Users/bmulholland/.rvm/gems/ruby-1.9.3-p327/bin:/Users/bmulholland/
 # specified by $SAVEHIST (see also the HIST SAVE BY COPY option).
 setopt APPEND_HISTORY
 
+# Autocorrect was breaking too much stuff
+unsetopt correct_all
+
 RAILS_ENV=development
 alias be="bundle exec"
 alias bi="bundle install"
