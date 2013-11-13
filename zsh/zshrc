@@ -37,7 +37,9 @@ plugins=(brew capistrano knife osx rails3 rake ruby rvm git git-extras vagrant)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/bmulholland/.rvm/gems/ruby-1.9.3-p429/bin:/Users/bmulholland/.rvm/gems/ruby-1.9.3-p429@global/bin:/Users/bmulholland/.rvm/rubies/ruby-1.9.3-p429/bin:/Users/bmulholland/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/bmulholland/.rvm/bin:/Users/bmulholland/Applications/Postgres.app/Contents/MacOS/bin:$PATH
+export PATH=/Users/bmulholland/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/bmulholland/.rvm/bin:/Users/bmulholland/Applications/Postgres.app/Contents/MacOS/bin:$PATH
+
+source $HOME/.rvm/scripts/rvm
 
 # APPEND_HISTORY If this is set, zsh sessions will append their history list to
 # the history file, rather than replace it. Thus, multiple parallel zsh sessions
