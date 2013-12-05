@@ -88,3 +88,10 @@ nmap <leader>s :TagbarToggle<CR>
 
 " Close current buffer
 nmap <leader>q :bd<CR>
+
+" Auto-reload the CommandT file list
+augroup CommandTExtension
+  autocmd!
+  autocmd FocusGained * CommandTFlush
+  autocmd BufWritePost * CommandTFlush
+augroup END
