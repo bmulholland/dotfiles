@@ -22,7 +22,7 @@ windows:
   - server:
       layout: tiled
       panes:
-        - rm -rf .zeus.sock && zeus start
+        - rm -f .zeus.sock && zeus start
         - sleep 1 && zeus console
         - sleep 1 && zeus server
         - bundle exec mailcatcher
