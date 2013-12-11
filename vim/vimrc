@@ -29,6 +29,7 @@ let mapleader = ","
 syntax on
 " made_of_code
 colorscheme molokai
+hi Comment         guifg=#A8A491
 
 " Pretty fonts
 set guifont=Inconsolata-dz\ for\ Powerline:h10
