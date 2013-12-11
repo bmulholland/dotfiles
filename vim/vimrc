@@ -20,7 +20,6 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'flazz/vim-colorschemes'
 Bundle 'Valloric/YouCompleteMe'
 
 let mapleader = ","
@@ -28,7 +27,9 @@ let mapleader = ","
 " Pretty colours
 syntax on
 " made_of_code
+set background=dark
 colorscheme molokai
+" The default comment color is impossible to read
 hi Comment         guifg=#A8A491
 
 " Pretty fonts
