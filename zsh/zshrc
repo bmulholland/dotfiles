@@ -60,6 +60,7 @@ alias bu="bundle update"
 alias gs="git status"
 alias gd="git diff"
 alias gc="git commit"
+alias gch="git checkout"
 alias gl="git lg"
 
 alias upgradeall="brew update && brew upgrade `brew outdated` && upgrade_oh_my_zsh && vim -c 'BundleInstall!'"
