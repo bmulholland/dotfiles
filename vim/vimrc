@@ -97,3 +97,6 @@ augroup CommandTExtension
   autocmd FocusGained * CommandTFlush
   autocmd BufWritePost * CommandTFlush
 augroup END
+
+" Autostrip trailing whitespace for certain filetypes
+autocmd BufWritePre *.rb,*.js,*.feature :%s/\s\+$//e
