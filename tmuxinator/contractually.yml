@@ -25,7 +25,7 @@ windows:
         - rm -f .zeus.sock && zeus start
         - sleep 1 && zeus console
         - sleep 1 && zeus server
-        - bundle exec mailcatcher
+        - bundle exec mailcatcher && bundle exec sidekiq
   - guard:
       layout: even-horizontal
       panes:
