@@ -1,13 +1,13 @@
 # ~/.tmuxinator/contractually.yml
 
 name: contractually
-root: ~/dev/contractually
+root: /Users/bmulholland/dev/contractually
 
 # Optional tmux socket
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
-pre: open ~/Applications/Postgres.app
+pre: open /Users/bmulholland/Applications/Postgres.app
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -30,4 +30,4 @@ windows:
       layout: even-horizontal
       panes:
         - bundle exec guard
-        - 
+        - mvim
