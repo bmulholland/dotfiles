@@ -21,6 +21,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'dkprice/vim-easygrep'
 
 let mapleader = ","
 
