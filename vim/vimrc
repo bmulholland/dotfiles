@@ -18,6 +18,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-cucumber', {'rtp': 'vim/'}
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Valloric/YouCompleteMe'
