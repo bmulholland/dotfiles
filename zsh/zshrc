@@ -37,7 +37,7 @@ plugins=(brew capistrano knife osx rails rake ruby rvm git git-extras vagrant)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/bmulholland/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/bmulholland/.rvm/bin:/Users/bmulholland/Applications/Postgres.app/Contents/MacOS/bin:$PATH
+export PATH=/Users/bmulholland/.rvm/bin:/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/bmulholland/.rvm/bin:/Users/bmulholland/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 
 source $HOME/.rvm/scripts/rvm
 

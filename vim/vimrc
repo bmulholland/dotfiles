@@ -22,6 +22,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'dkprice/vim-easygrep'
+Bundle 'rizzatti/dash.vim'
 
 " CONFIGURATION
 
@@ -75,7 +76,7 @@ set splitright
 " Config for EasyGrep (project search within vim)
 let g:EasyGrepCommand=1 " Use system grep instead of vim grep (required for excludes)
 let g:EasyGrepRecursive=1 " Recursive search (slow!)
-let g:EasyGrepFilesToExclude="*.log,tmp/*,coverage/*,tags"
+let g:EasyGrepFilesToExclude="*.log,tmp/*,coverage/*,tags,*.swp,*.swo"
 
 " MAPPINGS
 
@@ -100,6 +101,9 @@ nmap <leader>s :TagbarToggle<CR>
 
 " Close current buffer
 nmap <leader>q :bd<CR>
+
+" Look up command in dash
+nmap <silent> <leader>d :Dash<CR>
 
 " Auto-reload the CommandT file list
 augroup CommandTExtension
