@@ -12,10 +12,12 @@ Bundle 'gmarik/vundle'
 " My bundles
 " LESS support
 Bundle 'groenewege/vim-less'
-" Ruby helpers
-Bundle 'vim-ruby/vim-ruby'
 " HAML support
 Bundle 'tpope/vim-haml'
+" Javscript support
+Bundle 'pangloss/vim-javascript'
+" Ruby helpers
+Bundle 'vim-ruby/vim-ruby'
 " Rails helpers
 Bundle 'tpope/vim-rails'
 " Cucumber support
