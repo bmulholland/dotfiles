@@ -38,6 +38,8 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'dkprice/vim-easygrep'
 " Quick look ups of commands in dash
 Bundle 'rizzatti/dash.vim'
+" Add a gutter that shows git additions/deletions/etc
+Bundle 'airblade/vim-gitgutter'
 
 " CONFIGURATION
 
