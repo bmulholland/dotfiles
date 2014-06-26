@@ -48,7 +48,7 @@ Bundle 'airblade/vim-gitgutter'
 let mapleader = ","
 
 " Pretty colours
-syntax on
+syntax enable
 " made_of_code
 set background=dark
 colorscheme molokai
