@@ -10,19 +10,33 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My bundles
+" LESS support
 Bundle 'groenewege/vim-less'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-cucumber', {'rtp': 'vim/'}
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-endwise'
+" Ruby helpers
 Bundle 'vim-ruby/vim-ruby'
+" HAML support
+Bundle 'tpope/vim-haml'
+" Rails helpers
+Bundle 'tpope/vim-rails'
+" Cucumber support
+Bundle 'tpope/vim-cucumber', {'rtp': 'vim/'}
+" Auto add end keyword in ruby
+Bundle 'tpope/vim-endwise'
+" Nerdtree for project navigation
+Bundle 'scrooloose/nerdtree'
+" Syntax checks
+Bundle 'scrooloose/syntastic'
+" Fancy bottom bar
+Bundle 'majutsushi/tagbar'
+" Git helpers
+Bundle 'tpope/vim-fugitive'
+" Fuzzy file search
 Bundle 'git://git.wincent.com/command-t.git'
+" Autocomplete
 Bundle 'Valloric/YouCompleteMe'
+" Easy file searching
 Bundle 'dkprice/vim-easygrep'
+" Quick look ups of commands in dash
 Bundle 'rizzatti/dash.vim'
 
 " CONFIGURATION
