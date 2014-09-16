@@ -64,3 +64,5 @@ alias gch="git checkout"
 alias gl="git lg"
 
 alias upgradeall="brew update && brew upgrade `brew outdated` && upgrade_oh_my_zsh && vim -c 'BundleInstall!'"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
