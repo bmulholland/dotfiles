@@ -20,12 +20,11 @@ pre: open /Users/bmulholland/Applications/Postgres.app
 
 windows:
   - server:
-      layout: tiled
+      layout: 282d,211x52,0,0{105x52,0,0,0,105x52,106,0[105x26,106,0,1,105x25,106,27,2]}
       panes:
-        - rm -f .zeus.sock && zeus start
-        - sleep 1 && zeus console
-        - sleep 1 && zeus server
-        - bundle exec mailcatcher && bundle exec sidekiq
+        - rails server
+        - rails console
+        - bundle exec mailcatcher & bundle exec sidekiq
   - guard:
       layout: even-horizontal
       panes:
