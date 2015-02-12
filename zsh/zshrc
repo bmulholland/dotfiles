@@ -37,9 +37,7 @@ plugins=(brew capistrano knife osx rails rake ruby rvm git git-extras vagrant)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Users/bmulholland/.rvm/bin:/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/bmulholland/.rvm/bin:/Users/bmulholland/Applications/Postgres.app/Contents/MacOS/bin:$PATH
-
-source $HOME/.rvm/scripts/rvm
+export PATH=/Users/bmulholland/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/bmulholland/.rvm/bin:/Users/bmulholland/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 
 # APPEND_HISTORY If this is set, zsh sessions will append their history list to
 # the history file, rather than replace it. Thus, multiple parallel zsh sessions
@@ -63,6 +61,6 @@ alias gc="git commit"
 alias gch="git checkout"
 alias gl="git lg"
 
-alias upgradeall="brew update && brew upgrade `brew outdated` && upgrade_oh_my_zsh && vim -c 'BundleInstall!'"
+alias upgradeall="brew update && brew upgrade && upgrade_oh_my_zsh && vim -c 'BundleInstall!'"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
