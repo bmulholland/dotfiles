@@ -71,6 +71,11 @@ set shiftwidth=2
 set expandtab
 set smarttab
 
+" Max line length
+set textwidth=120
+" Wrap at word boundaries
+set formatoptions+=t
+
 " Force the indentation to be correct when shifting
 set shiftround
 
