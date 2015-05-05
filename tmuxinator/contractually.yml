@@ -24,7 +24,7 @@ windows:
       panes:
         - rails server
         - rails console
-        - bundle exec mailcatcher & bundle exec sidekiq
+        - mailcatcher & bundle exec sidekiq
   - guard:
       layout: even-horizontal
       panes:
