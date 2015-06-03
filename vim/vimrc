@@ -46,7 +46,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " CONFIGURATION
-let mapleader = ","
+let mapleader = " "
 " Use sh instead of zsh, because vim fucks up the zsh config in a way that
 " doesn't load the rvm setup properly. Somehow it makes it so it's impossible
 " to install the gems I need to run lessc, which is used by syntastic to run
