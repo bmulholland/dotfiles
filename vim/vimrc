@@ -135,6 +135,9 @@ nmap <leader>q :bd<CR>
 " Look up command in dash
 nmap <silent> <leader>d :Dash<CR>
 
+" Save file
+nmap <leader>w :w<CR>
+
 " Auto-reload the CommandT file list
 augroup CommandTExtension
   autocmd!
