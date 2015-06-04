@@ -147,3 +147,14 @@ augroup END
 
 " Autostrip trailing whitespace for certain filetypes
 autocmd BufWritePre *.rb,*.js,*.feature :%s/\s\+$//e
+
+" When pasting, don't replace the paste buffer with what was overwritten
+function! RestoreRegister()
+  let @" = s:restore_reg
+  return ''
+endfunction
+function! s:Repl()
+  let s:restore_reg = @"
+  return "p@=RestoreRegister()\<cr>"
+endfunction
+vmap <silent> <expr> p <sid>Repl()
