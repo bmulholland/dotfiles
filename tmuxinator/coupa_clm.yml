@@ -1,7 +1,7 @@
-# ~/.tmuxinator/contractually.yml
+# ~/.tmuxinator/coupa_clm.yml
 
-name: contractually
-root: /Users/bmulholland/dev/contractually
+name: coupa_clm
+root: /Users/bmulholland/dev/coupa_clm
 
 # Optional tmux socket
 # socket_name: foo
