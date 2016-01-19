@@ -38,6 +38,8 @@ Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'Valloric/YouCompleteMe'
 " Easy file searching
 Bundle 'dkprice/vim-easygrep'
+" Easier file searching
+Bundle 'rking/ag.vim'
 " Quick look ups of commands in dash
 Bundle 'rizzatti/dash.vim'
 " Add a gutter that shows git additions/deletions/etc
