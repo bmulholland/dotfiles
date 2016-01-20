@@ -23,3 +23,7 @@ alias gl="git lg"
 alias upgradeall="brew update && brew upgrade --all && upgrade_oh_my_zsh && vim -c 'BundleInstall!'"
 
 export EDITOR=vim
+
+# Shortcuts to jump forward/back a word with Alt+Arrow
+bindkey '[C' forward-word
+bindkey '[D' backward-word
