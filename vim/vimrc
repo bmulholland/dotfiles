@@ -43,7 +43,7 @@ Bundle 'rizzatti/dash.vim'
 " Add a gutter that shows git additions/deletions/etc
 Bundle 'airblade/vim-gitgutter'
 " Pretty status line
-Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'vim-airline/vim-airline'
 
 " CONFIGURATION
 let mapleader = " "
@@ -64,6 +64,12 @@ hi Comment         guifg=#A8A491
 
 " Pretty fonts
 set guifont=Inconsolata-dz\ for\ Powerline:h10
+
+" Use patched fonts for status bar
+let g:airline_powerline_fonts = 1
+
+" Make airline look like powerline
+let g:airline_theme = 'powerlineish'
 
 " Always show the status line
 set laststatus=2
