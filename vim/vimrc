@@ -36,8 +36,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'git://git.wincent.com/command-t.git'
 " Autocomplete
 Bundle 'Valloric/YouCompleteMe'
-" Easy file searching
-Bundle 'dkprice/vim-easygrep'
 " Easier file searching
 Bundle 'rking/ag.vim'
 " Quick look ups of commands in dash
@@ -104,11 +102,6 @@ set showmatch
 
 " More natural split opening position
 set splitright
-
-" Config for EasyGrep (project search within vim)
-let g:EasyGrepCommand=1 " Use system grep instead of vim grep (required for excludes)
-let g:EasyGrepRecursive=1 " Recursive search (slow!)
-let g:EasyGrepFilesToExclude="*.log,tmp/*,coverage/*,tags,*.swp,*.swo"
 
 " MAPPINGS
 
