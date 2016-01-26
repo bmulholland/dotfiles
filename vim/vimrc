@@ -74,6 +74,9 @@ let g:airline_theme = 'powerlineish'
 " Always show the status line
 set laststatus=2
 
+" Let CommandT use the full window height when searching files
+let g:CommandTMaxHeight=0
+
 " Indentation
 filetype plugin indent on
 set tabstop=2
