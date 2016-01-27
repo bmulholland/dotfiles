@@ -73,6 +73,9 @@ let g:airline_powerline_fonts = 1
 " Make airline look like powerline
 let g:airline_theme = 'powerlineish'
 
+" Only show git symbols when they're non-zero
+let airline#extensions#hunks#non_zero_only = 1
+
 " Always show the status line
 set laststatus=2
 
