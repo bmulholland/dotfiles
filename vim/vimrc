@@ -14,6 +14,8 @@ Bundle 'VundleVim/Vundle.vim'
 Bundle 'groenewege/vim-less'
 " HAML support
 Bundle 'tpope/vim-haml'
+" CSV suppport
+Bundle 'chrisbra/csv.vim'
 " Javscript support
 Bundle 'pangloss/vim-javascript'
 " Ruby helpers
