@@ -46,6 +46,7 @@ Bundle 'rizzatti/dash.vim'
 Bundle 'airblade/vim-gitgutter'
 " Pretty status line
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " CONFIGURATION
 let mapleader = " "
