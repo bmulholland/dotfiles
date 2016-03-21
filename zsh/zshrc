@@ -27,3 +27,6 @@ export EDITOR=vim
 # Shortcuts to jump forward/back a word with Alt+Arrow
 bindkey '[C' forward-word
 bindkey '[D' backward-word
+
+# Show tmux window titles in tmux tabs
+export DISABLE_AUTO_TITLE=true
