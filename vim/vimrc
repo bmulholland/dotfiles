@@ -35,7 +35,7 @@ Bundle 'majutsushi/tagbar'
 " Git helpers
 Bundle 'tpope/vim-fugitive'
 " Fuzzy file search
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'wincent/command-t'
 " Autocomplete
 Bundle 'Valloric/YouCompleteMe'
 " Easier file searching
