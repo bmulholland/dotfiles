@@ -20,7 +20,7 @@ alias gc="git commit"
 alias gch="git checkout"
 alias gl="git lg"
 
-alias upgradeall="brew update && brew upgrade --all && upgrade_oh_my_zsh && vim -c 'BundleInstall!'"
+alias upgradeall="brew update && brew upgrade --all && upgrade_oh_my_zsh && rvm get stable && vim -c 'BundleInstall!'"
 
 export EDITOR=vim
 
