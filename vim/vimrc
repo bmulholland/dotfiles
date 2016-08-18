@@ -154,9 +154,9 @@ nmap <leader><Space> :w<CR>
 " in a controller (method) the "alternate" is the spec and the "related" is the view
 " in a view the "alternate" is the spec and the "related" is the controller (method)
 " Easily switch between file and its spec using rails.vim's alternate file functionality
-nmap <leader>a :A
+nmap <leader>a :A<CR>
 " Easily switch between controllers and views using rails.vim's related file functionality
-nmap <leader>r :R
+nmap <leader>r :R<CR>
 
 " Auto-reload the CommandT file list
 augroup CommandTExtension
