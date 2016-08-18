@@ -149,6 +149,15 @@ nmap <silent> <leader>d :Dash<CR>
 nmap <leader>w :w<CR>
 nmap <leader><Space> :w<CR>
 
+" (From https://wincent.com/wiki/rails.vim_cheatsheet)
+" in a model the "alternate" is the spec and the "related" is the schema
+" in a controller (method) the "alternate" is the spec and the "related" is the view
+" in a view the "alternate" is the spec and the "related" is the controller (method)
+" Easily switch between file and its spec using rails.vim's alternate file functionality
+nmap <leader>a :A
+" Easily switch between controllers and views using rails.vim's related file functionality
+nmap <leader>r :R
+
 " Auto-reload the CommandT file list
 augroup CommandTExtension
   autocmd!
