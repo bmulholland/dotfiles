@@ -15,7 +15,7 @@
 	diff = diff-so-fancy | less --tabs=4 -RFX
 	show = diff-so-fancy | less --tabs=4 -RFX
 [diff]
-  compactionHeuristic = true
+  indentHeuristic = true
 [merge]
   tool = gvimdiff
   conflictstyle = diff3
