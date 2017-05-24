@@ -32,3 +32,5 @@ bindkey '[D' backward-word
 export DISABLE_AUTO_TITLE=true
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+source ~/.zshrcsecrets
