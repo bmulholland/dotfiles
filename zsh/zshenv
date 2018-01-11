@@ -17,5 +17,3 @@ ZSH_THEME="wezm"
 plugins=(brew capistrano knife osx rails rake ruby rvm git git-extras vagrant)
 
 source $ZSH/oh-my-zsh.sh
-
-export PATH=$HOME/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
