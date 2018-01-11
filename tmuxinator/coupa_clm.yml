@@ -6,9 +6,8 @@ root: /Users/bmulholland/dev/coupa_clm
 # Optional tmux socket
 # socket_name: foo
 
-# Runs before everything. Use it to start daemons etc.
-#pre: open /Users/bmulholland/Applications/Postgres.app
-pre: mysql.server start
+# Runs on project start, always
+on_project_start: mysql.server start
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
