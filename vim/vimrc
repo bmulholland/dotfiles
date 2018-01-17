@@ -29,7 +29,7 @@ Bundle 'tpope/vim-endwise'
 " Nerdtree for project navigation
 Bundle 'scrooloose/nerdtree'
 " Syntax checks
-Bundle 'scrooloose/syntastic'
+Bundle 'w0rp/ale'
 " Fancy bottom bar
 Bundle 'majutsushi/tagbar'
 " Git helpers
