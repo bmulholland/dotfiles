@@ -1,11 +1,16 @@
 [user]
 	name = Brendan Mulholland
+	email = brendan.mulholland@coupa.com
 [color]
 	ui = auto
 [push]
   default = current
 [alias]
+  # Pretty git log
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  # Find git stashes by name
+  sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+  sapply = "!f() { git stash apply stash^{/$*}; }; f"
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
