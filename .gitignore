@@ -2,6 +2,8 @@
 .DS_Store
 *.swp
 
+git/gitconfig
+
 # Ignore all vim bundles
 vim/bundle/*
 # ... except for vundle, which sets everything up
