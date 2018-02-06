@@ -82,6 +82,8 @@ set laststatus=2
 
 " Let CommandT use the full window height when searching files
 let g:CommandTMaxHeight=0
+" Use git ls-files for fast searching of git projects
+let g:CommandTFileScanner='git'
 
 " Indentation
 filetype plugin indent on
@@ -183,6 +185,4 @@ augroup LargeProjects
   autocmd!
   " Whitespace-only changes complicate PRs
   autocmd BufNewFile,BufRead ~/dev/coupa_development/**/* autocmd! TrailingSpaces
-  " Command T takes a long time to reload cache on large projects
-  autocmd BufNewFile,BufRead ~/dev/coupa_development/**/* autocmd! AutoReloadCommandT
 augroup END
