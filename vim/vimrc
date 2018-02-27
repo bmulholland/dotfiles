@@ -14,8 +14,6 @@ Bundle 'VundleVim/Vundle.vim'
 Bundle 'groenewege/vim-less'
 " HAML support
 Bundle 'tpope/vim-haml'
-" CSV suppport
-Bundle 'chrisbra/csv.vim'
 " Javscript support
 Bundle 'pangloss/vim-javascript'
 " Ruby helpers
@@ -30,7 +28,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'scrooloose/nerdtree'
 " Syntax checks
 Bundle 'w0rp/ale'
-" Fancy bottom bar
+" Easily browse tags in current file
 Bundle 'majutsushi/tagbar'
 " Git helpers
 Bundle 'tpope/vim-fugitive'
@@ -38,10 +36,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'wincent/command-t'
 " Autocomplete
 Bundle 'Valloric/YouCompleteMe'
-" Easier file searching
-Bundle 'rking/ag.vim'
-" Quick look ups of commands in dash
-Bundle 'rizzatti/dash.vim'
 " Add a gutter that shows git additions/deletions/etc
 Bundle 'airblade/vim-gitgutter'
 " Pretty status line
