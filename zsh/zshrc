@@ -20,7 +20,7 @@ alias gc="git commit"
 alias gch="git checkout"
 alias gl="git lg"
 
-alias upgradeall="brew update && brew upgrade && upgrade_oh_my_zsh && rvm-update && vim -c 'BundleInstall!'"
+alias upgradeall="brew update && brew upgrade && upgrade_oh_my_zsh && gem update \`gem list | cut -d ' ' -f 1\` && rvm-update && vim -c 'BundleInstall!'"
 
 function va() {
   vim -p `ag -l $@`
