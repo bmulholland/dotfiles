@@ -22,6 +22,10 @@ alias gl="git lg"
 
 alias upgradeall="brew update && brew upgrade && upgrade_oh_my_zsh && gem update \`gem list | cut -d ' ' -f 1\` && rvm-update && vim -c 'BundleInstall!'"
 
+function mvag() {
+  mvim -p `ag -l $@`
+}
+
 function vag() {
   vim -p `ag -l $@`
 }
