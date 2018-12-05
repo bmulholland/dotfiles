@@ -41,7 +41,10 @@ export DISABLE_AUTO_TITLE=true
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-source ~/.zshrcsecrets
+# Secret environment variables - passwords etc.
+if [ -f ~/.zshrcsecrets ]; then
+  source ~/.zshrcsecrets
+fi
 
 export PATH="/usr/local/sbin:$PATH"
 
