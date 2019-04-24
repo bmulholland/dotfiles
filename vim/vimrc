@@ -16,6 +16,8 @@ Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-haml'
 " Javscript support
 Bundle 'pangloss/vim-javascript'
+" JSX support
+Bundle 'mxw/vim-jsx'
 " Ruby helpers
 Bundle 'vim-ruby/vim-ruby'
 " Rails helpers
