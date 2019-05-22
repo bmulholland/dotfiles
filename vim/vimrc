@@ -184,3 +184,11 @@ augroup LargeProjects
   " Whitespace-only changes complicate PRs
   autocmd BufNewFile,BufRead ~/dev/coupa_development/**/* autocmd! TrailingSpaces
 augroup END
+
+" Run both ESLint and StyleLint in jsx files
+augroup FiletypeGroup
+  autocmd!
+  au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+augroup END
+let g:ale_linter_aliases = {'jsx': ['css', 'javascript']}
+let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
