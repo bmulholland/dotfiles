@@ -81,7 +81,7 @@ set laststatus=2
 " Let CommandT use the full window height when searching files
 let g:CommandTMaxHeight=0
 " Use git ls-files for fast searching of git projects
-let g:CommandTFileScanner='git'
+" let g:CommandTFileScanner='git' " This is only necessary when working with v. large projects
 
 " Indentation
 filetype plugin indent on
