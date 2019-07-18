@@ -55,3 +55,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/bmulholland/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
