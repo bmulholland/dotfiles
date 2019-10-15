@@ -35,7 +35,7 @@ Bundle 'majutsushi/tagbar'
 " Git helpers
 Bundle 'tpope/vim-fugitive'
 " Fuzzy file search
-" Bundle 'wincent/command-t' when enabling again, also enable the CommandT stuff below
+Bundle 'wincent/command-t'
 " " Autocomplete
 " Bundle 'Valloric/YouCompleteMe'
 " Add a gutter that shows git additions/deletions/etc
@@ -163,11 +163,11 @@ nmap <leader>a :A<CR>
 nmap <leader>r :R<CR>
 
 " Auto-reload the CommandT file list
-" augroup AutoReloadCommandT
-"   autocmd!
-"   autocmd FocusGained * CommandTFlush
-"   autocmd BufWritePost * CommandTFlush
-" augroup END
+augroup AutoReloadCommandT
+  autocmd!
+  autocmd FocusGained * CommandTFlush
+  autocmd BufWritePost * CommandTFlush
+augroup END
 
 " When pasting, don't replace the paste buffer with what was overwritten
 function! RestoreRegister()
