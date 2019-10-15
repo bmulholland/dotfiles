@@ -37,7 +37,7 @@ Bundle 'tpope/vim-fugitive'
 " Fuzzy file search
 Bundle 'wincent/command-t'
 " " Autocomplete
-" Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
 " Add a gutter that shows git additions/deletions/etc
 Bundle 'airblade/vim-gitgutter'
 " Pretty status line
