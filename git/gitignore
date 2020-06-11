@@ -1,2 +1,7 @@
 *.swp
 *.swo
+*.code-workspace
+._.DS_Store
+._DS_Store
+.DS_Store
+Thumbs.db
