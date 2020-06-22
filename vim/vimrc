@@ -156,6 +156,9 @@ nmap <silent> <leader>d :Dash<CR>
 nmap <leader>w :w<CR>
 nmap <leader><Space> :w<CR>
 
+" Pretty print JSON
+nmap <leader>o :%!python -m json.tool<CR>
+
 " (From https://wincent.com/wiki/rails.vim_cheatsheet)
 " in a model the "alternate" is the spec and the "related" is the schema
 " in a controller (method) the "alternate" is the spec and the "related" is the view
