@@ -29,3 +29,5 @@
   tool = gvimdiff
   conflictstyle = diff3
   prompt = false
+[pull]
+	rebase = false
