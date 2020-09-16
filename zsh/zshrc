@@ -23,7 +23,7 @@ alias gl="git lg"
 # System VIM sucks and doesn't even have Python; use the one from MacVim
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
-alias upgradeall="brew update && brew upgrade && brew upgrade --cask && omz update && rvm @global do gem update \`gem list | cut -d ' ' -f 1\` && rvm-update && vim -c 'BundleInstall!'"
+alias upgradeall="brew update && brew upgrade && brew upgrade --cask && omz update && rvm @global do gem update \`gem list | cut -d ' ' -f 1\` && rvm-update && yarn global upgrade --latest && npm update -g && vim -c 'BundleInstall!'"
 
 function mvag() {
   mvim -p `ag -l $@`
