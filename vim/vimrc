@@ -18,6 +18,8 @@ Bundle 'tpope/vim-haml'
 Bundle 'pangloss/vim-javascript'
 " JSX support
 Bundle 'mxw/vim-jsx'
+" Support for Vue syntax and indentation
+Plugin 'leafOfTree/vim-vue-plugin'
 " Ruby helpers
 Bundle 'vim-ruby/vim-ruby'
 " Rails helpers
