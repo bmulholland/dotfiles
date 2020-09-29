@@ -5,3 +5,5 @@
 ._DS_Store
 .DS_Store
 Thumbs.db
+# Ignore a helper file for solargem: https://solargraph.org/guides/rails
+bm_solargem_helpers.rb
