@@ -23,7 +23,7 @@ alias gl="git lg"
 # System VIM sucks and doesn't even have Python; use the one from MacVim
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
-alias upgradeall="brew update && brew upgrade && brew upgrade --cask && omz update && gem update --system && rvm @global do gem update \`gem list | cut -d ' ' -f 1\` && rvm-update && yarn global upgrade --latest && npm update -g && vim -c 'BundleInstall!'"
+alias upgradeall="brew update && brew upgrade && brew upgrade --cask --greedy && omz update && gem update --system && rvm get stable && rvm @global do gem update \`gem list | cut -d ' ' -f 1\` && rvm-update && yarn global upgrade --latest && npm update -g && vim -c 'BundleInstall!'"
 
 function mvag() {
   mvim -p `ag -l $@`
@@ -57,7 +57,6 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/bmulholland/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
@@ -80,3 +79,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(brew capistrano knife osx rails rake ruby rvm nvm git git-extras vagrant)
 
 source $ZSH/oh-my-zsh.sh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
