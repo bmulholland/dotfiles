@@ -32,6 +32,8 @@ Bundle 'tpope/vim-endwise'
 Bundle 'scrooloose/nerdtree'
 " Syntax checks
 Bundle 'w0rp/ale'
+" Autocorrection and formatting for Ruby
+Plugin 'ruby-formatter/rufo-vim'
 " Easily browse tags in current file
 Bundle 'majutsushi/tagbar'
 " Git helpers
@@ -95,9 +97,11 @@ set expandtab
 set smarttab
 
 " Max line length
-set textwidth=120
+set textwidth=80
 " Wrap at word boundaries
 set formatoptions+=t
+" Auto-format ruby with rufo
+let g:rufo_auto_formatting = 1
 
 " Force the indentation to be correct when shifting
 set shiftround
