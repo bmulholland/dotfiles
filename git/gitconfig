@@ -5,6 +5,7 @@
   editor = vim
   autocrlf = input
   excludesfile = ~/.gitignore
+	attributesfile = /Users/bmulholland/.gitattributes
 [color]
   ui = auto
 [push]
