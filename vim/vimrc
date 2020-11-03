@@ -113,7 +113,7 @@ set backspace=indent,eol,start
 set wildmenu
 set wildmode=longest,list,full
 " Ignore files I don't want to open in vim
-set wildignore+=*.o,*~,*.pyc,*.jpg,*.gif,*.png,*/tmp,*/coverage,*/fixtures,*/node_modules,*/cache,*/spec/vcr_cassettes,*/storage
+set wildignore+=*.o,*~,*.pyc,*.jpg,*.gif,*.png,*/tmp/*,*/coverage/*,*/fixtures/*,*/node_modules/*,*/cache/*,*/spec/vcr_cassettes/*,*/storage/*
 
 " Autostrip trailing whitespace for certain filetypes
 " See http://vim.wikia.com/wiki/Remove_unwanted_spaces
