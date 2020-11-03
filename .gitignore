@@ -8,3 +8,6 @@ git/gitconfig
 vim/bundle/*
 # ... except for vundle, which sets everything up
 !vim/bundle/vundle
+
+node_modules/
+package-lock.json
