@@ -16,8 +16,6 @@ Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-haml'
 " Javscript support
 Bundle 'pangloss/vim-javascript'
-" JSX support
-Bundle 'mxw/vim-jsx'
 " Support for Vue syntax and indentation
 Plugin 'leafOfTree/vim-vue-plugin'
 " Ruby helpers
@@ -26,6 +24,8 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 " Cucumber support
 Bundle 'tpope/vim-cucumber', {'rtp': 'vim/'}
+" Terraform support
+Plugin 'hashivim/vim-terraform'
 " Auto add end keyword in ruby
 Bundle 'tpope/vim-endwise'
 " Nerdtree for project navigation
