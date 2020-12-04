@@ -40,8 +40,8 @@ Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 " Fuzzy file search
 Bundle 'wincent/command-t'
-" " Autocomplete
-Bundle 'Valloric/YouCompleteMe'
+" Autocomplete
+Bundle 'neoclide/coc.nvim', {'branch': 'release'}
 " Add a gutter that shows git additions/deletions/etc
 Bundle 'airblade/vim-gitgutter'
 " Pretty status line
