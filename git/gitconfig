@@ -1,6 +1,6 @@
 [user]
   name = Brendan Mulholland
-  email = me@bmulholland.ca
+	email = git@bmulholland.ca
 [core]
   editor = vim
   autocrlf = input
