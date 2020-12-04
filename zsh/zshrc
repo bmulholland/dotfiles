@@ -26,6 +26,11 @@ alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
 alias upgradeall="brew update && brew upgrade && brew upgrade --cask --greedy && omz update && gem update --system && rvm get stable && rvm @global do gem update \`gem list | cut -d ' ' -f 1\` && rvm-update && yarn global upgrade --latest && npm update -g && vim -c 'BundleInstall!'"
 
+# https://gist.github.com/hlissner/db74d23fc00bed81ff62
+function ag-replace() {
+  ag -0 -l $1 | xargs -0 sed -ri.bak -e "s/$1/$2/g"
+}
+
 # Search for all files with contents using silver searcher,
 # then open them in MacVim
 function mvag() {
