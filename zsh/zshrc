@@ -22,7 +22,9 @@ alias gch="git checkout"
 alias gl="git lg"
 
 # System VIM sucks and doesn't even have Python; use the one from MacVim
-alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+# Going to try using neovim
+# alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias vim=nvim
 
 alias upgradeall="brew update && brew upgrade && brew upgrade --cask --greedy && omz update && gem update --system && rvm get stable && rvm @global do gem update \`gem list | cut -d ' ' -f 1\` && rvm-update && yarn global upgrade --latest && npm update -g && vim -c 'BundleInstall! | q' && nvim -c 'call dein#update() | q'"
 
@@ -34,21 +36,21 @@ function ag-replace() {
 # Search for all files with contents using silver searcher,
 # then open them in MacVim
 function mvag() {
-  mvim -p `ag -l $@`
+  vimr -p `ag -l $@`
 }
 
 # Search for all files with contents using silver searcher,
 # then open them in Vim
 function vag() {
-  vim -p `ag -l $@`
+  nvim -p `ag -l $@`
 }
 
 # Open all modified files in git
 function mvgit() {
-  mvim -p $(git status -s | awk '{print $2}')
+  nvimr -p $(git status -s | awk '{print $2}')
 }
 
-export EDITOR=vim
+export EDITOR=nvim
 
 # Shortcuts to jump forward/back a word with Alt+Arrow
 bindkey '[C' forward-word
