@@ -80,7 +80,8 @@ let mapleader = " "
 " doesn't load the rvm setup properly. Somehow it makes it so it's impossible
 " to install the gems I need to run lessc, which is used by syntastic to run
 " syntax checks on less files.
-set shell=/bin/sh
+" Hmm, maybe it works better on neovim? Comment out to see.
+" set shell=/bin/sh
 
 " Pretty colours
 syntax enable
