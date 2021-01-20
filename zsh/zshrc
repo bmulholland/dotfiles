@@ -24,7 +24,7 @@ alias gl="git lg"
 # System VIM sucks and doesn't even have Python; use the one from MacVim
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
-alias upgradeall="brew update && brew upgrade && brew upgrade --cask --greedy && omz update && gem update --system && rvm get stable && rvm @global do gem update \`gem list | cut -d ' ' -f 1\` && rvm-update && yarn global upgrade --latest && npm update -g && vim -c 'BundleInstall!'"
+alias upgradeall="brew update && brew upgrade && brew upgrade --cask --greedy && omz update && gem update --system && rvm get stable && rvm @global do gem update \`gem list | cut -d ' ' -f 1\` && rvm-update && yarn global upgrade --latest && npm update -g && vim -c 'BundleInstall! | q' && nvim -c 'call dein#update() | q'"
 
 # https://gist.github.com/hlissner/db74d23fc00bed81ff62
 function ag-replace() {
