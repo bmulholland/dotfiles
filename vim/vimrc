@@ -134,6 +134,9 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
+" Go to next lint error
+nmap <leader>e <Plug>(ale_next_wrap)
+
 " Move the splits arround!
 " Doesn't work :(
 "nmap <silent> <c-s-k> <C-W>K
