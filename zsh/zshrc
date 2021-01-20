@@ -36,18 +36,18 @@ function ag-replace() {
 # Search for all files with contents using silver searcher,
 # then open them in MacVim
 function mvag() {
-  vimr -p `ag -l $@`
+  vimr -n `ag -l $@`
 }
 
 # Search for all files with contents using silver searcher,
 # then open them in Vim
 function vag() {
-  nvim -p `ag -l $@`
+  nvim -n `ag -l $@`
 }
 
 # Open all modified files in git
 function mvgit() {
-  nvimr -p $(git status -s | awk '{print $2}')
+  nvimr -n $(git status -s | awk '{print $2}')
 }
 
 export EDITOR=nvim
