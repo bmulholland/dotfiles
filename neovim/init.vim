@@ -130,7 +130,7 @@ set textwidth=80
 set formatoptions+=t
 " Auto-format on save (Requires configuration for each file type using
 " suggestions from :ALEFixSuggest)
-let g:ale_fixers = {'ruby': ['sorbet', 'rubocop', 'rufo', 'standardrb', 'trim_whitespace']}
+let g:ale_fixers = {'ruby': ['sorbet', 'rubocop', 'rufo', 'trim_whitespace']}
 let g:ale_fix_on_save = 1
 
 " Force the indentation to be correct when shifting
