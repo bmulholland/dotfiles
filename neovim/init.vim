@@ -18,10 +18,6 @@ if dein#load_state('/Users/bmulholland/.cache/dein')
   call dein#add('/Users/bmulholland/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " My installed plugins
-  " LESS support
-  call dein#add('groenewege/vim-less')
-  " HAML support
-  call dein#add('tpope/vim-haml')
   " Javscript support
   call dein#add('pangloss/vim-javascript')
   " Support for Vue syntax and indentation
@@ -40,8 +36,6 @@ if dein#load_state('/Users/bmulholland/.cache/dein')
   call dein#add('scrooloose/nerdtree')
   " Syntax checks
   call dein#add('w0rp/ale')
-  " Autocorrection and formatting for Ruby
-  call dein#add('ruby-formatter/rufo-vim')
   " Easily browse tags in current file
   call dein#add('majutsushi/tagbar')
   " Git helpers
@@ -72,8 +66,6 @@ if dein#check_install()
   call dein#install()
 endif
 
-" 
-
 " CONFIGURATION
 let mapleader = " "
 " Use sh instead of zsh, because vim fucks up the zsh config in a way that
@@ -83,13 +75,18 @@ let mapleader = " "
 " Hmm, maybe it works better on neovim? Comment out to see.
 " set shell=/bin/sh
 
+" https://github.com/dense-analysis/ale/issues/1016
+" https://github.com/postmodern/chruby/wiki/Vim
+" set shell=$SHELL
+
 " Pretty colours
 syntax enable
 " made_of_code
 set background=dark
-colorscheme molokai
 " https://cyfyifanchen.com/neovim-true-color/
 set termguicolors
+
+colorscheme molokai
 
 " The default comment color is impossible to read
 hi Comment         guifg=#A8A491
@@ -130,8 +127,16 @@ set textwidth=80
 set formatoptions+=t
 " Auto-format on save (Requires configuration for each file type using
 " suggestions from :ALEFixSuggest)
+" NOTE: These commands MUST be installed in nvim-ruby-version@global to be
+" accessible in the vimr $PATH 
 let g:ale_fixers = {'ruby': ['sorbet', 'rubocop', 'rufo', 'trim_whitespace']}
 let g:ale_fix_on_save = 1
+" When run in vimr, ale tries to run in zsh shell, but that fails.
+" When run in console, nvim uses sh, which works fine.
+" So just force ale to always use sh.
+" let g:ale_shell="/bin/sh"
+
+" let g:ruby_host_prog="rvm 2.7.2@recital-backend do neovim-ruby-host"
 
 " Force the indentation to be correct when shifting
 set shiftround
@@ -143,7 +148,7 @@ set backspace=indent,eol,start
 set wildmenu
 set wildmode=longest,list,full
 " Ignore files I don't want to open in vim
-set wildignore+=*.bak,*.o,*~,*.pyc,*.jpg,*.gif,*.png,*/tmp/*,*/coverage/*,*/fixtures/*,*/node_modules/*,*/cache/*,*/spec/vcr_cassettes/*,*/storage/*
+set wildignore+=*.bak,*.o,*~,*.pyc,*.jpg,*.gif,*.png,*/tmp/*,*/coverage/*,*/fixtures/*,*/node_modules/*,*/cache/*,*/spec/vcr_cassettes/*,*/storage/*,*/sorbet/*
 
 " Make searching be incremental (e.g. search as you type)
 set incsearch
@@ -217,18 +222,3 @@ function! s:Repl()
   return "p@=RestoreRegister()\<cr>"
 endfunction
 vmap <silent> <expr> p <sid>Repl()
-
-" Special exceptions for large project
-augroup LargeProjects
-  autocmd!
-  " Whitespace-only changes complicate PRs
-  autocmd BufNewFile,BufRead ~/dev/coupa_development/**/* autocmd! TrailingSpaces
-augroup END
-
-" Run both ESLint and StyleLint in jsx files
-augroup FiletypeGroup
-  autocmd!
-  au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-augroup END
-let g:ale_linter_aliases = {'jsx': ['css', 'javascript']}
-let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
