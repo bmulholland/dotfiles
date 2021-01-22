@@ -40,7 +40,9 @@ if dein#load_state('/Users/bmulholland/.cache/dein')
   " Terraform support
   call dein#add('hashivim/vim-terraform')
   " Nerdtree for project navigation
-  call dein#add('scrooloose/nerdtree')
+  " call dein#add('scrooloose/nerdtree')
+  " Trying out vinegar as a lightweight replacement for nerdtree
+  call dein#add('tpope/vim-vinegar')
   " Syntax checks
   call dein#add('w0rp/ale')
   " Easily browse tags in current file
@@ -176,7 +178,14 @@ nmap <leader>e <Plug>(ale_next_wrap)
 "nmap <silent> <c-s-l> <C-W>L
 
 " Open Nerd Tree
-nmap <leader>n :NERDTree<cr>
+" nmap <leader>n :NERDTree<cr>
+" Configure netrw like NerdTree https://shapeshed.com/vim-netrw/
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+nmap <leader>n :Vexplore<cr>
 
 " Open tagbar
 nmap <leader>s :TagbarToggle<CR>
