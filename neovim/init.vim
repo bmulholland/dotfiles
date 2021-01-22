@@ -18,20 +18,27 @@ if dein#load_state('/Users/bmulholland/.cache/dein')
   call dein#add('/Users/bmulholland/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " My installed plugins
+  " syntax highlighting for JSON with comments, especially useful for coc.vim
+  " config
+  call dein#add('kevinoid/vim-jsonc')
   " Javscript support
   call dein#add('pangloss/vim-javascript')
   " Support for Vue syntax and indentation
   call dein#add('leafOfTree/vim-vue-plugin')
   " Ruby helpers
   call dein#add('vim-ruby/vim-ruby')
+  " Helper methods to refactor Ruby
+  call dein#add('ecomba/vim-ruby-refactoring')
+  " Auto add end keyword in ruby
+  call dein#add('tpope/vim-endwise')
   " Rails helpers
   call dein#add('tpope/vim-rails')
+  " Improved matchit; use % to navigate between paids of brackets, if/end, etc
+  call dein#add('andymass/vim-matchup')
   " Cucumber support
   call dein#add('tpope/vim-cucumber', {'rtp': 'vim/'})
   " Terraform support
   call dein#add('hashivim/vim-terraform')
-  " Auto add end keyword in ruby
-  call dein#add('tpope/vim-endwise')
   " Nerdtree for project navigation
   call dein#add('scrooloose/nerdtree')
   " Syntax checks
@@ -54,7 +61,8 @@ if dein#load_state('/Users/bmulholland/.cache/dein')
   " Easily change surrounding tags (e.g. in html)
   call dein#add('tpope/vim-surround')
   " My theme
-  call dein#add('justinmk/molokai')
+  " call dein#add('phanviet/vim-monokai-pro')
+  call dein#add('srcery-colors/srcery-vim')
 
   " Required:
   call dein#end()
@@ -68,16 +76,6 @@ endif
 
 " CONFIGURATION
 let mapleader = " "
-" Use sh instead of zsh, because vim fucks up the zsh config in a way that
-" doesn't load the rvm setup properly. Somehow it makes it so it's impossible
-" to install the gems I need to run lessc, which is used by syntastic to run
-" syntax checks on less files.
-" Hmm, maybe it works better on neovim? Comment out to see.
-" set shell=/bin/sh
-
-" https://github.com/dense-analysis/ale/issues/1016
-" https://github.com/postmodern/chruby/wiki/Vim
-" set shell=$SHELL
 
 " Pretty colours
 syntax enable
@@ -86,7 +84,7 @@ set background=dark
 " https://cyfyifanchen.com/neovim-true-color/
 set termguicolors
 
-colorscheme molokai
+colorscheme srcery
 
 " The default comment color is impossible to read
 hi Comment         guifg=#A8A491
@@ -136,7 +134,7 @@ let g:ale_fix_on_save = 1
 " So just force ale to always use sh.
 " let g:ale_shell="/bin/sh"
 
-" let g:ruby_host_prog="rvm 2.7.2@recital-backend do neovim-ruby-host"
+let g:ruby_host_prog="rvm 2.7.2@recital-backend do neovim-ruby-host"
 
 " Force the indentation to be correct when shifting
 set shiftround
