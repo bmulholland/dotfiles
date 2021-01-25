@@ -52,7 +52,7 @@ if dein#load_state('/Users/bmulholland/.cache/dein')
   " Fuzzy file search
   call dein#add('wincent/command-t')
   " Autocomplete
-  call dein#add('neoclide/coc.nvim', {'branch': 'release'})
+  call dein#add('neoclide/coc.nvim', { 'merged': 0 })
   " Add a gutter that shows git additions/deletions/etc
   call dein#add('airblade/vim-gitgutter')
   " Pretty status line
@@ -136,7 +136,11 @@ let g:ale_fix_on_save = 1
 " So just force ale to always use sh.
 " let g:ale_shell="/bin/sh"
 
+" Run ruby from current project so it can access gems like rubocop
+" TODO: Ideally this would reference the ruby-version and ruby-gemset from pwd
 let g:ruby_host_prog="rvm 2.7.2@recital-backend do neovim-ruby-host"
+" Load node from nvm
+let g:coc_node_path="/Users/bmulholland/.nvm/versions/node/v12.14.1/bin/node"
 
 " Force the indentation to be correct when shifting
 set shiftround
