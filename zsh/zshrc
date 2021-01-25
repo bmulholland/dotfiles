@@ -27,7 +27,7 @@ alias gl="git lg"
 # alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias vim=nvim
 
-alias upgradeall="brew update && brew upgrade && brew upgrade --cask --greedy && omz update && gem update --system && rvm get stable && rvm @global do gem update \`gem list | cut -d ' ' -f 1\` && rvm-update && yarn global upgrade --latest && npm update -g && vim -c 'BundleInstall! | q' && nvim -c 'call dein#update() | q'"
+alias upgradeall="brew update && brew upgrade && brew upgrade --cask --greedy && omz update && gem update --system && rvm get stable && rvm @global do gem update \`gem list | cut -d ' ' -f 1\` && rvm-update && yarn global upgrade --latest && npm update -g && nvim -c 'call dein#update() | q'"
 
 # https://gist.github.com/hlissner/db74d23fc00bed81ff62
 function ag-replace() {
