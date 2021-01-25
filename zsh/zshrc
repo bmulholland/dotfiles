@@ -7,7 +7,8 @@
 setopt APPEND_HISTORY
 
 # Autocorrect was breaking too much stuff
-unsetopt correct_all
+# Maybe this is better these days?
+# unsetopt correct_all
 
 RAILS_ENV=development
 alias be="bundle exec"
