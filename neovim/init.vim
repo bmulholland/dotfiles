@@ -153,7 +153,7 @@ let g:ale_ruby_sorbet_enable_watchman = 1
 " TODO: Ideally this would reference the ruby-version and ruby-gemset from pwd
 let g:ruby_host_prog="rvm 2.7.2@recital-backend do neovim-ruby-host"
 " Load node from nvm
-let g:coc_node_path="/Users/bmulholland/.nvm/versions/node/v12.14.1/bin/node"
+let g:coc_node_path = substitute(system('which node'), '\n', '', '')
 
 " Force the indentation to be correct when shifting
 set shiftround
