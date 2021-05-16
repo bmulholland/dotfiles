@@ -229,6 +229,12 @@ nmap <leader>a :A<CR>
 " Easily switch between controllers and views using rails.vim's related file functionality
 nmap <leader>r :R<CR>
 
+" Give option to realod files when they've changed
+" See discussion at:
+" https://github.com/qvacua/vimr/issues/242
+" https://github.com/qvacua/vimr/issues/646
+au FocusGained * checktime
+
 " Auto-reload the CommandT file list
 augroup AutoReloadCommandT
   autocmd!
