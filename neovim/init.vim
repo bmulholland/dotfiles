@@ -165,7 +165,7 @@ set backspace=indent,eol,start
 set wildmenu
 set wildmode=longest,list,full
 " Ignore files I don't want to open in vim
-set wildignore+=*.bak,*.o,*~,*.pyc,*.jpg,*.gif,*.png,*/tmp/*,*/coverage/*,*/fixtures/*,*/node_modules/*,*/cache/*,*/spec/vcr_cassettes/*,*/storage/*,*/sorbet/*
+set wildignore+=*.bak,*.o,*~,*.pyc,*.jpg,*.gif,*.png,tmp,coverage,fixtures,node_modules,vcr_cassettes,storage,sorbet
 
 " Make searching be incremental (e.g. search as you type)
 set incsearch
