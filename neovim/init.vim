@@ -65,7 +65,6 @@ if dein#load_state('/Users/bmulholland/.cache/dein')
   " Easily change surrounding tags (e.g. in html)
   call dein#add('tpope/vim-surround')
   " My theme
-  " call dein#add('phanviet/vim-monokai-pro')
   call dein#add('srcery-colors/srcery-vim')
 
   " Required:
@@ -89,9 +88,6 @@ set background=dark
 set termguicolors
 
 colorscheme srcery
-
-" The default comment color is impossible to read
-hi Comment         guifg=#A8A491
 
 " Pretty fonts, patched for pwoerline, downloaded from: https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/VictorMono/Regular/complete/Victor%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf
 if !has('gui_vimr')
