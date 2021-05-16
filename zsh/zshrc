@@ -37,7 +37,7 @@ function ag-replace() {
 # Search for all files with contents using silver searcher,
 # then open them in MacVim
 function mvag() {
-  vimr -n `ag -l $@`
+  vimr -n `ag -l $@` --cur-env
 }
 
 # Search for all files with contents using silver searcher,
