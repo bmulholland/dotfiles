@@ -126,9 +126,24 @@ set formatoptions+=t
 " Auto-format on save (Requires configuration for each file type using
 " suggestions from :ALEFixSuggest)
 " NOTE: These commands MUST be installed in nvim-ruby-version@global to be
-" accessible in the vimr $PATH 
-let g:ale_fixers = {'ruby': ['sorbet', 'rubocop', 'rufo', 'trim_whitespace']}
+" accessible in the vimr $PATH
+" Removed rufo for now; I hope rubocop will work. For any rules I don't see in
+" Rubocop, should probably add them that way so they stay the same for others
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'ruby': ['rubocop']
+\   }
+let g:ale_linters = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'ruby': ['rubocop', 'sorbet', 'solargraph']
+\   }
 let g:ale_fix_on_save = 1
+" gems installed via bundle
+let g:ale_ruby_sorbet_executable="bundle"
+let g:ale_ruby_rubocop_executable="bundle"
+let g:ale_ruby_rufo_executable="bundle"
+" Watch files for changes using watchman
+let g:ale_ruby_sorbet_enable_watchman = 1
 " When run in vimr, ale tries to run in zsh shell, but that fails.
 " When run in console, nvim uses sh, which works fine.
 " So just force ale to always use sh.
