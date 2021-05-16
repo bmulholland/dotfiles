@@ -31,6 +31,8 @@ if dein#load_state('/Users/bmulholland/.cache/dein')
   call dein#add('ecomba/vim-ruby-refactoring')
   " Auto add end keyword in ruby
   call dein#add('tpope/vim-endwise')
+  " apid toggling between the two different styles of ruby blocks, namely do/end and brackets {}
+  call dein#add('jgdavey/vim-blockle')
   " Rails helpers
   call dein#add('tpope/vim-rails')
   " Improved matchit; use % to navigate between paids of brackets, if/end, etc
