@@ -16,11 +16,7 @@ alias bi="bundle install"
 alias bu="bundle update"
 
 alias gs="git status"
-alias gd="git diff"
-alias gds="git diff --staged"
-alias gc="git commit"
 alias gch="git checkout"
-alias gl="git lg"
 
 # System VIM sucks and doesn't even have Python; use the one from MacVim
 # Going to try using neovim
