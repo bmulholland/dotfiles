@@ -66,6 +66,8 @@ if dein#load_state('/Users/bmulholland/.cache/dein')
   call dein#add('tpope/vim-surround')
   " My theme
   call dein#add('srcery-colors/srcery-vim')
+  " Show guides for indent lines
+  call dein#add('Yggdroot/indentLine')
 
   " Required:
   call dein#end()
