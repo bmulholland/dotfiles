@@ -1,11 +1,3 @@
-" Vundle!
-set nocompatible               " be iMproved
-filetype off                   " required!
-
-if &compatible
-  set nocompatible               " Be iMproved
-endif
-
 " Required:
 set runtimepath+=/Users/bmulholland/.cache/dein/repos/github.com/Shougo/dein.vim
 
