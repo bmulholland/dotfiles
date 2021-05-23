@@ -8,5 +8,6 @@
       "initializationOptions": {},
       "settings": {}
     }
-  }
+  },
+  "diagnostic.displayByAle": true
 }
