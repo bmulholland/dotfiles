@@ -14,12 +14,13 @@ return require('packer').startup(function(use)
   -- Packer can manage itself as an optional plugin
   use 'wbthomason/packer.nvim'
 
-  -- Syntax checks
-  use 'w0rp/ale'
-
   use 'folke/todo-comments.nvim' -- Highlight TODOs
 
   use 'tpope/vim-surround' -- Easily change surrounding tags (e.g. in html)
+
+    -- LSP
+  use 'neovim/nvim-lspconfig'
+  use 'onsails/lspkind-nvim'
 
   -- syntax highlighting for JSON with comments, especially useful for coc.vim
   -- config
