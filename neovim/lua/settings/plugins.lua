@@ -56,20 +56,18 @@ return require('packer').startup(function(use)
 
   -- Git
   use 'tpope/vim-fugitive' -- Git helper commands
-  use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} } -- Add a gutter that shows git additions/deletions/etc
 
   -- File and tag navigation
   use 'andymass/vim-matchup' -- Improved matchit; use % to navigate between paids of brackets, if/end, etc
   use 'ludovicchabant/vim-gutentags' -- (re)generate tag files as you work
 
   -- Vim UI stuff
+  use 'romgrk/barbar.nvim' -- better tabs
   use 'kyazdani42/nvim-web-devicons' -- Nicer icons
-  use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
-
-  -- Pretty status line
-  use 'famiu/feline.nvim'
-
+  use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' } -- Indentation guide lines
+  use 'famiu/feline.nvim' -- Pretty status line
   use 'jeffkreeftmeijer/vim-numbertoggle' -- absolute and relative line numbers
+  use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} } -- Add a gutter that shows git additions/deletions/etc
 
   -- Color theme
   use 'srcery-colors/srcery-vim'
