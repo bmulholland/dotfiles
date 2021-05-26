@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
   use 'folke/todo-comments.nvim' -- Highlight TODOs
 
   use 'tpope/vim-surround' -- Easily change surrounding tags (e.g. in html)
+  use 'windwp/nvim-autopairs' -- Autopair brackets
 
     -- LSP
   use 'neovim/nvim-lspconfig'
