@@ -67,8 +67,8 @@ return require('packer').startup(function(use)
   use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
 
   -- Pretty status line
-  use 'vim-airline/vim-airline'
-  use 'vim-airline/vim-airline-themes'
+  use 'famiu/feline.nvim'
+
   use 'jeffkreeftmeijer/vim-numbertoggle' -- absolute and relative line numbers
 
   -- Color theme

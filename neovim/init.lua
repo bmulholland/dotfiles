@@ -8,16 +8,10 @@ require('settings.scrolloff-fraction')
 
 require('plugins.telescope')
 require('plugins.numbertoggle')
+require('plugins.feline')
 
 -- Plugin config
 local g = vim.g
-
--- Use patched fonts for status bar
-g['airline_powerline_fonts '] = 1
--- Make airline look like powerline
-g['airline_theme '] = 'powerlineish'
--- Only show git symbols when they're non-zero
-g['airline#extensions#hunks#non_zero_only'] = 1
 
 -- Auto-format on save (Requires configuration for each file type using
 -- suggestions from :ALEFixSuggest)

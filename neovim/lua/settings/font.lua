@@ -4,5 +4,5 @@ if vim.fn.has('gui_vimr') ~= 1 then
   --Pretty fonts, patched for powerline, downloaded from:
   --https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/VictorMono/Regular/complete/Victor%20Mono%20Regular%20Nerd%20Font%20Complete%20Mono.ttf
   --]]
-  vim.o.guifont = "VictorMono Nerd Font Mono:h12"
+  vim.o.guifont = "VictorMono Nerd Font:h12"
 end

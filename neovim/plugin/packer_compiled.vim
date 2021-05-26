@@ -83,9 +83,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/dash.vim"
   },
-  indentLine = {
+  ["feline.nvim"] = {
     loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/indentLine"
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/feline.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -134,14 +138,6 @@ _G.packer_plugins = {
   ["todo-comments.nvim"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/todo-comments.nvim"
-  },
-  ["vim-airline"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-airline"
-  },
-  ["vim-airline-themes"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-airline-themes"
   },
   ["vim-blockle"] = {
     loaded = true,
