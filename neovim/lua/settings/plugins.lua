@@ -50,8 +50,6 @@ return require('packer').startup(function(use)
   use 'fhill2/telescope-ultisnips.nvim'
   use { 'pwntester/octo.nvim', requires = {{'nvim-lua/plenary.nvim'}, {'nvim-lua/popup.nvim'}} }
 
-  use 'kyazdani42/nvim-tree.lua' -- File Explorer
-
   use 'rizzatti/dash.vim' -- Documentation lookups
 
   -- Git
@@ -60,8 +58,10 @@ return require('packer').startup(function(use)
   -- File and tag navigation
   use 'andymass/vim-matchup' -- Improved matchit; use % to navigate between paids of brackets, if/end, etc
   use 'ludovicchabant/vim-gutentags' -- (re)generate tag files as you work
+  use 'christoomey/vim-tmux-navigator' -- Consistently navigate between vim and tmux splits
 
   -- Vim UI stuff
+  use 'kyazdani42/nvim-tree.lua' -- File Explorer
   use 'romgrk/barbar.nvim' -- better tabs
   use 'kyazdani42/nvim-web-devicons' -- Nicer icons
   use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' } -- Indentation guide lines
