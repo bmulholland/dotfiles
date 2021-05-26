@@ -9,8 +9,10 @@ require('settings.scrolloff-fraction')
 require('plugins.feline')
 require('plugins.gitsigns')
 require('plugins.numbertoggle')
+require('plugins.nvim-ts-rainbow')
 require('plugins.nvimtree')
 require('plugins.telescope')
+require('plugins.treesitter')
 
 -- Plugin config
 local g = vim.g

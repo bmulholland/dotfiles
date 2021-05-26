@@ -62,6 +62,11 @@ return require('packer').startup(function(use)
 
   use "tversteeg/registers.nvim" -- preview the contents of the registers
 
+  -- Treesitter
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'p00f/nvim-ts-rainbow' -- Different colours for nested parentheses
+  use 'romgrk/nvim-treesitter-context' -- Show offscreen context for the cursor position
+
   -- Vim UI stuff
   use 'kyazdani42/nvim-tree.lua' -- File Explorer
   use 'romgrk/barbar.nvim' -- better tabs
