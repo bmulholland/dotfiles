@@ -60,6 +60,8 @@ return require('packer').startup(function(use)
   use 'ludovicchabant/vim-gutentags' -- (re)generate tag files as you work
   use 'christoomey/vim-tmux-navigator' -- Consistently navigate between vim and tmux splits
 
+  use "tversteeg/registers.nvim" -- preview the contents of the registers
+
   -- Vim UI stuff
   use 'kyazdani42/nvim-tree.lua' -- File Explorer
   use 'romgrk/barbar.nvim' -- better tabs
