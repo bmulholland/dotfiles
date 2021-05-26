@@ -79,10 +79,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/coc.nvim"
   },
-  ["command-t"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/command-t"
-  },
   ["dash.vim"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/dash.vim"
@@ -91,9 +87,25 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/indentLine"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+  },
+  ["octo.nvim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/octo.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["srcery-vim"] = {
     loaded = true,
@@ -102,6 +114,26 @@ _G.packer_plugins = {
   tagbar = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/tagbar"
+  },
+  ["telescope-fzy-native.nvim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim"
+  },
+  ["telescope-project.nvim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/telescope-project.nvim"
+  },
+  ["telescope-ultisnips.nvim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/telescope-ultisnips.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/todo-comments.nvim"
   },
   ["vim-airline"] = {
     loaded = true,
@@ -127,6 +159,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-gitgutter"
   },
+  ["vim-gutentags"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-gutentags"
+  },
   ["vim-javascript"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-javascript"
@@ -138,6 +174,10 @@ _G.packer_plugins = {
   ["vim-matchup"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-matchup"
+  },
+  ["vim-numbertoggle"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-numbertoggle"
   },
   ["vim-rails"] = {
     loaded = true,

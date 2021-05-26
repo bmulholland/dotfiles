@@ -5,6 +5,7 @@ require('settings.plugins')
 require('settings.colors')
 
 require('plugins.telescope')
+require('plugins.numbertoggle')
 
 -- Plugin config
 local g = vim.g

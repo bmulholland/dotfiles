@@ -39,8 +39,6 @@ return require('packer').startup(function(use)
   use 'tpope/vim-vinegar'
   -- Syntax checks
   use 'w0rp/ale'
-  -- Easily browse tags in current file
-  use 'majutsushi/tagbar'
   -- Git helpers
   use 'tpope/vim-fugitive'
 
@@ -52,6 +50,10 @@ return require('packer').startup(function(use)
   use 'nvim-telescope/telescope-project.nvim'
   use 'fhill2/telescope-ultisnips.nvim'
   use { 'pwntester/octo.nvim', requires = {{'nvim-lua/plenary.nvim'}, {'nvim-lua/popup.nvim'}} }
+
+	-- File and tag navigation
+  use 'majutsushi/tagbar' -- Easily browse tags in current file
+  use 'ludovicchabant/vim-gutentags' -- (re)generate tag files as you work
 
   -- Autocomplete
   use {'neoclide/coc.nvim',  merged = 0 }
@@ -71,4 +73,7 @@ return require('packer').startup(function(use)
 
   -- Icons
   use 'kyazdani42/nvim-web-devicons'
+
+	use 'jeffkreeftmeijer/vim-numbertoggle' -- absolute and relative line numbers
+	use 'folke/todo-comments.nvim' -- Highlight TODOs
 end)
