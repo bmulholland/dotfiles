@@ -43,6 +43,24 @@ map('n', '<c-l>', ':wincmd l<CR>', { silent = true })
 map('n', '<leader>e', '<Plug>(ale_next_wrap)')
 
 -- Open plugins
+map('n', '<leader>t', ":lua require('plugins.telescope').project_files()<CR>", { silent = true})
+
+-- TODO: Learn these too
+-- From https://github.com/crivotz/nv-ide/blob/master/lua/settings/keymap.lua#L41
+vim.api.nvim_set_keymap('n', '<leader>r', ":lua require('telescope.builtin').live_grep()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>bb', ":lua require('telescope.builtin').buffers()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>m', ":lua require('telescope.builtin').marks()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>e', ":lua require('telescope.builtin').treesitter()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>l', ":lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>p', ":lua require('telescope').extensions.project.project{}<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>c', ":lua require('plugins.telescope').my_git_commits()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>gg', ":lua require('plugins.telescope').my_git_status()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>b', ":lua require('plugins.telescope').my_git_bcommits()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>n', ":lua require('plugins.telescope').my_note()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>nn', ":e ~/Note/", {noremap = true, silent = false})
+vim.api.nvim_set_keymap('n', '<leader>gc', ':Octo issue create<CR>', {noremap = true, silent = false})
+vim.api.nvim_set_keymap('n', '<leader>i', ':Octo issue list<CR>', {noremap = true, silent = false})
+
 map('n', '<leader>n', ':Vexplore<cr>') -- Open a file explorer
 
 map('n', '<leader>s', ':TagbarToggle<CR>') -- Open tagbar

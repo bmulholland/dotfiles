@@ -43,8 +43,16 @@ return require('packer').startup(function(use)
   use 'majutsushi/tagbar'
   -- Git helpers
   use 'tpope/vim-fugitive'
+
   -- Fuzzy file search
-  use 'wincent/command-t'
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-fzy-native.nvim'
+  use 'nvim-telescope/telescope-project.nvim'
+  use 'fhill2/telescope-ultisnips.nvim'
+  use { 'pwntester/octo.nvim', requires = {{'nvim-lua/plenary.nvim'}, {'nvim-lua/popup.nvim'}} }
+
   -- Autocomplete
   use {'neoclide/coc.nvim',  merged = 0 }
   -- Add a gutter that shows git additions/deletions/etc
@@ -60,4 +68,7 @@ return require('packer').startup(function(use)
   use 'srcery-colors/srcery-vim'
   -- Show guides for indent lines
   use 'Yggdroot/indentLine'
+
+  -- Icons
+  use 'kyazdani42/nvim-web-devicons'
 end)

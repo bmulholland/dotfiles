@@ -4,6 +4,8 @@ require('settings.font')
 require('settings.plugins')
 require('settings.colors')
 
+require('plugins.telescope')
+
 -- Plugin config
 local g = vim.g
 
@@ -48,14 +50,3 @@ g['netrw_liststyle '] = 3
 g['netrw_browse_split '] = 4
 g['netrw_altv '] = 1
 g['netrw_winsize '] = 25
-
--- Let CommandT use the full window height when searching files
-g['CommandTMaxHeight'] = 0
--- Auto-reload the CommandT file list
-vim.api.nvim_exec([[
-augroup AutoReloadCommandT
-  autocmd!
-  autocmd FocusGained * CommandTFlush
-  autocmd BufWritePost * CommandTFlush
-augroup END
-]], true)
