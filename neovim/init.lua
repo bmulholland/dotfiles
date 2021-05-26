@@ -42,10 +42,3 @@ g['ale_ruby_sorbet_enable_watchman '] = 1
 g['ruby_host_prog'] ="rvm 2.7.2@recital-backend do neovim-ruby-host"
 -- Load node from nvm
 -- g['coc_node_path '] = substitute(system('which node'), '\n', '', '')
-
--- Configure netrw like NerdTree https://shapeshed.com/vim-netrw/
-g['netrw_banner '] = 0
-g['netrw_liststyle '] = 3
-g['netrw_browse_split '] = 4
-g['netrw_altv '] = 1
-g['netrw_winsize '] = 25
