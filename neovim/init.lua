@@ -14,6 +14,7 @@ require('plugins.nvimtree')
 require('plugins.telescope')
 require('plugins.todo-comments')
 require('plugins.treesitter')
+require('plugins.vim-gutentags')
 
 -- Plugin config
 local g = vim.g
