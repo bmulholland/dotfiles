@@ -64,7 +64,7 @@ return require('packer').startup(function(use)
 
   -- Vim UI stuff
   use 'kyazdani42/nvim-web-devicons' -- Nicer icons
-  use 'Yggdroot/indentLine' -- Show guides for indent lines
+  use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
 
   -- Pretty status line
   use 'vim-airline/vim-airline'
