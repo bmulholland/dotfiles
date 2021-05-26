@@ -9,6 +9,7 @@ require('settings.scrolloff-fraction')
 require('plugins.feline')
 require('plugins.gitsigns')
 require('plugins.numbertoggle')
+require('plugins.nvimtree')
 require('plugins.telescope')
 
 -- Plugin config

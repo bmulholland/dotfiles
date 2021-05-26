@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
   use 'fhill2/telescope-ultisnips.nvim'
   use { 'pwntester/octo.nvim', requires = {{'nvim-lua/plenary.nvim'}, {'nvim-lua/popup.nvim'}} }
 
-  use 'tpope/vim-vinegar' -- Trying out vinegar as a lightweight replacement for nerdtree
+  use 'kyazdani42/nvim-tree.lua' -- File Explorer
 
   use 'rizzatti/dash.vim' -- Documentation lookups
 

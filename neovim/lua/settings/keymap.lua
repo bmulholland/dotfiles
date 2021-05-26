@@ -61,7 +61,7 @@ vim.api.nvim_set_keymap('n', '<leader>nn', ":e ~/Note/", {noremap = true, silent
 vim.api.nvim_set_keymap('n', '<leader>gc', ':Octo issue create<CR>', {noremap = true, silent = false})
 vim.api.nvim_set_keymap('n', '<leader>i', ':Octo issue list<CR>', {noremap = true, silent = false})
 
-map('n', '<leader>n', ':Vexplore<cr>') -- Open a file explorer
+map('n', '<leader>n', ':NvimTreeToggle<cr>') -- Open a file explorer
 
 map('n', '<leader>s', ':TagbarToggle<CR>') -- Open tagbar
 
