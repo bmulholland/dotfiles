@@ -12,6 +12,7 @@ require('plugins.numbertoggle')
 require('plugins.nvim-ts-rainbow')
 require('plugins.nvimtree')
 require('plugins.telescope')
+require('plugins.todo-comments')
 require('plugins.treesitter')
 
 -- Plugin config
