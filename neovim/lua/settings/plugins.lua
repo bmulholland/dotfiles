@@ -54,8 +54,9 @@ return require('packer').startup(function(use)
 
   use 'rizzatti/dash.vim' -- Documentation lookups
 
+  -- Git
   use 'tpope/vim-fugitive' -- Git helper commands
-  use 'airblade/vim-gitgutter' -- Add a gutter that shows git additions/deletions/etc
+  use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} } -- Add a gutter that shows git additions/deletions/etc
 
   -- File and tag navigation
   use 'andymass/vim-matchup' -- Improved matchit; use % to navigate between paids of brackets, if/end, etc

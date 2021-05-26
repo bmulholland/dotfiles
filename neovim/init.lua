@@ -6,9 +6,10 @@ require('settings.colors')
 
 require('settings.scrolloff-fraction')
 
-require('plugins.telescope')
-require('plugins.numbertoggle')
 require('plugins.feline')
+require('plugins.gitsigns')
+require('plugins.numbertoggle')
+require('plugins.telescope')
 
 -- Plugin config
 local g = vim.g
