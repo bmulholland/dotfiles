@@ -60,7 +60,6 @@ return require('packer').startup(function(use)
 
   -- File and tag navigation
   use 'andymass/vim-matchup' -- Improved matchit; use % to navigate between paids of brackets, if/end, etc
-  use 'majutsushi/tagbar' -- Easily browse tags in current file
   use 'ludovicchabant/vim-gutentags' -- (re)generate tag files as you work
 
   -- Vim UI stuff
