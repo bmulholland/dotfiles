@@ -16,7 +16,6 @@ return require('packer').startup(function(use)
 
     -- LSP
   use 'neovim/nvim-lspconfig'
-  use 'onsails/lspkind-nvim'
 
   -- syntax highlighting for JSON with comments, especially useful for coc.vim
   -- config
@@ -36,7 +35,8 @@ return require('packer').startup(function(use)
   use 'hashivim/vim-terraform' -- Terraform support
 
   -- Autocomplete
-  use {'neoclide/coc.nvim',  merged = 0 }
+  use 'hrsh7th/nvim-compe'
+  use 'onsails/lspkind-nvim' -- Nicer pictograms
 
   -- Fuzzy file search
   use 'nvim-lua/popup.nvim'
