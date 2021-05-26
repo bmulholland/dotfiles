@@ -14,11 +14,6 @@ return require('packer').startup(function(use)
   -- Packer can manage itself as an optional plugin
   use 'wbthomason/packer.nvim'
 
-  use 'folke/todo-comments.nvim' -- Highlight TODOs
-
-  use 'tpope/vim-surround' -- Easily change surrounding tags (e.g. in html)
-  use 'windwp/nvim-autopairs' -- Autopair brackets
-
     -- LSP
   use 'neovim/nvim-lspconfig'
   use 'onsails/lspkind-nvim'
@@ -64,6 +59,9 @@ return require('packer').startup(function(use)
 
   use "tversteeg/registers.nvim" -- preview the contents of the registers
 
+  use 'tpope/vim-surround' -- Easily change surrounding tags (e.g. in html)
+  use 'windwp/nvim-autopairs' -- Autopair brackets
+
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'p00f/nvim-ts-rainbow' -- Different colours for nested parentheses
@@ -77,6 +75,8 @@ return require('packer').startup(function(use)
   use 'famiu/feline.nvim' -- Pretty status line
   use 'jeffkreeftmeijer/vim-numbertoggle' -- absolute and relative line numbers
   use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} } -- Add a gutter that shows git additions/deletions/etc
+
+  use 'folke/todo-comments.nvim' -- Highlight TODOs
 
   -- Color theme
   use 'srcery-colors/srcery-vim'
