@@ -14,6 +14,13 @@ return require('packer').startup(function(use)
   -- Packer can manage itself as an optional plugin
   use 'wbthomason/packer.nvim'
 
+  -- Syntax checks
+  use 'w0rp/ale'
+
+  use 'folke/todo-comments.nvim' -- Highlight TODOs
+
+  use 'tpope/vim-surround' -- Easily change surrounding tags (e.g. in html)
+
   -- syntax highlighting for JSON with comments, especially useful for coc.vim
   -- config
   use 'kevinoid/vim-jsonc'
@@ -21,26 +28,18 @@ return require('packer').startup(function(use)
   use 'pangloss/vim-javascript'
   -- Support for Vue syntax and indentation
   use 'leafOfTree/vim-vue-plugin'
+
   -- Ruby helpers
   use 'vim-ruby/vim-ruby'
-  -- Helper methods to refactor Ruby
-  use 'ecomba/vim-ruby-refactoring'
-  -- Auto add end keyword in ruby
-  use 'tpope/vim-endwise'
-  -- apid toggling between the two different styles of ruby blocks, namely do/end and brackets {}
-  use 'jgdavey/vim-blockle'
-  -- Rails helpers
-  use 'tpope/vim-rails'
-  -- Improved matchit; use % to navigate between paids of brackets, if/end, etc
-  use 'andymass/vim-matchup'
-  -- Terraform support
-  use 'hashivim/vim-terraform'
-  -- Trying out vinegar as a lightweight replacement for nerdtree
-  use 'tpope/vim-vinegar'
-  -- Syntax checks
-  use 'w0rp/ale'
-  -- Git helpers
-  use 'tpope/vim-fugitive'
+  use 'ecomba/vim-ruby-refactoring' -- Helper methods to refactor Ruby
+  use 'tpope/vim-endwise' -- Auto add end keyword in ruby
+  use 'jgdavey/vim-blockle' -- toggle between do/end and {} ruby block styles
+  use 'tpope/vim-rails' -- Rails helpers
+
+  use 'hashivim/vim-terraform' -- Terraform support
+
+  -- Autocomplete
+  use {'neoclide/coc.nvim',  merged = 0 }
 
   -- Fuzzy file search
   use 'nvim-lua/popup.nvim'
@@ -51,29 +50,27 @@ return require('packer').startup(function(use)
   use 'fhill2/telescope-ultisnips.nvim'
   use { 'pwntester/octo.nvim', requires = {{'nvim-lua/plenary.nvim'}, {'nvim-lua/popup.nvim'}} }
 
-	-- File and tag navigation
+  use 'tpope/vim-vinegar' -- Trying out vinegar as a lightweight replacement for nerdtree
+
+  use 'rizzatti/dash.vim' -- Documentation lookups
+
+  use 'tpope/vim-fugitive' -- Git helper commands
+  use 'airblade/vim-gitgutter' -- Add a gutter that shows git additions/deletions/etc
+
+  -- File and tag navigation
+  use 'andymass/vim-matchup' -- Improved matchit; use % to navigate between paids of brackets, if/end, etc
   use 'majutsushi/tagbar' -- Easily browse tags in current file
   use 'ludovicchabant/vim-gutentags' -- (re)generate tag files as you work
 
-  -- Autocomplete
-  use {'neoclide/coc.nvim',  merged = 0 }
-  -- Add a gutter that shows git additions/deletions/etc
-  use 'airblade/vim-gitgutter'
+  -- Vim UI stuff
+  use 'kyazdani42/nvim-web-devicons' -- Nicer icons
+  use 'Yggdroot/indentLine' -- Show guides for indent lines
+
   -- Pretty status line
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
-  -- Documentation lookups
-  use 'rizzatti/dash.vim'
-  -- Easily change surrounding tags (e.g. in html)
-  use 'tpope/vim-surround'
-  -- My theme
+  use 'jeffkreeftmeijer/vim-numbertoggle' -- absolute and relative line numbers
+
+  -- Color theme
   use 'srcery-colors/srcery-vim'
-  -- Show guides for indent lines
-  use 'Yggdroot/indentLine'
-
-  -- Icons
-  use 'kyazdani42/nvim-web-devicons'
-
-	use 'jeffkreeftmeijer/vim-numbertoggle' -- absolute and relative line numbers
-	use 'folke/todo-comments.nvim' -- Highlight TODOs
 end)
