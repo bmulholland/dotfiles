@@ -4,6 +4,8 @@ require('settings.font')
 require('settings.plugins')
 require('settings.colors')
 
+require('settings.scrolloff-fraction')
+
 require('plugins.telescope')
 require('plugins.numbertoggle')
 
