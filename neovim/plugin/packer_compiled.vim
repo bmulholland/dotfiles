@@ -123,6 +123,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context"
   },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring"
+  },
   ["nvim-ts-rainbow"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow"
@@ -182,6 +186,10 @@ _G.packer_plugins = {
   ["vim-blockle"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-blockle"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-commentary"
   },
   ["vim-endwise"] = {
     loaded = true,

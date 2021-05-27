@@ -62,6 +62,10 @@ return require('packer').startup(function(use)
   use 'tpope/vim-surround' -- Easily change surrounding tags (e.g. in html)
   use 'windwp/nvim-autopairs' -- Autopair brackets
 
+  -- Easily (un)comment out stuff
+  use 'tpope/vim-commentary'
+  use 'JoosepAlviste/nvim-ts-context-commentstring' -- Set comment char(s) based on cursor location
+
   -- Vim UI stuff
   use 'kyazdani42/nvim-tree.lua' -- File Explorer
   use 'romgrk/barbar.nvim' -- better tabs
