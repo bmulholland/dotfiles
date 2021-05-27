@@ -242,6 +242,10 @@ _G.packer_plugins = {
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator"
+  },
+  ["vim-wordmotion"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-wordmotion"
   }
 }
 

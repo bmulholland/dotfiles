@@ -53,12 +53,13 @@ return require('packer').startup(function(use)
 	use 'tpope/vim-fugitive' -- Git helper commands
 
 	-- File and tag navigation
-	use 'andymass/vim-matchup' -- Improved matchit; use % to navigate between paids of brackets, if/end, etc
 	use 'ludovicchabant/vim-gutentags' -- (re)generate tag files as you work
+	use 'andymass/vim-matchup' -- Improved matchit; use % to navigate between paids of brackets, if/end, etc
 	use 'christoomey/vim-tmux-navigator' -- Consistently navigate between vim and tmux splits
+	use 'kshenoy/vim-signature' -- show location markers in the gutter
+	use 'chaoren/vim-wordmotion' -- treat common variable naming schemes as vim words, despite no spaces
 
 	use "tversteeg/registers.nvim" -- preview the contents of the registers
-	use 'kshenoy/vim-signature' -- show location markers in the gutter
 
 	use 'tpope/vim-surround' -- Easily change surrounding tags (e.g. in html)
 	use 'windwp/nvim-autopairs' -- Autopair brackets
