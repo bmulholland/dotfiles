@@ -49,7 +49,7 @@ map('n', '<leader>;', ':lua vim.lsp.diagnostic.goto_next()<CR>', {silent = true}
 map('n', '<leader>a', ':lua vim.lsp.diagnostic.code_action()<CR>', {silent = true})
 map('n', '<leader>d', ':lua vim.lsp.buf.definition()<CR>', {silent = true})
 map('n', '<leader>h', ':lua vim.lsp.buf.hover()<CR>', {silent = true})
-map('n', '<leader>m', ':lua vim.lsp.buf.rename()<CR>',{silent = true})
+map('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>',{silent = true})
 map('n', '<leader>rf', ':lua vim.lsp.buf.references()<CR>', {silent = true})
 map('n', '<leader>s', ':lua vim.lsp.buf.document_symbol()<CR>', {silent = true})
 -- Telescope
@@ -64,8 +64,7 @@ map('n', '<leader>p', ":lua require('telescope').extensions.project.project{}<CR
 map('n', '<leader>c', ":lua require('plugins.telescope').my_git_commits()<CR>", {silent = true})
 map('n', '<leader>gg', ":lua require('plugins.telescope').my_git_status()<CR>", {silent = true})
 map('n', '<leader>b', ":lua require('plugins.telescope').my_git_bcommits()<CR>", {silent = true})
-map('n', '<leader>n', ":lua require('plugins.telescope').my_note()<CR>", {silent = true})
-map('n', '<leader>nn', ":e ~/Note/", {silent = false})
+map('n', '<leader>nt', ":lua require('plugins.telescope').my_note()<CR>", {silent = true})
 map('n', '<leader>gc', ':Octo issue create<CR>', {silent = false})
 map('n', '<leader>i', ':Octo issue list<CR>', {silent = false})
 
