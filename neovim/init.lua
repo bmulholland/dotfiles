@@ -22,6 +22,7 @@ require('plugins.treesitter')
 require('plugins.vim-gutentags')
 require('plugins.vim-signature')
 require('plugins.vim-sneak')
+require('plugins.vim-ultest')
 
 -- LSP Config
 require('lsp')

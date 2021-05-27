@@ -38,8 +38,6 @@ return require('packer').startup(function(use)
 	use 'SirVer/ultisnips' -- Snippets
 	use 'honza/vim-snippets' -- More snippets
 
-	use 'kosayoda/nvim-lightbulb' -- Show a lightbulb when a code fix is available
-
 	-- Fuzzy file search
 	use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }
 	use 'nvim-telescope/telescope-fzy-native.nvim'
@@ -51,6 +49,9 @@ return require('packer').startup(function(use)
 
 	-- Git
 	use 'tpope/vim-fugitive' -- Git helper commands
+
+	-- Easier test running
+	use { "rcarriga/vim-ultest", requires = {"janko/vim-test"}, run = ":UpdateRemotePlugins" }
 
 	-- File and tag navigation
 	use 'ludovicchabant/vim-gutentags' -- (re)generate tag files as you work
@@ -80,6 +81,7 @@ return require('packer').startup(function(use)
 	use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} } -- Add a gutter that shows git additions/deletions/etc
 
 	use 'folke/todo-comments.nvim' -- Highlight TODOs
+	use 'kosayoda/nvim-lightbulb' -- Show a lightbulb when a code fix is available
 
 	-- Color theme
 	-- Also consisterec nvim-solarized-lua

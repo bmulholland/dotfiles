@@ -65,7 +65,7 @@ map('n', '<leader>o', ':%!python -m json.tool<CR>')
 -- LSP - Errors, Definitions, etc
 map('n', '<leader>,', ':lua vim.lsp.diagnostic.goto_prev()<CR>', {silent = true})
 map('n', '<leader>;', ':lua vim.lsp.diagnostic.goto_next()<CR>', {silent = true})
-map('n', '<leader>a', ':lua vim.lsp.diagnostic.code_action()<CR>', {silent = true})
+map('n', '<leader>ca', ':lua vim.lsp.diagnostic.code_action()<CR>', {silent = true})
 map('n', '<leader>d', ':lua vim.lsp.buf.definition()<CR>', {silent = true})
 map('n', '<leader>h', ':lua vim.lsp.buf.hover()<CR>', {silent = true})
 map('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>',{silent = true})
@@ -93,3 +93,10 @@ map('n', '<leader>to', ':TodoTelescope<CR>', {noremap = true, silent = false})
 -- Refactoring ruby
 map('n', '<leader>ap', ':RAddParameter<CR>', {silent = true})
 map('v', '<leader>em', ':RExtractMethod<CR>', {silent = true})
+
+-- Run tests in vim
+map('n', '<leader>tn', ':w<CR>:TestNearest<CR>', {silent = true})
+map('n', '<leader>tf', ':w<CR>:TestFile<CR>', {silent = true})
+map('n', '<leader>ts', ':w<CR>:TestSuite<CR>', {silent = true})
+map('n', '<leader>tl', ':w<CR>:TestLast<CR>', {silent = true})
+map('n', '<leader>tv', ':w<CR>:TestVisit<CR>', {silent = true})
