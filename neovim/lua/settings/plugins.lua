@@ -37,6 +37,8 @@ return require('packer').startup(function(use)
   -- Autocomplete
   use 'hrsh7th/nvim-compe'
   use 'onsails/lspkind-nvim' -- Nicer pictograms
+  use 'SirVer/ultisnips' -- Snippets
+  use 'honza/vim-snippets' -- More snippets
 
   -- Fuzzy file search
   use 'nvim-lua/popup.nvim'
