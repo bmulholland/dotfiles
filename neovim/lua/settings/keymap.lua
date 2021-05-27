@@ -30,8 +30,18 @@ map('n', '<leader>a', ':A<CR>')
 --map('n', '<c-s-l>', '<C-W>L', {silent = true })
 
 -- Navigate within a file
--- Go to next lint error
-map('n', '<leader>e', '<Plug>(ale_next_wrap)')
+
+-- Vim-sneak
+map('n', '<Tab>', '<Plug>Sneak_s', {noremap = false, silent = false})
+map('n', '<S-Tab>', '<Plug>Sneak_S', {noremap = false, silent = false})
+map('v', '<Tab>', '<Plug>Sneak_s', {noremap = false, silent = false})
+map('v', '<S-Tab>', '<Plug>Sneak_S', {noremap = false, silent = false})
+map('o', '<Tab>', '<Plug>Sneak_s', {noremap = false, silent = false})
+map('o', '<S-Tab>', '<Plug>Sneak_S', {noremap = false, silent = false})
+map('n', 'f', '<Plug>Sneak_f', {noremap = false, silent = false})
+map('n', 'F', '<Plug>Sneak_F', {noremap = false, silent = false})
+map('n', 't', '<Plug>Sneak_t', {noremap = false, silent = false})
+map('n', 'T', '<Plug>Sneak_T', {noremap = false, silent = false})
 
 -- Move lines up/down
 -- Based on https://vim.fandom.com/wiki/Moving_lines_up_or_down
