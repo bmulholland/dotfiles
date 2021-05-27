@@ -77,3 +77,5 @@ map('n', '<leader>nt', ":lua require('plugins.telescope').my_note()<CR>", {silen
 map('n', '<leader>gc', ':Octo issue create<CR>', {silent = false})
 map('n', '<leader>i', ':Octo issue list<CR>', {silent = false})
 
+-- Todo-comments
+vim.api.nvim_set_keymap('n', '<leader>to', ':TodoTelescope<CR>', {noremap = true, silent = false})
