@@ -33,6 +33,15 @@ map('n', '<leader>a', ':A<CR>')
 -- Go to next lint error
 map('n', '<leader>e', '<Plug>(ale_next_wrap)')
 
+-- Move lines up/down
+-- Based on https://vim.fandom.com/wiki/Moving_lines_up_or_down
+map('n', '<C-Down>', ':m .+1<CR>==', {silent  = true})
+map('n', '<C-Up>', ':m .-2<CR>==', {silent  = true})
+map('i', '<C-Down>', '<Esc>:m .+1<CR>==gi', {silent  = true})
+map('i', '<C-Up>', '<Esc>:m .-2<CR>==gi', {silent  = true})
+map('v', '<C-Down>', ':m \'>+1<CR>gv=gv', {silent  = true})
+map('v', '<C-Up>', ':m \'<-2<CR>gv=gv', {silent  = true})
+
 -- Open plugins
 map('n', '<leader>t', ":lua require('plugins.telescope').project_files()<CR>", {silent = true})
 
