@@ -81,5 +81,6 @@ return require('packer').startup(function(use)
 	use 'folke/todo-comments.nvim' -- Highlight TODOs
 
 	-- Color theme
-	use 'srcery-colors/srcery-vim'
+	-- Also consisterec nvim-solarized-lua
+	use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
 end)

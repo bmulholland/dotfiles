@@ -4,6 +4,9 @@ if vim.fn.has("termguicolors") == 1 then
 end
 
 vim.cmd('syntax on')
-vim.cmd('colorscheme srcery')
+vim.g.gruvbox_italic = true
+vim.g.gruvbox_contrast_light="hard"
+vim.g.gruvbox_contrast_dark="hard"
 -- TODO: Sync with system dark mode
 vim.o.background = 'dark'
+vim.cmd('colorscheme gruvbox')
