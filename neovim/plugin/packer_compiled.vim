@@ -83,10 +83,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/dash.vim"
   },
-  ["feline.nvim"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/feline.nvim"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
@@ -190,6 +186,14 @@ _G.packer_plugins = {
   ultisnips = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/ultisnips"
+  },
+  ["vim-airline"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-airline"
+  },
+  ["vim-airline-themes"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-airline-themes"
   },
   ["vim-blockle"] = {
     loaded = true,

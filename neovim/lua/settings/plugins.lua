@@ -74,7 +74,8 @@ return require('packer').startup(function(use)
 	use 'romgrk/barbar.nvim' -- better tabs
 	use 'kyazdani42/nvim-web-devicons' -- Nicer icons
 	use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' } -- Indentation guide lines
-	use 'famiu/feline.nvim' -- Pretty status line
+	use 'vim-airline/vim-airline' -- Pretty status line
+	use 'vim-airline/vim-airline-themes'
 	use 'jeffkreeftmeijer/vim-numbertoggle' -- absolute and relative line numbers
 	use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} } -- Add a gutter that shows git additions/deletions/etc
 
