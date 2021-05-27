@@ -12,13 +12,6 @@ vim.cmd('sign define LspDiagnosticsSignInformation text=')
 vim.cmd('sign define LspDiagnosticsSignHint text=')
 vim.cmd('setlocal omnifunc=v:lua.vim.lsp.omnifunc')
 
-require'lspconfig'.html.setup {
-  capabilities = capabilities,
-}
-
-require'lspconfig'.tsserver.setup{
-}
-
 require'lspconfig'.solargraph.setup{
   capabilities = capabilities,
 }
