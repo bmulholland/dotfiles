@@ -14,6 +14,8 @@ return require('packer').startup(function(use)
   -- Packer can manage itself as an optional plugin
   use 'wbthomason/packer.nvim'
 
+  use 'tpope/vim-sensible' -- Sensible defaults
+
     -- LSP
   use 'neovim/nvim-lspconfig'
 
