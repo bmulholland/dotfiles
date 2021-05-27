@@ -58,6 +58,7 @@ return require('packer').startup(function(use)
   use 'christoomey/vim-tmux-navigator' -- Consistently navigate between vim and tmux splits
 
   use "tversteeg/registers.nvim" -- preview the contents of the registers
+	use 'kshenoy/vim-signature' -- show location markers in the gutter
 
   use 'tpope/vim-surround' -- Easily change surrounding tags (e.g. in html)
   use 'windwp/nvim-autopairs' -- Autopair brackets

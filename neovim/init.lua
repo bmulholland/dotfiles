@@ -19,6 +19,7 @@ require('plugins.telescope')
 require('plugins.todo-comments')
 require('plugins.treesitter')
 require('plugins.vim-gutentags')
+require('plugins.vim-signature')
 
 -- LSP Config
 require('lsp')
