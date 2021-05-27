@@ -19,6 +19,11 @@ return require('packer').startup(function(use)
     -- LSP
   use 'neovim/nvim-lspconfig'
 
+  -- Treesitter
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'p00f/nvim-ts-rainbow' -- Different colours for nested parentheses
+  use 'romgrk/nvim-treesitter-context' -- Show offscreen context for the cursor position
+
   -- Ruby helpers
   use 'ecomba/vim-ruby-refactoring' -- Helper methods to refactor Ruby
   use 'tpope/vim-endwise' -- Auto add end keyword in ruby
@@ -56,11 +61,6 @@ return require('packer').startup(function(use)
 
   use 'tpope/vim-surround' -- Easily change surrounding tags (e.g. in html)
   use 'windwp/nvim-autopairs' -- Autopair brackets
-
-  -- Treesitter
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use 'p00f/nvim-ts-rainbow' -- Different colours for nested parentheses
-  use 'romgrk/nvim-treesitter-context' -- Show offscreen context for the cursor position
 
   -- Vim UI stuff
   use 'kyazdani42/nvim-tree.lua' -- File Explorer
