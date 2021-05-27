@@ -40,6 +40,8 @@ return require('packer').startup(function(use)
   use 'SirVer/ultisnips' -- Snippets
   use 'honza/vim-snippets' -- More snippets
 
+  use 'kosayoda/nvim-lightbulb' -- Show a lightbulb when a code fix is available
+
   -- Fuzzy file search
   use 'nvim-lua/popup.nvim'
   use 'nvim-lua/plenary.nvim'
