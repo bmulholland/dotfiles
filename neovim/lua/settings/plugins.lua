@@ -19,16 +19,7 @@ return require('packer').startup(function(use)
     -- LSP
   use 'neovim/nvim-lspconfig'
 
-  -- syntax highlighting for JSON with comments, especially useful for coc.vim
-  -- config
-  use 'kevinoid/vim-jsonc'
-  -- Javscript support
-  use 'pangloss/vim-javascript'
-  -- Support for Vue syntax and indentation
-  use 'leafOfTree/vim-vue-plugin'
-
   -- Ruby helpers
-  use 'vim-ruby/vim-ruby'
   use 'ecomba/vim-ruby-refactoring' -- Helper methods to refactor Ruby
   use 'tpope/vim-endwise' -- Auto add end keyword in ruby
   use 'jgdavey/vim-blockle' -- toggle between do/end and {} ruby block styles

@@ -195,14 +195,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-gutentags"
   },
-  ["vim-javascript"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-javascript"
-  },
-  ["vim-jsonc"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-jsonc"
-  },
   ["vim-matchup"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-matchup"
@@ -214,10 +206,6 @@ _G.packer_plugins = {
   ["vim-rails"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-rails"
-  },
-  ["vim-ruby"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-ruby"
   },
   ["vim-ruby-refactoring"] = {
     loaded = true,
@@ -242,10 +230,6 @@ _G.packer_plugins = {
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator"
-  },
-  ["vim-vue-plugin"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-vue-plugin"
   }
 }
 
