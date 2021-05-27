@@ -36,9 +36,7 @@ return require('packer').startup(function(use)
   use 'kosayoda/nvim-lightbulb' -- Show a lightbulb when a code fix is available
 
   -- Fuzzy file search
-  use 'nvim-lua/popup.nvim'
-  use 'nvim-lua/plenary.nvim'
-  use 'nvim-telescope/telescope.nvim'
+  use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }
   use 'nvim-telescope/telescope-fzy-native.nvim'
   use 'nvim-telescope/telescope-project.nvim'
   use 'fhill2/telescope-ultisnips.nvim'
