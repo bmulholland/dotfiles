@@ -83,4 +83,7 @@ return require('packer').startup(function(use)
 	-- Color theme
 	-- Also consisterec nvim-solarized-lua
 	use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+
+	-- Auto-switch to dark mode
+	use 'cormacrelf/dark-notify'
 end)

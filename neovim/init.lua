@@ -6,6 +6,7 @@ require('settings.colors')
 
 require('settings.scrolloff-fraction')
 
+require('plugins.dark-notify')
 require('plugins.feline')
 require('plugins.gitsigns')
 require('plugins.lspkind')
