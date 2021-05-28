@@ -7,6 +7,6 @@ vim.cmd('syntax on')
 vim.g.gruvbox_italic = true
 vim.g.gruvbox_contrast_light="hard"
 vim.g.gruvbox_contrast_dark="hard"
--- TODO: Sync with system dark mode
+-- This syncs with dark mode using dark-notify
 vim.o.background = 'dark'
 vim.cmd('colorscheme gruvbox')
