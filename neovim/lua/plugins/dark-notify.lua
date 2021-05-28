@@ -1,9 +1,14 @@
 require('dark_notify').run({
+	schemes = {
+		-- you can use a different colorscheme for each
+		dark  = "sonokai",
+		light  = "ayu",
+	},
 	onchange = function(mode)
 		if mode == "dark" then
-			vim.cmd(':AirlineTheme base16_gruvbox_dark_hard')
+			vim.cmd(':AirlineTheme sonokai')
 		else
-			vim.cmd(':AirlineTheme base16_gruvbox_light_hard')
+			vim.cmd(':AirlineTheme ayu')
 		end
 	end
 })

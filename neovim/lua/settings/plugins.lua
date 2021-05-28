@@ -84,8 +84,8 @@ return require('packer').startup(function(use)
         use 'kosayoda/nvim-lightbulb' -- Show a lightbulb when a code fix is available
 
         -- Color theme
-        -- Also consisterec nvim-solarized-lua
-        use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+        use 'sainnhe/sonokai' -- dark color scheme
+        use 'Luxed/ayu-vim' -- light color scheme
 
         -- Auto-switch to dark mode
         use 'cormacrelf/dark-notify'
