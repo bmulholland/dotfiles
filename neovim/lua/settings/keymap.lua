@@ -53,11 +53,11 @@ map('v', '<C-Down>', ':m \'>+1<CR>gv=gv', {silent  = true})
 map('v', '<C-Up>', ':m \'<-2<CR>gv=gv', {silent  = true})
 
 -- Open plugins
-map('n', '<leader>t', ":lua require('plugins.telescope').project_files()<CR>", {silent = true})
+map('n', '<leader>t', ":lua require('plugins.telescope').project_files()<CR>", {silent = true, nowait = true})
 
 map('n', '<leader>n', ':NvimTreeToggle<cr>') -- Open a file explorer
 
-map('n', '<leader>d', ':Dash<CR>', {silent = true }) -- Look up command in Dash
+map('n', '<leader>da', ':Dash<CR>', {silent = true }) -- Look up command in Dash
 
 -- Pretty print JSON
 map('n', '<leader>o', ':%!python -m json.tool<CR>')
@@ -88,7 +88,7 @@ map('n', '<leader>gc', ':Octo issue create<CR>', {silent = false})
 map('n', '<leader>i', ':Octo issue list<CR>', {silent = false})
 
 -- Todo-comments
-map('n', '<leader>to', ':TodoTelescope<CR>', {noremap = true, silent = false})
+map('n', '<leader>do', ':TodoTelescope<CR>', {noremap = true, silent = false})
 
 -- Refactoring ruby
 map('n', '<leader>ap', ':RAddParameter<CR>', {silent = true})
