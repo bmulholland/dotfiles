@@ -95,8 +95,8 @@ map('n', '<leader>ap', ':RAddParameter<CR>', {silent = true})
 map('v', '<leader>em', ':RExtractMethod<CR>', {silent = true})
 
 -- Run tests in vim
-map('n', '<leader>tn', ':w<CR>:TestNearest<CR>', {silent = true})
-map('n', '<leader>tf', ':w<CR>:TestFile<CR>', {silent = true})
-map('n', '<leader>ts', ':w<CR>:TestSuite<CR>', {silent = true})
-map('n', '<leader>tl', ':w<CR>:TestLast<CR>', {silent = true})
-map('n', '<leader>tv', ':w<CR>:TestVisit<CR>', {silent = true})
+map('n', '<leader>rn', ':w<CR>:TestNearest<CR>', {silent = true})
+map('n', '<leader>rf', ':w<CR>:TestFile<CR>', {silent = true})
+map('n', '<leader>rs', ':w<CR>:TestSuite<CR>', {silent = true})
+map('n', '<leader>rl', ':w<CR>:TestLast<CR>', {silent = true})
+map('n', '<leader>rv', ':w<CR>:TestVisit<CR>', {silent = true})
