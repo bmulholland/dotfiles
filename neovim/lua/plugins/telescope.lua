@@ -2,6 +2,7 @@
 local actions = require('telescope.actions')
 require('telescope').setup{
   defaults = {
+		file_ignore_patterns = {"sorbet/*", "spec/vcr_cassettes/*"},
     prompt_prefix = "λ -> ",
     selection_caret = "|> ",
     -- Don't pass to normal mode with ESC, problem with telescope-project
