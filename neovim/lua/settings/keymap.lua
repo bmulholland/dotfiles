@@ -69,7 +69,7 @@ map('n', '<leader>ca', ':lua vim.lsp.diagnostic.code_action()<CR>', {silent = tr
 map('n', '<leader>d', ':lua vim.lsp.buf.definition()<CR>', {silent = true})
 map('n', '<leader>h', ':lua vim.lsp.buf.hover()<CR>', {silent = true})
 map('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>',{silent = true})
-map('n', '<leader>rf', ':lua vim.lsp.buf.references()<CR>', {silent = true})
+map('n', '<leader>ref', ':lua vim.lsp.buf.references()<CR>', {silent = true})
 map('n', '<leader>s', ':lua vim.lsp.buf.document_symbol()<CR>', {silent = true})
 -- Telescope
 -- TODO: Learn these too
