@@ -2,8 +2,8 @@
 vim.api.nvim_exec([[
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-" autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global=1
-" autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global=1
+autocmd BufRead,BufNewFile *.md setlocal spell
 ]], true)
 
 require'compe'.setup {

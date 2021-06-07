@@ -2,9 +2,6 @@ local nvim_lsp = require('lspconfig')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
--- Auto format on save
-vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
-
 -- Diagnostics symbols for display in the sign column.
 vim.cmd('sign define LspDiagnosticsSignError text=')
 vim.cmd('sign define LspDiagnosticsSignWarning text=')
@@ -18,3 +15,6 @@ require'lspconfig'.solargraph.setup{
 
 
 require'lspconfig'.sorbet.setup{}
+
+-- Auto format on save
+vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
