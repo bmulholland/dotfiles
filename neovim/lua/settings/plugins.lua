@@ -16,6 +16,9 @@ return require('packer').startup(function(use)
 
         use 'tpope/vim-sensible' -- Sensible defaults
 
+				-- Auto-set line and spacing params
+				use 'editorconfig/editorconfig-vim'
+
         -- LSP
         use 'neovim/nvim-lspconfig'
 
