@@ -50,12 +50,13 @@ return require('packer').startup(function(use)
 	use 'nvim-telescope/telescope-fzy-native.nvim'
 	use 'nvim-telescope/telescope-project.nvim'
 	use 'fhill2/telescope-ultisnips.nvim'
-	use { 'pwntester/octo.nvim', requires = {{'nvim-lua/plenary.nvim'}, {'nvim-lua/popup.nvim'}} }
 
 	use 'rizzatti/dash.vim' -- Documentation lookups
 
 	-- Git
 	use 'tpope/vim-fugitive' -- Git helper commands
+	use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+	use 'sindrets/diffview.nvim'
 
 	-- Easier test running
 	use { "rcarriga/vim-ultest", requires = {"janko/vim-test"}, run = ":UpdateRemotePlugins" }

@@ -74,12 +74,12 @@ map('n', '<leader>m', ":lua require('telescope.builtin').marks()<CR>", {silent =
 map('n', '<leader>e', ":lua require('telescope.builtin').treesitter()<CR>", {silent = true})
 map('n', '<leader>l', ":lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>", {silent = true})
 map('n', '<leader>p', ":lua require('telescope').extensions.project.project{}<CR>", {silent = true})
-map('n', '<leader>c', ":lua require('plugins.telescope').my_git_commits()<CR>", {silent = true})
-map('n', '<leader>gg', ":lua require('plugins.telescope').my_git_status()<CR>", {silent = true})
-map('n', '<leader>b', ":lua require('plugins.telescope').my_git_bcommits()<CR>", {silent = true})
+map('n', '<leader>gc', ":lua require('plugins.telescope').my_git_commits()<CR>", {silent = true})
+map('n', '<leader>gb', ":lua require('plugins.telescope').my_git_bcommits()<CR>", {silent = true})
 map('n', '<leader>nt', ":lua require('plugins.telescope').my_note()<CR>", {silent = true})
-map('n', '<leader>gc', ':Octo issue create<CR>', {silent = false})
-map('n', '<leader>i', ':Octo issue list<CR>', {silent = false})
+
+-- Git
+map('n', '<leader>gg', ":Neogit<CR>", {silent = true})
 
 -- Todo-comments
 map('n', '<leader>do', ':TodoTelescope<CR>', {noremap = true, silent = false})
