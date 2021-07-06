@@ -17,4 +17,4 @@ require'lspconfig'.solargraph.setup{
 require'lspconfig'.sorbet.setup{}
 
 -- Auto format on save
-vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 500)]]
