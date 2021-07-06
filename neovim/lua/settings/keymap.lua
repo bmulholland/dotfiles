@@ -53,15 +53,21 @@ map('n', '<leader>o', ':%!python -m json.tool<CR>')
 -- LSP - Errors, Definitions, etc
 map('n', '<leader>,', ':lua vim.lsp.diagnostic.goto_prev()<CR>', {silent = true})
 map('n', '<leader>;', ':lua vim.lsp.diagnostic.goto_next()<CR>', {silent = true})
-map('n', '<leader>ca', ':lua vim.lsp.diagnostic.code_action()<CR>', {silent = true})
-map('n', '<leader>d', ':lua vim.lsp.buf.definition()<CR>', {silent = true})
 map('n', '<leader>h', ':lua vim.lsp.buf.hover()<CR>', {silent = true})
 map('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>',{silent = true})
-map('n', '<leader>ref', ':lua vim.lsp.buf.references()<CR>', {silent = true})
 map('n', '<leader>s', ':lua vim.lsp.buf.document_symbol()<CR>', {silent = true})
+-- The experience of these isn't great - try the telescope versions
+--map('n', '<leader>ca', ':lua vim.lsp.diagnostic.code_action()<CR>', {silent = true})
+--map('n', '<leader>d', ':lua vim.lsp.buf.definition()<CR>', {silent = true})
+--map('n', '<leader>ref', ':lua vim.lsp.buf.references()<CR>', {silent = true})
+
 -- Telescope
 -- TODO: Learn these too
 -- From https://github.com/crivotz/nv-ide/blob/master/lua/settings/keymap.lua#L41
+map('n', '<leader>ca', ":lua require('telescope.builtin').lsp_code_actions()<CR>", {silent = true})
+map('n', '<leader>d', ":lua require('telescope.builtin').lsp_definitions()<CR>", {silent = true})
+map('n', '<leader>ref', ":lua require('telescope.builtin').lsp_references()<CR>", {silent = true})
+
 map('n', '<leader>r', ":lua require('telescope.builtin').live_grep()<CR>", {silent = true})
 map('n', '<leader>bb', ":lua require('telescope.builtin').buffers()<CR>", {silent = true})
 map('n', '<leader>m', ":lua require('telescope.builtin').marks()<CR>", {silent = true})
