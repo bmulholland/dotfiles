@@ -31,18 +31,6 @@ map('n', '<leader>a', ':A<CR>')
 
 -- Navigate within a file
 
--- Vim-sneak
-map('n', '<Tab>', '<Plug>Sneak_s', {noremap = false, silent = false})
-map('n', '<S-Tab>', '<Plug>Sneak_S', {noremap = false, silent = false})
-map('x', '<Tab>', '<Plug>Sneak_s', {noremap = false, silent = false})
-map('x', '<S-Tab>', '<Plug>Sneak_S', {noremap = false, silent = false})
-map('o', '<Tab>', '<Plug>Sneak_s', {noremap = false, silent = false})
-map('o', '<S-Tab>', '<Plug>Sneak_S', {noremap = false, silent = false})
-map('n', 'f', '<Plug>Sneak_f', {noremap = false, silent = false})
-map('n', 'F', '<Plug>Sneak_F', {noremap = false, silent = false})
-map('n', 't', '<Plug>Sneak_t', {noremap = false, silent = false})
-map('n', 'T', '<Plug>Sneak_T', {noremap = false, silent = false})
-
 -- Move lines up/down
 -- Based on https://vim.fandom.com/wiki/Moving_lines_up_or_down
 map('n', '<C-Down>', ':m .+1<CR>==', {silent  = true})

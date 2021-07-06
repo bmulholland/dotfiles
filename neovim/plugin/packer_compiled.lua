@@ -97,6 +97,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
+  ["lightspeed.nvim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/lightspeed.nvim"
+  },
   ["lsp_signature.nvim"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
@@ -240,10 +244,6 @@ _G.packer_plugins = {
   ["vim-signature"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-signature"
-  },
-  ["vim-sneak"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-sneak"
   },
   ["vim-snippets"] = {
     loaded = true,
