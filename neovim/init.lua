@@ -23,6 +23,7 @@ require('plugins.vim-gutentags')
 require('plugins.vim-signature')
 require('plugins.vim-sneak')
 require('plugins.vim-ultest')
+require('plugins.which-key')
 
 -- LSP Config
 require('lsp')
