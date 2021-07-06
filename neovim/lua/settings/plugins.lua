@@ -80,7 +80,7 @@ return require('packer').startup(function(use)
 	use 'kyazdani42/nvim-tree.lua' -- File Explorer
 	use 'romgrk/barbar.nvim' -- better tabs
 	use 'kyazdani42/nvim-web-devicons' -- Nicer icons
-	use { 'lukas-reineke/indent-blankline.nvim' } -- Indentation guide lines
+	use 'lukas-reineke/indent-blankline.nvim' -- Indentation guide lines
 	use 'vim-airline/vim-airline' -- Pretty status line
 	use 'vim-airline/vim-airline-themes'
 	use 'jeffkreeftmeijer/vim-numbertoggle' -- absolute and relative line numbers
