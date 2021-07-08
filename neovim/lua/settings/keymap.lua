@@ -22,6 +22,7 @@ map('v', '<leader>p', '"_dP') -- Paste multiple times with the same contents
 -- in a view the "alternate" is the spec and the "related" is the controller (method)
 -- Easily switch between file and its spec using rails.vim's alternate file functionality
 map('n', '<leader>a', ':A<CR>')
+map('n', '<leader>A', ':AV<CR>') -- open in vertical split
 
 -- Move the splits arround - but sadly couldn't get it working
 --map('n', '<c-s-k>', '<C-W>K', {silent = true })
