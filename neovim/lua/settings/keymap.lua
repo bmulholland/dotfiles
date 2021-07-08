@@ -42,7 +42,6 @@ map('v', '<C-Down>', ':m \'>+1<CR>gv=gv', {silent  = true})
 map('v', '<C-Up>', ':m \'<-2<CR>gv=gv', {silent  = true})
 
 -- Open plugins
-map('n', '<leader>t', ":lua require('plugins.telescope').project_files()<CR>", {silent = true, nowait = true})
 
 map('n', '<leader>n', ':NvimTreeToggle<cr>') -- Open a file explorer
 
@@ -63,6 +62,8 @@ map('n', '<leader>s', ':lua vim.lsp.buf.document_symbol()<CR>', {silent = true})
 --map('n', '<leader>ref', ':lua vim.lsp.buf.references()<CR>', {silent = true})
 
 -- Telescope
+--map('n', '<leader>t', ":lua require('plugins.telescope').project_files()<CR>", {silent = true, nowait = true})
+map('n', '<leader>t', ":lua require('telescope').extensions.frecency.frecency()<CR>", {silent = true, nowait = true})
 -- TODO: Learn these too
 -- From https://github.com/crivotz/nv-ide/blob/master/lua/settings/keymap.lua#L41
 map('n', '<leader>ca', ":lua require('telescope.builtin').lsp_code_actions()<CR>", {silent = true})

@@ -173,6 +173,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/splitjoin.vim"
   },
+  ["sql.nvim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/sql.nvim"
+  },
+  ["telescope-frecency.nvim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/telescope-frecency.nvim"
+  },
   ["telescope-project.nvim"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/telescope-project.nvim"

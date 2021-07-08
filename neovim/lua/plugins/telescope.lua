@@ -10,6 +10,7 @@ require('telescope').setup{
 
 		require('telescope').load_extension('ultisnips')
 		require('telescope').load_extension('project')
+		require("telescope").load_extension("frecency")
 
 		-- Implement delta as previewer for diffs
 
