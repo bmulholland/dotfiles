@@ -77,7 +77,6 @@ map('n', '<leader>l', ":lua require('telescope.builtin').current_buffer_fuzzy_fi
 map('n', '<leader>p', ":lua require('telescope').extensions.project.project{}<CR>", {silent = true})
 map('n', '<leader>gc', ":lua require('plugins.telescope').my_git_commits()<CR>", {silent = true})
 map('n', '<leader>gb', ":lua require('plugins.telescope').my_git_bcommits()<CR>", {silent = true})
-map('n', '<leader>nt', ":lua require('plugins.telescope').my_note()<CR>", {silent = true})
 
 -- Git
 map('n', '<leader>gg', ":Neogit<CR>", {silent = true})
