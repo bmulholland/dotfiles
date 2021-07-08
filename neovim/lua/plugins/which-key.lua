@@ -30,7 +30,10 @@ require("which-key").setup {
     width = { min = 20, max = 50 }, -- min and max width of the columns
     spacing = 3, -- spacing between columns
   },
-  hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ ", "require%('telescope.builtin'%)." }, -- hide mapping boilerplate
+	hidden = {
+		"<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ ",
+		"require%('", "builtin'%).", "require%('plugins", "'%)", ".extensions.project", "^vim."
+}, -- hide mapping boilerplate
   show_help = true, -- show help message on the command line when the popup is visible
 }
 
