@@ -22,6 +22,9 @@ o.shiftwidth = 2
 bo.expandtab = true -- Use spaces instead of tabs
 vim.cmd('filetype plugin indent on')
 
+-- Doce folding
+wo.foldenable = false
+
 -- Text highlighting
 o.showmatch = true -- Show the matching brace when a new one is added
 
