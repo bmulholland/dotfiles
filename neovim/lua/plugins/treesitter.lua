@@ -9,4 +9,7 @@ require'nvim-treesitter.configs'.setup {
 	matchup = {
 		enable = true,
 	},
+	incremental_selection = {
+		enable = true,
+	},
 }
