@@ -54,7 +54,7 @@ map('n', '<leader>o', ':%!python -m json.tool<CR>')
 map('n', '<leader>,', ':lua vim.lsp.diagnostic.goto_prev()<CR>', {silent = true})
 map('n', '<leader>;', ':lua vim.lsp.diagnostic.goto_next()<CR>', {silent = true})
 map('n', '<leader>h', ':lua vim.lsp.buf.hover()<CR>', {silent = true})
-map('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>',{silent = true})
+map('n', '<leader>rnm', ':lua vim.lsp.buf.rename()<CR>',{silent = true})
 map('n', '<leader>s', ':lua vim.lsp.buf.document_symbol()<CR>', {silent = true})
 -- The experience of these isn't great - try the telescope versions
 --map('n', '<leader>ca', ':lua vim.lsp.diagnostic.code_action()<CR>', {silent = true})
