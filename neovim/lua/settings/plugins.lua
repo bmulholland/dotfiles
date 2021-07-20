@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
 	use 'folke/which-key.nvim'
 
 	-- Treesitter
-	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+	use { 'nvim-treesitter/nvim-treesitter', branch = '0.5-compat', run = ':TSUpdate' }
 	use 'p00f/nvim-ts-rainbow' -- Different colours for nested parentheses
 	use 'romgrk/nvim-treesitter-context' -- Show offscreen context for the cursor position
 
