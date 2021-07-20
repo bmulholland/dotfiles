@@ -61,12 +61,13 @@ map('n', '<leader>s', ':lua vim.lsp.buf.document_symbol()<CR>', {silent = true})
 --map('n', '<leader>d', ':lua vim.lsp.buf.definition()<CR>', {silent = true})
 --map('n', '<leader>ref', ':lua vim.lsp.buf.references()<CR>', {silent = true})
 
+map('n', '<leader>def', ":lua require('telescope.builtin').lsp_definitions()<CR>", {silent = true})
+
 -- Telescope
 map('n', '<leader>t', ":lua require('plugins.telescope').project_files()<CR>", {silent = true, nowait = true})
 -- TODO: Learn these too
 -- From https://github.com/crivotz/nv-ide/blob/master/lua/settings/keymap.lua#L41
 map('n', '<leader>ca', ":lua require('telescope.builtin').lsp_code_actions()<CR>", {silent = true})
-map('n', '<leader>d', ":lua require('telescope.builtin').lsp_definitions()<CR>", {silent = true})
 map('n', '<leader>ref', ":lua require('telescope.builtin').lsp_references()<CR>", {silent = true})
 
 map('n', '<leader>r', ":lua require('telescope.builtin').live_grep()<CR>", {silent = true})
