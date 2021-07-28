@@ -97,6 +97,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
+  kommentary = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/kommentary"
+  },
   ["lightspeed.nvim"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/lightspeed.nvim"
@@ -200,10 +204,6 @@ _G.packer_plugins = {
   ["vim-airline-themes"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-airline-themes"
-  },
-  ["vim-commentary"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-commentary"
   },
   ["vim-endwise"] = {
     loaded = true,
