@@ -25,6 +25,9 @@ return require('packer').startup(function(use)
 	-- WhichKey: help remember and learn shortcuts
 	use 'folke/which-key.nvim'
 
+	-- autocompletion for wildmenu
+	use 'gelguy/wilder.nvim'
+
 	-- Treesitter
 	use { 'nvim-treesitter/nvim-treesitter', branch = '0.5-compat', run = ':TSUpdate' }
 	use 'p00f/nvim-ts-rainbow' -- Different colours for nested parentheses
