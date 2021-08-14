@@ -48,9 +48,10 @@ return require('packer').startup(function(use)
 	use 'SirVer/ultisnips' -- Snippets
 	use 'honza/vim-snippets' -- More snippets
 
+
 	-- Fuzzy file search
 	use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }
-	use 'nvim-telescope/telescope-project.nvim'
+	use "ahmedkhalf/project.nvim" -- keep track of porjects, and cd to the correct dir
 	use 'fhill2/telescope-ultisnips.nvim'
 
 	use 'rizzatti/dash.vim' -- Documentation lookups

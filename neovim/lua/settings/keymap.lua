@@ -75,7 +75,7 @@ map('n', '<leader>bb', ":lua require('telescope.builtin').buffers()<CR>", {silen
 map('n', '<leader>m', ":lua require('telescope.builtin').marks()<CR>", {silent = true})
 map('n', '<leader>e', ":lua require('telescope.builtin').treesitter()<CR>", {silent = true})
 map('n', '<leader>l', ":lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>", {silent = true})
-map('n', '<leader>p', ":lua require('telescope').extensions.project.project{}<CR>", {silent = true})
+map('n', '<leader>prj', ":Telescope projects<CR>", {silent = true})
 map('n', '<leader>gc', ":lua require('plugins.telescope').my_git_commits()<CR>", {silent = true})
 map('n', '<leader>gb', ":lua require('plugins.telescope').my_git_bcommits()<CR>", {silent = true})
 

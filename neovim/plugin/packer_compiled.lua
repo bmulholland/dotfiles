@@ -169,6 +169,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
+  ["project.nvim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/project.nvim"
+  },
   sonokai = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/sonokai"
@@ -176,10 +180,6 @@ _G.packer_plugins = {
   ["splitjoin.vim"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/splitjoin.vim"
-  },
-  ["telescope-project.nvim"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/telescope-project.nvim"
   },
   ["telescope-ultisnips.nvim"] = {
     loaded = true,
