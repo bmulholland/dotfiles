@@ -9,12 +9,17 @@ vim.cmd('sign define LspDiagnosticsSignInformation text=')
 vim.cmd('sign define LspDiagnosticsSignHint text=')
 vim.cmd('setlocal omnifunc=v:lua.vim.lsp.omnifunc')
 
+-- Ruby
 require'lspconfig'.solargraph.setup{
   capabilities = capabilities,
 }
-
-
 require'lspconfig'.sorbet.setup{}
+
+-- Frontend/Vue
+require'lspconfig'.tsserver.setup{
+}
+require'lspconfig'.vuels.setup{
+}
 
 -- Auto format on save
 vim.cmd [[autocmd BufWritePre *.rb,*.rake lua vim.lsp.buf.formatting_sync(nil, 500)]]
