@@ -15,6 +15,10 @@ map('n', '<leader><Space>', ':w<CR>') -- Save file by hammering space twice
 
 map('v', '<leader>p', '"_dP') -- Paste multiple times with the same contents
 
+-- turn off ex mode
+map('n', 'Q', '<Nop>')
+
+
 -- Navigate between files
 -- (From https://wincent.com/wiki/rails.vim_cheatsheet)
 -- in a model the "alternate" is the spec and the "related" is the schema
