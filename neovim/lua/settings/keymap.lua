@@ -10,7 +10,7 @@ wk.register({
 		-- in a controller (method) the "alternate" is the spec and the "related" is the view
 		-- in a view the "alternate" is the spec and the "related" is the controller (method)
 		-- Easily switch between file and its spec using rails.vim's alternate file functionality
-		A = {':AV<CR>', 'Open in rails alternate in VSplit'},
+		A = {':AV<CR>', 'Open rails alternate in VSplit'},
 		a = {':A<CR>', 'Open rails alternate'},
 		['bb'] = {":lua require('telescope.builtin').buffers()<CR>", "List buffers"},
 		['ca'] = {":lua require('telescope.builtin').lsp_code_actions()<CR>", "LSP code action"},
@@ -18,10 +18,14 @@ wk.register({
 		['def'] = {":lua require('telescope.builtin').lsp_definitions()<CR>", 'Go to definition'},
 		['do'] = {':TodoTelescope<CR>', "Show todos", noremap = true},
 		e = {":lua require('telescope.builtin').treesitter()<CR>", "Open treesitter"},
-		['gb'] = {":lua require('plugins.telescope').my_git_bcommits()<CR>", "List commits for this buffer"},
-		['gc'] = {":lua require('plugins.telescope').my_git_commits()<CR>", "List all commits"},
-		['gg'] = {":Neogit<CR>", "Neogit"},
 		['gr'] = {":lua require('telescope.builtin').live_grep()<CR>", "Grep code"},
+    ['gt'] = {
+      name = "+ git",
+      b = {":lua require('plugins.telescope').my_git_bcommits()<CR>", "List commits for this buffer"},
+      c = {":lua require('plugins.telescope').my_git_commits()<CR>", "List all commits"},
+      g = {":Neogit<CR>", "Neogit"},
+      r = {":lua require('telescope.builtin').live_grep()<CR>", "Grep code"}
+    },
 		h = {':lua vim.lsp.buf.hover()<CR>', 'open LSP hover'},
 		m = {":lua require('telescope.builtin').marks()<CR>", "List marks"},
 		n = {':NvimTreeToggle<cr>', 'Open a file explorer'},
@@ -34,7 +38,8 @@ wk.register({
     ['rf'] = {
       name = "+ refactor",
       ['ap'] = {':RAddParameter<CR>', "Add parameter (ruby)"},
-      ['em'] = {':RExtractMethod<CR>', "Extract method (ruby)"}
+      ['em'] = {':RExtractMethod<CR>', "Extract method (ruby)"},
+      ['rn'] = {':lua vim.lsp.buf.rename()<CR>', 'Rename symbol'}
     },
 		['rs'] = {
 			name = "+ tests",
@@ -44,7 +49,6 @@ wk.register({
 			l = {':w<CR>:TestLast<CR>', "Re-run last test"},
 			v = {':w<CR>:TestVisit<CR>', "Re-open file from last test run"}
 		},
-		['rnm'] = {':lua vim.lsp.buf.rename()<CR>', 'Rename symbol'},
 		s = {':lua vim.lsp.buf.document_symbol()<CR>', 'List symbols in current docx'},
 		t = {":lua require('plugins.telescope').project_files()<CR>", "Open project's files"},
 		w = {':w<CR>', 'Save file'},
