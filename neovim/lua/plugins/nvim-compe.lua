@@ -6,6 +6,15 @@ autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global=1
 autocmd BufRead,BufNewFile *.md setlocal spell
 ]], true)
 
+-- From https://github.com/hrsh7th/nvim-compe#mappings
+vim.api.nvim_exec([[
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <CR>      compe#confirm(luaeval("require 'nvim-autopairs'.autopairs_cr()"))
+inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+]], true)
+
 require'compe'.setup {
   enabled = true,
   autocomplete = true,

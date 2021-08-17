@@ -3,6 +3,10 @@ local o = vim.o
 local wo = vim.wo
 local bo = vim.bo
 
+-- Recquired for compe
+-- https://github.com/hrsh7th/nvim-compe#prerequisite
+vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
+
 -- Search
 o.laststatus = 2 -- Always show the status line
 o.incsearch = true -- Make searching be incremental (e.g. search as you type)
