@@ -16,31 +16,43 @@ wk.register({
 		['ca'] = {":lua require('telescope.builtin').lsp_code_actions()<CR>", "LSP code action"},
 		['da'] = {':Dash<CR>', 'Look up command in Dash'},
 		['def'] = {":lua require('telescope.builtin').lsp_definitions()<CR>", 'Go to definition'},
-		['do'] = {':TodoTelescope<CR>', "Show todos", noremap = true},
+		['do'] = {':TodoTelescope<CR>', "Show todos"},
 		e = {":lua require('telescope.builtin').treesitter()<CR>", "Open treesitter"},
-		['gr'] = {":lua require('telescope.builtin').live_grep()<CR>", "Grep code"},
-    ['gt'] = {
-      name = "+ git",
-      b = {":lua require('plugins.telescope').my_git_bcommits()<CR>", "List commits for this buffer"},
-      c = {":lua require('plugins.telescope').my_git_commits()<CR>", "List all commits"},
-      g = {":Neogit<CR>", "Neogit"},
-      r = {":lua require('telescope.builtin').live_grep()<CR>", "Grep code"}
-    },
+		g = {
+			r = {":lua require('telescope.builtin').live_grep()<CR>", "Grep code"},
+			t = {
+				name = "+ git",
+				b = {":lua require('plugins.telescope').my_git_bcommits()<CR>", "List commits for this buffer"},
+				c = {":lua require('plugins.telescope').my_git_commits()<CR>", "List all commits"},
+				g = {":Neogit<CR>", "Neogit"},
+
+				s = {'<cmd>lua require"gitsigns".stage_hunk()<CR>', "Stage hunk"},
+				u = {'<cmd>lua require"gitsigns".undo_stage_hunk()<CR>', "Un-stage hunk"},
+				r = {'<cmd>lua require"gitsigns".reset_hunk()<CR>',"Reset hunk"},
+				R = {'<cmd>lua require"gitsigns".reset_buffer()<CR>', "Reset buffer"},
+				p = {'<cmd>lua require"gitsigns".preview_hunk()<CR>', "Preview hunk"},
+				b = {'<cmd>lua require"gitsigns".blame_line(true)<CR>', "Blame line"}
+
+				-- https://github.com/folke/which-key.nvim/issues/153
+				--s = {'<cmd>lua require"gitsigns".stage_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>', "Stage lines", mode = 'v'},
+				--r = {'<cmd>lua require"gitsigns".reset_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>', "Reset lines", mode = 'v'},
+			}
+		},
 		h = {':lua vim.lsp.buf.hover()<CR>', 'open LSP hover'},
 		m = {":lua require('telescope.builtin').marks()<CR>", "List marks"},
 		n = {':NvimTreeToggle<cr>', 'Open a file explorer'},
 		l = {":lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>", "Fuzzy find in buffer"},
 		o = {':%!python -m json.tool<CR>', 'Pretty print JSON'},
-    p = {'"_dP', "Paste multiple times with the same contents"},
+		p = {'"_dP', "Paste multiple times with the same contents"},
 		['prj'] = {":Telescope projects<CR>", "Open projects"},
 		q = {':bd<CR>', 'Close current buffer' },
 		['ref'] = {":lua require('telescope.builtin').lsp_references()<CR>", "List references"},
-    ['rf'] = {
-      name = "+ refactor",
-      ['ap'] = {':RAddParameter<CR>', "Add parameter (ruby)"},
-      ['em'] = {':RExtractMethod<CR>', "Extract method (ruby)"},
-      ['rn'] = {':lua vim.lsp.buf.rename()<CR>', 'Rename symbol'}
-    },
+		['rf'] = {
+			name = "+ refactor",
+			['ap'] = {':RAddParameter<CR>', "Add parameter (ruby)"},
+			['em'] = {':RExtractMethod<CR>', "Extract method (ruby)"},
+			['rn'] = {':lua vim.lsp.buf.rename()<CR>', 'Rename symbol'}
+		},
 		['rs'] = {
 			name = "+ tests",
 			n = {':w<CR>:TestNearest<CR>', 'Run nearest test'},
@@ -60,11 +72,18 @@ wk.register({
 	-- Move lines up/down
 	-- Based on https://vim.fandom.com/wiki/Moving_lines_up_or_down
 	['<C-Down>'] = {':m .+1<CR>==', "Move line down"},
-  ['<C-Up>'] = {':m .-2<CR>==', "Move line up"},
-  ['<C-Down>'] = {'<Esc>:m .+1<CR>==gi', "Move line down", mode='i'},
-  ['<C-Up>'] = {'<Esc>:m .-2<CR>==gi', "Move line up", mode='i'},
-  ['<C-Down>'] = {':m \'>+1<CR>gv=gv', "Move line down", mode='v'},
-  ['<C-Up>'] = {':m \'<-2<CR>gv=gv', "Move line up", mode='v'}
+	['<C-Up>'] = {':m .-2<CR>==', "Move line up"},
+	['<C-Down>'] = {'<Esc>:m .+1<CR>==gi', "Move line down", mode='i'},
+	['<C-Up>'] = {'<Esc>:m .-2<CR>==gi', "Move line up", mode='i'},
+	['<C-Down>'] = {':m \'>+1<CR>gv=gv', "Move line down", mode='v'},
+	['<C-Up>'] = {':m \'<-2<CR>gv=gv', "Move line up", mode='v'},
+
+	-- Text objects
+	['ih'] = {':<C-U>lua require"gitsigns.actions".select_hunk()<CR>', "Select hunk", mode = "o"},
+	['ih'] = {':<C-U>lua require"gitsigns.actions".select_hunk()<CR>', "Select hunk", mode = "x"},
+	[']c'] = {"&diff ? ']c' : '<cmd>lua require\"gitsigns.actions\".next_hunk()<CR>'", "Next hunk", expr = true},
+	['[c'] = {"&diff ? '[c' : '<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>'", "Prev hunk", expr = true}
+
 })
 
 
