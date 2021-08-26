@@ -30,4 +30,4 @@ require'lspconfig'.vuels.setup{
 }
 
 -- Auto format on save
-vim.cmd [[autocmd BufWritePre *.rb,*.rake,*.js,*.ts,*.vue lua vim.lsp.buf.formatting_sync(nil, 500)]]
+vim.cmd [[autocmd BufWritePre *.rb,*.rake,*.json,*.js,*.ts,*.vue lua vim.lsp.buf.formatting_sync(nil, 500)]]
