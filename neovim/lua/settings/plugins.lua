@@ -69,7 +69,6 @@ return require('packer').startup(function(use)
 	use 'andymass/vim-matchup' -- Improved matchit; use % to navigate between paids of brackets, if/end, etc
 	use 'christoomey/vim-tmux-navigator' -- Consistently navigate between vim and tmux splits
 	use 'kshenoy/vim-signature' -- show location markers in the gutter
-	use 'chaoren/vim-wordmotion' -- treat common variable naming schemes as vim words, despite no spaces
 	use 'ggandor/lightspeed.nvim' -- More powerful character-based movements
 
 	use 'tpope/vim-surround' -- Easily change surrounding tags (e.g. in html)
