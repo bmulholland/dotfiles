@@ -32,10 +32,6 @@ wk.register({
 				R = {'<cmd>lua require"gitsigns".reset_buffer()<CR>', "Reset buffer"},
 				p = {'<cmd>lua require"gitsigns".preview_hunk()<CR>', "Preview hunk"},
 				b = {'<cmd>lua require"gitsigns".blame_line(true)<CR>', "Blame line"}
-
-				-- https://github.com/folke/which-key.nvim/issues/153
-				--s = {'<cmd>lua require"gitsigns".stage_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>', "Stage lines", mode = 'v'},
-				--r = {'<cmd>lua require"gitsigns".reset_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>', "Reset lines", mode = 'v'},
 			}
 		},
 		h = {':lua vim.lsp.buf.hover()<CR>', 'open LSP hover'},
@@ -85,6 +81,19 @@ wk.register({
 	['[c'] = {"&diff ? '[c' : '<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>'", "Prev hunk", expr = true}
 
 })
+
+wk.register({
+  ['<leader>'] = {
+    g = {
+      name = "+ git",
+      t = {
+        name = "+ git",
+        s = {'<cmd>lua require"gitsigns".stage_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>', "Stage lines", mode = 'v'},
+        r = {'<cmd>lua require"gitsigns".reset_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>', "Reset lines", mode = 'v'},
+      },
+    }
+  }
+}, {mode = 'v'})
 
 
 -- Move the splits arround - but sadly couldn't get it working
