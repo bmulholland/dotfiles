@@ -35,7 +35,6 @@ return require('packer').startup(function(use)
 
 	-- Ruby helpers
 	use 'ecomba/vim-ruby-refactoring' -- Helper methods to refactor Ruby
-	use 'tpope/vim-endwise' -- Auto add end keyword in ruby
 	use 'AndrewRadev/splitjoin.vim' -- toggle between single-line and multi-line code things
 	use 'tpope/vim-rails' -- Rails helpers
 

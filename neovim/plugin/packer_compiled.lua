@@ -205,10 +205,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-airline-themes"
   },
-  ["vim-endwise"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-endwise"
-  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-fugitive"
