@@ -33,6 +33,11 @@ return require('packer').startup(function(use)
 	use 'p00f/nvim-ts-rainbow' -- Different colours for nested parentheses
 	use 'romgrk/nvim-treesitter-context' -- Show offscreen context for the cursor position
 
+	-- Javascript helpers
+	use({ "jose-elias-alvarez/null-ls.nvim",
+    requires = {"nvim-lua/plenary.nvim", "neovim/nvim-lspconfig"}
+	})
+
 	-- Ruby helpers
 	use 'ecomba/vim-ruby-refactoring' -- Helper methods to refactor Ruby
 	use 'AndrewRadev/splitjoin.vim' -- toggle between single-line and multi-line code things
