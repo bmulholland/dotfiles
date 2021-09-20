@@ -60,8 +60,6 @@ wk.register({
 		s = {':lua vim.lsp.buf.document_symbol()<CR>', 'List symbols in current docx'},
 		t = {":lua require('plugins.telescope').project_files()<CR>", "Open project's files"},
 		w = {':w<CR>', 'Save file'},
-		[','] = {':lua vim.lsp.diagnostic.goto_prev()<CR>', "Previous LSP error"},
-		[';'] = {':lua vim.lsp.diagnostic.goto_next()<CR>', 'Next LSP error'},
 		['<Space>'] = {':w<CR>', 'Save file by hammering space twice'}
 	},
 	Q = {'<Nop>', 'Ex mode disabled'},
@@ -74,11 +72,15 @@ wk.register({
 	['<C-Down>'] = {':m \'>+1<CR>gv=gv', "Move line down", mode='v'},
 	['<C-Up>'] = {':m \'<-2<CR>gv=gv', "Move line up", mode='v'},
 
-	-- Text objects
+
+	-- Work with git hunks
 	['ih'] = {':<C-U>lua require"gitsigns.actions".select_hunk()<CR>', "Select hunk", mode = "o"},
 	['ih'] = {':<C-U>lua require"gitsigns.actions".select_hunk()<CR>', "Select hunk", mode = "x"},
+
 	[']c'] = {"&diff ? ']c' : '<cmd>lua require\"gitsigns.actions\".next_hunk()<CR>'", "Next hunk", expr = true},
-	['[c'] = {"&diff ? '[c' : '<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>'", "Prev hunk", expr = true}
+	['[c'] = {"&diff ? '[c' : '<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>'", "Prev hunk", expr = true},
+  [']d'] = {':lua vim.lsp.diagnostic.goto_next()<CR>', 'Next LSP error'},
+  ['[d'] = {':lua vim.lsp.diagnostic.goto_prev()<CR>', "Previous LSP error"}
 
 })
 

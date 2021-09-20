@@ -197,6 +197,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/todo-comments.nvim"
   },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/trouble.nvim"
+  },
   ultisnips = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/ultisnips"

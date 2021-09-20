@@ -18,7 +18,7 @@ vim.cmd('sign define LspDiagnosticsSignHint text=')
 vim.cmd('setlocal omnifunc=v:lua.vim.lsp.omnifunc')
 
 -- Auto format on save
-vim.cmd [[autocmd BufWritePre *.rb,*.rake,*.json,*.js,*.ts,*.vue lua vim.lsp.buf.formatting_sync(nil, 500)]]
+vim.cmd [[autocmd BufWritePre *.rb,*.rake,*.json,*.js,*.ts,*.vue lua vim.lsp.buf.formatting_sync(null, 1000)]]
 
 -- Ruby
 require'lspconfig'.solargraph.setup{
@@ -27,8 +27,14 @@ require'lspconfig'.solargraph.setup{
 require'lspconfig'.sorbet.setup{}
 
 -- Frontend/Vue
-require'lspconfig'.vuels.setup{
+require'lspconfig'.tsserver.setup{
+	-- Leave the formatting to ESLint_d via null_ls
+	on_attach = function(client)
+		client.resolved_capabilities.document_formatting = false
+		client.resolved_capabilities.document_range_formatting = false
+	end,
 }
+require'lspconfig'.vuels.setup{ }
 
 -- ESLint
 local null_ls = require("null-ls")
