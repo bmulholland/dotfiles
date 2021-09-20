@@ -77,6 +77,8 @@ wk.register({
 	['ih'] = {':<C-U>lua require"gitsigns.actions".select_hunk()<CR>', "Select hunk", mode = "o"},
 	['ih'] = {':<C-U>lua require"gitsigns.actions".select_hunk()<CR>', "Select hunk", mode = "x"},
 
+	[']t'] = {"<Plug>(ultest-next-fail)", "Next failing test"},
+	['[t'] = {"<Plug>(ultest-prev-fail)", "Prev failing test"},
 	[']c'] = {"&diff ? ']c' : '<cmd>lua require\"gitsigns.actions\".next_hunk()<CR>'", "Next hunk", expr = true},
 	['[c'] = {"&diff ? '[c' : '<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>'", "Prev hunk", expr = true},
   [']d'] = {':lua vim.lsp.diagnostic.goto_next()<CR>', 'Next LSP error'},
