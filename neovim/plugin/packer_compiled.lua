@@ -69,6 +69,10 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["ayu-vim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/ayu-vim"
+  },
   ["dark-notify"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/dark-notify"
@@ -112,10 +116,6 @@ _G.packer_plugins = {
   neogit = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/neogit"
-  },
-  ["neovim-ayu"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/neovim-ayu"
   },
   ["null-ls.nvim"] = {
     loaded = true,

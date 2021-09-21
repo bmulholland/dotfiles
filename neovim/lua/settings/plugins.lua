@@ -97,7 +97,7 @@ return require('packer').startup(function(use)
 
 	-- Color theme
 	use 'sainnhe/sonokai' -- dark color scheme
-	use 'Shatur/neovim-ayu' -- light color scheme
+	use 'Luxed/ayu-vim' -- light color scheme
 
 	-- Auto-switch to dark mode
 	use 'cormacrelf/dark-notify'
