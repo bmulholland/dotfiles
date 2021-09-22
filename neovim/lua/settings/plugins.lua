@@ -86,8 +86,10 @@ return require('packer').startup(function(use)
 	use 'kyazdani42/nvim-tree.lua' -- File Explorer
 	use 'kyazdani42/nvim-web-devicons' -- Nicer icons
 	use 'lukas-reineke/indent-blankline.nvim' -- Indentation guide lines
-	use 'vim-airline/vim-airline' -- Pretty status line
-	use 'vim-airline/vim-airline-themes'
+	use { -- Pretty status line
+		'shadmansaleh/lualine.nvim',
+		requires = {'kyazdani42/nvim-web-devicons', opt = true}
+	}
 	use 'jeffkreeftmeijer/vim-numbertoggle' -- absolute and relative line numbers
 	use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} } -- Add a gutter that shows git additions/deletions/etc
 
@@ -97,7 +99,7 @@ return require('packer').startup(function(use)
 
 	-- Color theme
 	use 'sainnhe/sonokai' -- dark color scheme
-	use 'Luxed/ayu-vim' -- light color scheme
+	use 'Shatur/neovim-ayu' -- light color scheme
 
 	-- Auto-switch to dark mode
 	use 'cormacrelf/dark-notify'
