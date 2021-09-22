@@ -26,7 +26,10 @@ o.shiftwidth = 2
 bo.expandtab = true -- Use spaces instead of tabs
 vim.cmd('filetype plugin indent on')
 
--- Doce folding
+bo.textwidth = 80
+wo.colorcolumn = "+1"
+
+-- Code folding
 wo.foldenable = false
 
 -- Text highlighting
@@ -35,7 +38,7 @@ o.showmatch = true -- Show the matching brace when a new one is added
 -- Splits
 o.splitright = true -- More natural split opening position
 
--- Give option to realod files when they've changed
+-- Give option to reload files when they've changed
 -- See discussion at:
 -- https://github.com/qvacua/vimr/issues/242
 -- https://github.com/qvacua/vimr/issues/646
