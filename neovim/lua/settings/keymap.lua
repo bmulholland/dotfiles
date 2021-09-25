@@ -12,7 +12,11 @@ wk.register({
 		-- Easily switch between file and its spec using rails.vim's alternate file functionality
 		A = {':AV<CR>', 'Open rails alternate in VSplit'},
 		a = {':A<CR>', 'Open rails alternate'},
-		['bb'] = {":lua require('telescope.builtin').buffers()<CR>", "List buffers"},
+		b = {
+			name = "+ buffers",
+			b = {":lua require('telescope.builtin').buffers()<CR>", "List buffers"},
+			q = {":bufdo bwipeout<CR>", "Close all buffers"}
+		},
 		['ca'] = {":lua require('telescope.builtin').lsp_code_actions()<CR>", "LSP code action"},
 		['da'] = {':Dash<CR>', 'Look up command in Dash'},
 		['def'] = {":lua require('telescope.builtin').lsp_definitions()<CR>", 'Go to definition'},
