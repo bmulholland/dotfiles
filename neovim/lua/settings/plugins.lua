@@ -82,6 +82,12 @@ return require('packer').startup(function(use)
 	use 'b3nj5m1n/kommentary'
 	use 'JoosepAlviste/nvim-ts-context-commentstring' -- Set comment char(s) based on cursor location
 
+	-- Clipboard history
+	use {
+		"AckslD/nvim-neoclip.lua",
+		requires = {'tami5/sqlite.lua', module = 'sqlite'},
+	}
+
 	-- Vim UI stuff
 	use 'kyazdani42/nvim-tree.lua' -- File Explorer
 	use 'kyazdani42/nvim-web-devicons' -- Nicer icons
