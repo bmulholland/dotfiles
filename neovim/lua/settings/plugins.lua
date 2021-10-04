@@ -100,6 +100,10 @@ return require('packer').startup(function(use)
 	use 'folke/todo-comments.nvim' -- Highlight TODOs
 	use 'kosayoda/nvim-lightbulb' -- Show a lightbulb when a code fix is available
 	use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons", } -- improved diagnostics ui
+	use({ -- More code action into
+		'weilbith/nvim-code-action-menu',
+		cmd = 'CodeActionMenu',
+	})
 
 	-- Color theme
 	use 'sainnhe/sonokai' -- dark color scheme

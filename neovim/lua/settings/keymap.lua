@@ -17,7 +17,7 @@ wk.register({
 			b = {":lua require('telescope.builtin').buffers()<CR>", "List buffers"},
 			q = {":bufdo bwipeout<CR>", "Close all buffers"}
 		},
-		['ca'] = {":lua require('telescope.builtin').lsp_code_actions()<CR>", "LSP code action"},
+		['ca'] = {":CodeActionMenu<CR>", "LSP code action"},
 		['da'] = {':Dash<CR>', 'Look up command in Dash'},
 		['def'] = {":lua require('telescope.builtin').lsp_definitions()<CR>", 'Go to definition'},
 		['do'] = {':TodoTelescope<CR>', "Show todos"},
