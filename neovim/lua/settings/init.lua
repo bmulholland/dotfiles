@@ -3,9 +3,14 @@ local o = vim.o
 local wo = vim.wo
 local bo = vim.bo
 
+o.mouse = 'a' -- Enable mouse support
+
 -- Recquired for compe
 -- https://github.com/hrsh7th/nvim-compe#prerequisite
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
+
+-- Who wants .swap files??
+bo.swapfile = false
 
 -- Search
 o.laststatus = 2 -- Always show the status line
@@ -28,6 +33,9 @@ vim.cmd('filetype plugin indent on')
 
 bo.textwidth = 80
 wo.colorcolumn = "+1"
+
+-- Intuit the indentation of new lines when creating them
+bo.smartindent = true
 
 -- Code folding
 wo.foldenable = false

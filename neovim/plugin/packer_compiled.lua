@@ -141,6 +141,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
+  ["nvim-neoclip.lua"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/nvim-neoclip.lua"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
@@ -189,6 +193,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/splitjoin.vim"
   },
+  ["sqlite.lua"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/sqlite.lua"
+  },
   ["telescope-ultisnips.nvim"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/telescope-ultisnips.nvim"
@@ -232,10 +240,6 @@ _G.packer_plugins = {
   ["vim-ruby-refactoring"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-ruby-refactoring"
-  },
-  ["vim-sensible"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-sensible"
   },
   ["vim-signature"] = {
     loaded = true,

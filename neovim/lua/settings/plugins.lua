@@ -14,8 +14,6 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself as an optional plugin
 	use 'wbthomason/packer.nvim'
 
-	use 'tpope/vim-sensible' -- Sensible defaults
-
 	-- Auto-set line and spacing params
 	use 'editorconfig/editorconfig-vim'
 
