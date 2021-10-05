@@ -1,7 +1,7 @@
 require('settings')
+require('settings.plugins')
 require('settings.keymap')
 require('settings.font')
-require('settings.plugins')
 require('settings.colors')
 
 require('settings.scrolloff-fraction')
