@@ -64,6 +64,14 @@ wk.register({
 		s = {':lua vim.lsp.buf.document_symbol()<CR>', 'List symbols in current docx'},
 		t = {":lua require('plugins.telescope').project_files()<CR>", "Open project's files"},
 		w = {':w<CR>', 'Save file'},
+		x = {
+			name = "+ trouble",
+			d = {'<cmd>TroubleToggle lsp_document_diagnostics<cr>', 'Document diagnostics'},
+			l = {'<cmd>TroubleToggle loclist<cr>', 'Loclist'},
+			w = {'<cmd>TroubleToggle lsp_workspace_diagnostics<cr>', 'Workspace diagnostics'},
+			q = {'<cmd>TroubleToggle quickfix<cr>', 'Quickfix'},
+			x = {'<cmd>TroubleToggle<cr>', 'Toggle Trouble'}
+		},
 		['<Space>'] = {':w<CR>', 'Save file by hammering space twice'}
 	},
 	Q = {'<Nop>', 'Ex mode disabled'},
