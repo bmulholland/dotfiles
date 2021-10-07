@@ -27,7 +27,7 @@ return require('packer').startup(function(use)
 	use 'gelguy/wilder.nvim'
 
 	-- Treesitter
-	use { 'nvim-treesitter/nvim-treesitter', branch = '0.5-compat', run = ':TSUpdate' }
+	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 	use 'p00f/nvim-ts-rainbow' -- Different colours for nested parentheses
 	use 'romgrk/nvim-treesitter-context' -- Show offscreen context for the cursor position
 
@@ -96,6 +96,7 @@ return require('packer').startup(function(use)
 	}
 	use 'jeffkreeftmeijer/vim-numbertoggle' -- absolute and relative line numbers
 	use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} } -- Add a gutter that shows git additions/deletions/etc
+	use 'kevinhwang91/nvim-bqf'
 
 	use 'folke/todo-comments.nvim' -- Highlight TODOs
 	use 'kosayoda/nvim-lightbulb' -- Show a lightbulb when a code fix is available

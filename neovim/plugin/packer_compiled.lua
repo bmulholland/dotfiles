@@ -129,6 +129,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
+  ["nvim-bqf"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/nvim-bqf"
+  },
   ["nvim-code-action-menu"] = {
     commands = { "CodeActionMenu" },
     loaded = false,
