@@ -70,7 +70,7 @@ return require('packer').startup(function(use)
 	-- File and tag navigation
 	use 'ludovicchabant/vim-gutentags' -- (re)generate tag files as you work
 	use 'andymass/vim-matchup' -- Improved matchit; use % to navigate between paids of brackets, if/end, etc
-	use 'christoomey/vim-tmux-navigator' -- Consistently navigate between vim and tmux splits
+	-- use 'christoomey/vim-tmux-navigator' -- Consistently navigate between vim and tmux splits
 	use 'kshenoy/vim-signature' -- show location markers in the gutter
 	use 'ggandor/lightspeed.nvim' -- More powerful character-based movements
 
@@ -95,7 +95,6 @@ return require('packer').startup(function(use)
 		'shadmansaleh/lualine.nvim',
 		requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
-	use 'jeffkreeftmeijer/vim-numbertoggle' -- absolute and relative line numbers
 	use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} } -- Add a gutter that shows git additions/deletions/etc
 	use 'kevinhwang91/nvim-bqf'
 
