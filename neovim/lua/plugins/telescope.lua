@@ -10,6 +10,7 @@ require('telescope').setup{
 
 require('telescope').load_extension('ultisnips')
 require('telescope').load_extension('projects')
+require('telescope').load_extension('fzf') -- faster sorting
 
 -- Implement delta as previewer for diffs
 

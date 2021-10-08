@@ -207,6 +207,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/sqlite.lua"
   },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim"
+  },
   ["telescope-ultisnips.nvim"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/telescope-ultisnips.nvim"

@@ -53,6 +53,7 @@ return require('packer').startup(function(use)
 
 	-- Fuzzy file search
 	use { 'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }
+	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } -- Faster sorting
 	use "ahmedkhalf/project.nvim" -- keep track of porjects, and cd to the correct dir
 	use 'fhill2/telescope-ultisnips.nvim'
 
