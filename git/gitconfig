@@ -24,14 +24,15 @@
 [interactive]
   diffFilter = delta --color-only --features=interactive
 [delta]
-  light = true
-  syntax-theme = Github
   features = decorations
   navigate = true
 [delta "interactive"]
   keep-plus-minus-markers = false
+[delta "light-mode"]
+  light = true
+  syntax-theme = Github
 [delta "dark-mode"]
-  light = false
+  dark = true
   syntax-theme = Monokai Extended
 [merge]
   tool = gvimdiff
