@@ -31,7 +31,7 @@ o.shiftwidth = 2
 bo.expandtab = true -- Use spaces instead of tabs
 vim.cmd('filetype plugin indent on')
 
-bo.textwidth = 80
+o.textwidth = 80
 wo.colorcolumn = "+1"
 
 -- Intuit the indentation of new lines when creating them
