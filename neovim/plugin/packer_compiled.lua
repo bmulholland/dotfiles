@@ -73,9 +73,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/dark-notify"
   },
-  ["dash.vim"] = {
+  ["dash.nvim"] = {
     loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/dash.vim"
+    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/dash.nvim"
   },
   ["diffview.nvim"] = {
     loaded = true,

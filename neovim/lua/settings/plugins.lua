@@ -57,7 +57,7 @@ return require('packer').startup(function(use)
 	use "ahmedkhalf/project.nvim" -- keep track of porjects, and cd to the correct dir
 	use 'fhill2/telescope-ultisnips.nvim'
 
-	use 'rizzatti/dash.vim' -- Documentation lookups
+	use 'mrjones2014/dash.nvim' -- Documentation lookups
 
 	-- Git
 	use 'tpope/vim-fugitive' -- Git helper commands
