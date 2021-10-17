@@ -18,7 +18,10 @@ return require('packer').startup(function(use)
 	use 'editorconfig/editorconfig-vim'
 
 	-- LSP
-	use 'neovim/nvim-lspconfig'
+	use {
+		'neovim/nvim-lspconfig',
+		'williamboman/nvim-lsp-installer',
+	}
 
 	-- WhichKey: help remember and learn shortcuts
 	use 'folke/which-key.nvim'
