@@ -5,8 +5,8 @@ local bo = vim.bo
 
 o.mouse = 'a' -- Enable mouse support
 
--- Recquired for compe
--- https://github.com/hrsh7th/nvim-compe#prerequisite
+-- Recommended for nvim-cmp
+-- https://github.com/hrsh7th/nvim-cmp#recommended-configuration
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
 -- Who wants .swap files??

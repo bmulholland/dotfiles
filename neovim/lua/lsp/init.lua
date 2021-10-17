@@ -1,14 +1,6 @@
 local nvim_lsp = require('lspconfig')
-local capabilities = vim.lsp.protocol.make_client_capabilities()
--- From https://github.com/hrsh7th/nvim-compe#how-to-use-lsp-snippet
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-capabilities.textDocument.completion.completionItem.resolveSupport = {
-	properties = {
-		'documentation',
-		'detail',
-		'additionalTextEdits',
-	}
-}
+
+require('lspkind').init()
 
 -- Diagnostics symbols for display in the sign column.
 vim.cmd('sign define LspDiagnosticsSignError text=')
@@ -22,19 +14,24 @@ vim.cmd [[autocmd BufWritePre *.rb,*.rake,*.json,*.js,*.ts,*.vue lua vim.lsp.buf
 
 -- Ruby
 require'lspconfig'.solargraph.setup{
-	capabilities = capabilities,
+	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }
-require'lspconfig'.sorbet.setup{}
+require'lspconfig'.sorbet.setup{
+	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
 
 -- Frontend/Vue
 require'lspconfig'.tsserver.setup{
+	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
 	-- Leave the formatting to ESLint_d via null_ls
 	on_attach = function(client)
 		client.resolved_capabilities.document_formatting = false
 		client.resolved_capabilities.document_range_formatting = false
 	end,
 }
-require'lspconfig'.vuels.setup{ }
+require'lspconfig'.vuels.setup{
+	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
 
 -- ESLint
 local null_ls = require("null-ls")
