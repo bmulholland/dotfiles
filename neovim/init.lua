@@ -6,11 +6,11 @@ require('settings.colors')
 
 require('settings.scrolloff-fraction')
 
+require('plugins.comment-nvim')
 require('plugins.dark-notify')
 require('plugins.diffview')
 require('plugins.gitsigns')
 require('plugins.indent-blankline')
-require('plugins.kommentary')
 require('plugins.lspkind')
 require('plugins.lsp_signature')
 require('plugins.lualine')

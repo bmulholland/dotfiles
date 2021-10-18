@@ -89,7 +89,7 @@ return require('packer').startup(function(use)
 	use 'windwp/nvim-autopairs' -- Autopair brackets
 
 	-- Easily (un)comment out stuff
-	use 'b3nj5m1n/kommentary'
+	use 'numToStr/Comment.nvim'
 	use 'JoosepAlviste/nvim-ts-context-commentstring' -- Set comment char(s) based on cursor location
 
 	-- Clipboard history
