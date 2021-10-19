@@ -18,11 +18,15 @@ local lsp_installer = require("nvim-lsp-installer")
 local lsp_installer = require("nvim-lsp-installer")
 local servers = {
 	"solargraph",
+	"graphql",
 	-- Frontend/Vue
 	"tsserver",
 	"vuels",
 	"tailwindcss",
 	"html",
+	"stylelint_lsp",
+	-- Infra as code
+	"terraformls",
 	-- nvim config
 	"sumneko_lua",
 }
@@ -50,7 +54,17 @@ lsp_installer.on_server_ready(function(server)
 				client.resolved_capabilities.document_formatting = false
 				client.resolved_capabilities.document_range_formatting = false
 			end
-		end
+		elseif server.name == "eslint" then
+        opts.on_attach = function (client, bufnr)
+            -- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
+            -- the resolved capabilities of the eslint server ourselves!
+            client.resolved_capabilities.document_formatting = true
+            common_on_attach(client, bufnr)
+        end
+        opts.settings = {
+            format = { enable = true }, -- this will enable formatting
+        }
+    end
 
     if server.name == "solargraph" then
 			opts.autoformat = true -- WARNING: experimental
@@ -63,16 +77,5 @@ end)
 
 -- Ruby
 require'lspconfig'.sorbet.setup{
-	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-}
-
--- ESLint
-local null_ls = require("null-ls")
-
-null_ls.config({
-	sources = { null_ls.builtins.formatting.eslint_d }
-})
-
-require("lspconfig")["null-ls"].setup {
 	capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 }

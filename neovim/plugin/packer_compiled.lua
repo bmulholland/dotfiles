@@ -145,10 +145,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/neovim-ayu"
   },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/null-ls.nvim"
-  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
@@ -165,6 +161,7 @@ _G.packer_plugins = {
     commands = { "CodeActionMenu" },
     loaded = false,
     needs_bufread = true,
+    only_cond = false,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/opt/nvim-code-action-menu"
   },
   ["nvim-lightbulb"] = {
