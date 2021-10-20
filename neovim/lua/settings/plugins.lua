@@ -103,6 +103,10 @@ return require('packer').startup(function(use)
 	}
 	use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} } -- Add a gutter that shows git additions/deletions/etc
 	use 'kevinhwang91/nvim-bqf'
+	use { -- Keep the window stable when opening quickfix/Trouble
+		"luukvbaal/stabilize.nvim",
+		config = function() require("stabilize").setup() end
+	}
 
 	use 'folke/todo-comments.nvim' -- Highlight TODOs
 	use 'kosayoda/nvim-lightbulb' -- Show a lightbulb when a code fix is available
