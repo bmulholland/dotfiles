@@ -92,7 +92,7 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # TODO: Go through these plugins and add commands to Anki so I memorize them
 # Syntax highlighting from https://github.com/zdharma/fast-syntax-highlighting
-plugins=(brew osx rails rake ruby rvm git git-auto-fetch git-escape-magic aws colorize command-not-found common-aliases dash httpie nvm npm terraform tmux zsh-autosuggestions fast-syntax-highlighting)
+plugins=(brew osx rails rake rake-fast ruby rvm git git-auto-fetch git-escape-magic aws colorize command-not-found common-aliases httpie nvm npm yarn terraform tmux zsh-autosuggestions fast-syntax-highlighting z)
 
 source $ZSH/oh-my-zsh.sh
 
