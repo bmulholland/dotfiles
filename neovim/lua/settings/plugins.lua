@@ -32,7 +32,6 @@ return require('packer').startup(function(use)
 	-- Treesitter
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 	use 'p00f/nvim-ts-rainbow' -- Different colours for nested parentheses
-	use 'romgrk/nvim-treesitter-context' -- Show offscreen context for the cursor position
 
 	-- Ruby helpers
 	use 'ecomba/vim-ruby-refactoring' -- Helper methods to refactor Ruby
@@ -74,7 +73,7 @@ return require('packer').startup(function(use)
 	use { "rcarriga/vim-ultest", requires = {"janko/vim-test"}, run = ":UpdateRemotePlugins" }
 
 	-- File and tag navigation
-	use 'ludovicchabant/vim-gutentags' -- (re)generate tag files as you work
+	-- use 'ludovicchabant/vim-gutentags' -- (re)generate tag files as you work
 	use 'andymass/vim-matchup' -- Improved matchit; use % to navigate between paids of brackets, if/end, etc
 	-- use 'christoomey/vim-tmux-navigator' -- Consistently navigate between vim and tmux splits
 	use 'kshenoy/vim-signature' -- show location markers in the gutter
