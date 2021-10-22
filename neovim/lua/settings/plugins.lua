@@ -97,7 +97,7 @@ return require('packer').startup(function(use)
 	use 'kyazdani42/nvim-web-devicons' -- Nicer icons
 	use 'lukas-reineke/indent-blankline.nvim' -- Indentation guide lines
 	use { -- Pretty status line
-		'shadmansaleh/lualine.nvim',
+		'nvim-lualine/lualine.nvim',
 		requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
 	use { 'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} } -- Add a gutter that shows git additions/deletions/etc
