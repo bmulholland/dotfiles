@@ -188,10 +188,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
-  ["nvim-treesitter-context"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context"
-  },
   ["nvim-ts-context-commentstring"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring"
@@ -264,10 +260,6 @@ _G.packer_plugins = {
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-fugitive"
-  },
-  ["vim-gutentags"] = {
-    loaded = true,
-    path = "/Users/bmulholland/.local/share/nvim/site/pack/packer/start/vim-gutentags"
   },
   ["vim-matchup"] = {
     loaded = true,

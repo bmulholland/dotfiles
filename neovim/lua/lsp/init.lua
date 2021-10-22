@@ -92,7 +92,7 @@ lsp_installer.on_server_ready(function(server)
 			solargraph = {
 				diagnostics = true,
 				formatting = true,
-				autoformat = true,-- WARNING: experimental
+				-- autoformat = true,-- WARNING: experimental
 				-- useBundler = true,
 				-- bundlerPath = "/Users/bmulholland/.rvm/gems/ruby-2.7.2@recital-backend/bin/bundle"
 			}
