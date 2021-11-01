@@ -67,7 +67,7 @@ export PATH="/usr/local/sbin:$PATH"
 
 # Homebrew on Apple Silicon is installed in a non-path location
 if [[ $OSTYPE == darwin* && $CPUTYPE == arm64 ]]; then
-	export PATH="/opt/homebrew/bin:$PATH"
+	export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 fi
 
 # Add pyenv to the path for management of Python versions
