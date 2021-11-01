@@ -1,5 +1,4 @@
 vim.g.nvim_tree_gitignore = 1
-vim.g.nvim_tree_hide_dotfiles = 1
 vim.g.nvim_tree_quit_on_open = 1
 -- From https://github.com/crivotz/nv-ide/blob/master/lua/plugins/nvimtree.lua
 vim.g.nvim_tree_indent_markers = 1
@@ -57,6 +56,10 @@ require'nvim-tree'.setup {
     -- the command arguments as a list
     args = {}
   },
+
+	filters = {
+		dotfiles = false
+	},
 
   view = {
     -- width of the window, can be either a number (columns) or a string in `%`, for left or right side placement
