@@ -110,3 +110,12 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
+
+# Switch delta (diff viewer) between dark and light mode. Requires matching
+# config in gitconfig:
+# https://github.com/dandavison/delta/issues/447
+__delta_dark_mode_preexec_function () {
+    export DELTA_FEATURES="$(dark-notify -e)-mode"
+}
+typeset -ag preexec_functions;
+preexec_functions=( __delta_dark_mode_preexec_function ${preexec_functions[@]} )
