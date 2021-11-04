@@ -28,6 +28,7 @@
   navigate = true
 [delta "interactive"]
   keep-plus-minus-markers = false
+	colorMoved = default # enable support to color moved text
 [delta "light-mode"]
   light = true
   syntax-theme = Github
