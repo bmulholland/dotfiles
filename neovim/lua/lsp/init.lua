@@ -31,11 +31,11 @@ local lsp_installer = require("nvim-lsp-installer")
 local servers = {
 	"graphql",
 	-- Frontend/Vue
+	"eslint",
 	"tsserver",
 	"vuels",
 	"tailwindcss",
 	"html",
-	"stylelint_lsp",
 	-- Infra as code
 	"terraformls",
 	-- nvim config
