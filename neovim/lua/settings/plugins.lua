@@ -58,6 +58,12 @@ return require('packer').startup(function(use)
 
 	use "ray-x/lsp_signature.nvim" -- Display method signatures
 	use 'onsails/lspkind-nvim' -- Nicer pictograms
+	-- Nice rename UI
+	use {
+		'filipdutescu/renamer.nvim',
+		branch = 'master',
+		requires = { {'nvim-lua/plenary.nvim'} }
+	}
 
 
 	-- Fuzzy file search

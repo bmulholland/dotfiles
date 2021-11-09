@@ -51,7 +51,7 @@ wk.register({
 			name = "+ refactor",
 			['ap'] = {':RAddParameter<CR>', "Add parameter (ruby)"},
 			['em'] = {':RExtractMethod<CR>', "Extract method (ruby)"},
-			['rn'] = {':lua vim.lsp.buf.rename()<CR>', 'Rename symbol'}
+			['rn'] = {':lua require("renamer").rename()<CR>', 'Rename symbol'}
 		},
 		['rs'] = {
 			name = "+ tests",
