@@ -74,7 +74,10 @@ end)
 -- JS formatting with a daemonized eslint
 local null_ls = require("null-ls")
 
-local sources = { null_ls.builtins.formatting.eslint_d }
+local sources = {
+	null_ls.builtins.diagnostics.eslint_d,
+	null_ls.builtins.formatting.eslint_d
+}
 
 null_ls.config({ sources = sources })
 
