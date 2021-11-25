@@ -3,11 +3,11 @@ local o = vim.o
 local wo = vim.wo
 local bo = vim.bo
 
-o.mouse = 'a' -- Enable mouse support
+o.mouse = "a" -- Enable mouse support
 
 -- Recommended for nvim-cmp
 -- https://github.com/hrsh7th/nvim-cmp#recommended-configuration
-vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 -- Who wants .swap files??
 bo.swapfile = false
@@ -29,7 +29,7 @@ o.shiftround = true -- Force the indentation to be correct when shifting
 o.tabstop = 2
 o.shiftwidth = 2
 bo.expandtab = true -- Use spaces instead of tabs
-vim.cmd('filetype plugin indent on')
+vim.cmd("filetype plugin indent on")
 
 o.textwidth = 80
 wo.colorcolumn = "+1"

@@ -1,5 +1,5 @@
 -- https://github.com/gelguy/wilder.nvim
-vim.cmd[[
+vim.cmd([[
 call wilder#enable_cmdline_enter()
 set wildcharm=<Tab>
 cmap <expr> <Tab> wilder#in_context() ? wilder#next() : "\<Tab>"
@@ -27,4 +27,4 @@ call wilder#set_option('renderer', wilder#popupmenu_renderer({
 " Nice icons
 call wilder#set_option('pipeline', [ wilder#branch( [ wilder#check({_, x -> empty(x)}), wilder#history(), wilder#result({ 'draw': [{_, x -> ' ' . x}], }), ], wilder#cmdline_pipeline(), wilder#search_pipeline(),), ])
 
-]]
+]])

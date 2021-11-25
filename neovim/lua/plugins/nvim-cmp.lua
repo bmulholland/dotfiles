@@ -1,5 +1,6 @@
 -- From https://github.com/crivotz/nv-ide/blob/master/lua/settings/completion.lua
-vim.api.nvim_exec([[
+vim.api.nvim_exec(
+	[[
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 " autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global=1
@@ -8,9 +9,11 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 " autocmd FileType vue,javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 " autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " autocmd BufRead,BufNewFile *.md setlocal spell
-]], true)
+]],
+	true
+)
 
-local cmp = require'cmp'
+local cmp = require("cmp")
 
 cmp.setup({
 	snippet = {
@@ -19,25 +22,25 @@ cmp.setup({
 		end,
 	},
 	mapping = {
-		['<C-d>'] = cmp.mapping.scroll_docs(-4),
-		['<C-f>'] = cmp.mapping.scroll_docs(4),
-		['<C-Space>'] = cmp.mapping.complete(),
-		['<C-e>'] = cmp.mapping.close(),
-		['<CR>'] = cmp.mapping.confirm({ select = true }),
+		["<C-d>"] = cmp.mapping.scroll_docs(-4),
+		["<C-f>"] = cmp.mapping.scroll_docs(4),
+		["<C-Space>"] = cmp.mapping.complete(),
+		["<C-e>"] = cmp.mapping.close(),
+		["<CR>"] = cmp.mapping.confirm({ select = true }),
 	},
 	sources = {
-		{ name = 'nvim_lsp' },
+		{ name = "nvim_lsp" },
 
 		-- For vsnip user.
-		{ name = 'vsnip' },
+		{ name = "vsnip" },
 
 		-- For ultisnips user.
-		{ name = 'ultisnips' },
+		{ name = "ultisnips" },
 
-		{ name = 'buffer' },
-		{ name = 'path' },
-		{ name = 'treesitter' },
-		{ name = 'tags' },
+		{ name = "buffer" },
+		{ name = "path" },
+		{ name = "treesitter" },
+		{ name = "tags" },
 	},
 	formatting = {
 		format = function(entry, vim_item)
