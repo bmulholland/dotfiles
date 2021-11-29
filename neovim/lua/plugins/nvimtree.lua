@@ -1,4 +1,3 @@
-vim.g.nvim_tree_gitignore = 1
 vim.g.nvim_tree_quit_on_open = 1
 -- From https://github.com/crivotz/nv-ide/blob/master/lua/plugins/nvimtree.lua
 vim.g.nvim_tree_indent_markers = 1
@@ -36,7 +35,7 @@ require("nvim-tree").setup({
 	update_cwd = false,
 	-- show lsp diagnostics in the signcolumn
 	diagnostics = {
-		enable = true,
+		enable = false,
 	},
 	-- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
 	update_focused_file = {
