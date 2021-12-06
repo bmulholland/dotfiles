@@ -46,6 +46,9 @@ o.showmatch = true -- Show the matching brace when a new one is added
 -- Splits
 o.splitright = true -- More natural split opening position
 
+-- Persistent undo
+bo.undofile = true
+
 -- Give option to reload files when they've changed
 -- See discussion at:
 -- https://github.com/qvacua/vimr/issues/242
