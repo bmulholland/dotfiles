@@ -74,7 +74,12 @@ wk.register({
 		},
 		["<Space>"] = { ":w<CR>", "Save file by hammering space twice" },
 	},
-	Q = { "<Nop>", "Ex mode disabled" },
+	Q = {
+		name = "+ quickfix (& disables Exmode)",
+		n = { ":cnext<CR>", "Go to next item in quickfix list" },
+		p = { ":cprev<CR>", "Go to previous item in quickfix list" },
+		q = { ":ccl<CR>", "Close quickfix list" },
+	},
 	-- Move lines up/down
 	-- Based on https://vim.fandom.com/wiki/Moving_lines_up_or_down
 	["<C-Down>"] = { ":m .+1<CR>==", "Move line down" },
