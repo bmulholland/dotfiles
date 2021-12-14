@@ -80,9 +80,8 @@ local sources = {
 	null_ls.builtins.formatting.stylua,
 }
 
-null_ls.config({ sources = sources })
-
-require("lspconfig")["null-ls"].setup({
+null_ls.setup({
+	sources = sources,
 	on_attach = function(client, bufnr)
 		-- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
 		-- the resolved capabilities of the eslint server ourselves!
