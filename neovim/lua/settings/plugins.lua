@@ -99,7 +99,7 @@ return require("packer").startup(function(use)
 	-- Clipboard history
 	use({
 		"AckslD/nvim-neoclip.lua",
-		requires = { "tami5/sqlite.lua", module = "sqlite" },
+		requires = { { "tami5/sqlite.lua", module = "sqlite" }, { "nvim-telescope/telescope.nvim" } },
 	})
 
 	-- Vim UI stuff
@@ -111,7 +111,7 @@ return require("packer").startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 	use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } }) -- Add a gutter that shows git additions/deletions/etc
-	use({"kevinhwang91/nvim-bqf", ft = 'qf'})
+	use({ "kevinhwang91/nvim-bqf", ft = "qf" })
 	use({ -- Keep the window stable when opening quickfix/Trouble
 		"luukvbaal/stabilize.nvim",
 		config = function()
