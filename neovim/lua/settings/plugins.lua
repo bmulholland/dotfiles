@@ -44,6 +44,9 @@ return require("packer").startup(function(use)
 
 	use("hashivim/vim-terraform") -- Terraform support
 
+	-- Easier test running
+	use({ "rcarriga/vim-ultest", requires = { "janko/vim-test" }, run = ":UpdateRemotePlugins" })
+
 	-- Autocomplete
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-nvim-lsp")
@@ -78,9 +81,6 @@ return require("packer").startup(function(use)
 	use("tpope/vim-fugitive") -- Git helper commands
 	use({ "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" })
 	use("sindrets/diffview.nvim")
-
-	-- Easier test running
-	use({ "rcarriga/vim-ultest", requires = { "janko/vim-test" }, run = ":UpdateRemotePlugins" })
 
 	-- File and tag navigation
 	-- use 'ludovicchabant/vim-gutentags' -- (re)generate tag files as you work
