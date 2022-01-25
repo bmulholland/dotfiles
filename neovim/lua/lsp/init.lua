@@ -82,7 +82,7 @@ local sources = {
 
 null_ls.setup({
 	sources = sources,
-	on_attach = function(client, bufnr)
+	on_attach = function(client)
 		-- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
 		-- the resolved capabilities of the eslint server ourselves!
 		client.resolved_capabilities.document_formatting = true
