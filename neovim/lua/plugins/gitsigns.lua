@@ -16,7 +16,7 @@ require("gitsigns").setup({
 	linehl = false,
 	-- Set dirsectly in keymap config so which-key knows about them
 	keymaps = {},
-	watch_index = {
+	watch_gitdir = {
 		interval = 1000,
 	},
 	sign_priority = 6,
