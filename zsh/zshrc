@@ -1,3 +1,8 @@
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the start of this file.
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+#### END FIG ENV VARIABLES ####
+
 # APPEND_HISTORY If this is set, zsh sessions will append their history list to
 # the history file, rather than replace it. Thus, multiple parallel zsh sessions
 # will all have the new entries from their history lists added to the history
@@ -119,3 +124,8 @@ __delta_dark_mode_preexec_function () {
 }
 typeset -ag preexec_functions;
 preexec_functions=( __delta_dark_mode_preexec_function ${preexec_functions[@]} )
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the end of this file.
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
