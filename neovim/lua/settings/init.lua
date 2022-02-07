@@ -5,6 +5,9 @@ local bo = vim.bo
 
 o.mouse = "a" -- Enable mouse support
 
+-- Sync Vim copy/paste with system copy/paste
+vim.cmd[[set clipboard+=unnamedplus]]
+
 -- Recommended for nvim-cmp
 -- https://github.com/hrsh7th/nvim-cmp#recommended-configuration
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
