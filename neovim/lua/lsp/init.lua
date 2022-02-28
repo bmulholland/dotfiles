@@ -47,7 +47,7 @@ vim.cmd("sign define LspDiagnosticsSignHint text=")
 vim.cmd("setlocal omnifunc=v:lua.vim.lsp.omnifunc")
 
 -- Auto format on save
-vim.cmd([[autocmd BufWritePre *.rb,*.rake,*.json,*.js,*.ts,*.vue,*.lua lua vim.lsp.buf.formatting_sync(null, 1000)]])
+vim.cmd([[autocmd BufWritePre *.rb,*.rake,*.json,*.js,*.ts,*.vue,*.lua lua vim.lsp.buf.formatting_sync(null, 10000)]])
 
 local lsp_installer = require("nvim-lsp-installer")
 
