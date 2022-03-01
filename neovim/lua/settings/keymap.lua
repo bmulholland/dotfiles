@@ -97,8 +97,8 @@ wk.register({
 	["[t"] = { "<Plug>(ultest-prev-fail)", "Prev failing test" },
 	["]c"] = { "&diff ? ']c' : '<cmd>lua require\"gitsigns.actions\".next_hunk()<CR>'", "Next hunk", expr = true },
 	["[c"] = { "&diff ? '[c' : '<cmd>lua require\"gitsigns.actions\".prev_hunk()<CR>'", "Prev hunk", expr = true },
-	["]d"] = { ":lua vim.lsp.diagnostic.goto_next()<CR>", "Next LSP error" },
-	["[d"] = { ":lua vim.lsp.diagnostic.goto_prev()<CR>", "Previous LSP error" },
+	["]d"] = { ":lua vim.diagnostic.goto_next()<CR>", "Next LSP error" },
+	["[d"] = { ":lua vim.diagnostic.goto_prev()<CR>", "Previous LSP error" },
 })
 
 wk.register({
