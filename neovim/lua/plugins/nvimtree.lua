@@ -1,4 +1,3 @@
-vim.g.nvim_tree_quit_on_open = 1
 -- From https://github.com/crivotz/nv-ide/blob/master/lua/plugins/nvimtree.lua
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_icons = {
@@ -75,6 +74,10 @@ require("nvim-tree").setup({
 			custom_only = false,
 			-- list of mappings to set on the tree manually
 			list = {},
+		},
+
+		actions = {
+			open_file = { quit_on_open = true },
 		},
 	},
 })
