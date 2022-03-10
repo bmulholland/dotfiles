@@ -31,7 +31,7 @@
 	colorMoved = default # enable support to color moved text
 [delta "light-mode"]
   light = true
-  syntax-theme = Github
+  syntax-theme = GitHub
 [delta "dark-mode"]
   dark = true
   syntax-theme = Monokai Extended
