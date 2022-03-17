@@ -118,6 +118,13 @@ return require("packer").startup(function(use)
 			require("stabilize").setup()
 		end,
 	})
+	use({ -- dim unused vars
+		"narutoxy/dim.lua",
+		requires = { "nvim-treesitter/nvim-treesitter", "neovim/nvim-lspconfig" },
+		config = function()
+			require("dim").setup({})
+		end,
+	})
 
 	use("folke/todo-comments.nvim") -- Highlight TODOs
 	use("kosayoda/nvim-lightbulb") -- Show a lightbulb when a code fix is available
