@@ -103,14 +103,21 @@ return require("packer").startup(function(use)
 	})
 
 	-- Vim UI stuff
-	use("kyazdani42/nvim-tree.lua") -- File Explorer
-	use("kyazdani42/nvim-web-devicons") -- Nicer icons
-	use("lukas-reineke/indent-blankline.nvim") -- Indentation guide lines
+	-- situational awareness: scrollbar and indicate search results
+	use({
+		"petertriho/nvim-scrollbar",
+		config = function()
+			require("scrollbar").setup()
+		end,
+	})
 	use({ -- Pretty status line
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 	use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } }) -- Add a gutter that shows git additions/deletions/etc
+	use("kyazdani42/nvim-tree.lua") -- File Explorer
+	use("kyazdani42/nvim-web-devicons") -- Nicer icons
+	use("lukas-reineke/indent-blankline.nvim") -- Indentation guide lines
 	use({ "kevinhwang91/nvim-bqf", ft = "qf" })
 	use({ -- Keep the window stable when opening quickfix/Trouble
 		"luukvbaal/stabilize.nvim",
