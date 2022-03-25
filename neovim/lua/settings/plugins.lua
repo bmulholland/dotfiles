@@ -89,6 +89,9 @@ return require("packer").startup(function(use)
 	use("kshenoy/vim-signature") -- show location markers in the gutter
 	use("ggandor/lightspeed.nvim") -- More powerful character-based movements
 
+	use("svermeulen/vim-cutlass") -- when deleting text, don't overwrite paste register
+	use("tpope/vim-repeat") -- make dot-repeat work as expected with complex commands
+
 	use("tpope/vim-surround") -- Easily change surrounding tags (e.g. in html)
 	use("windwp/nvim-autopairs") -- Autopair brackets
 
