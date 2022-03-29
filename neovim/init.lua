@@ -3,6 +3,7 @@ require("settings.plugins")
 require("settings.keymap")
 require("settings.font")
 require("settings.colors")
+require("settings.neovide")
 
 require("settings.scrolloff-fraction")
 
