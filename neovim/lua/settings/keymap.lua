@@ -43,7 +43,6 @@ wk.register({
 		n = { ":NvimTreeToggle<cr>", "Open a file explorer" },
 		l = { ":lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>", "Fuzzy find in buffer" },
 		o = { ":%!python -m json.tool<CR>", "Pretty print JSON" },
-		p = { '"_dP', "Paste multiple times with the same contents" },
 		["prj"] = { ":Telescope projects<CR>", "Open projects" },
 		q = { ":bd<CR>", "Close current buffer" },
 		["ref"] = { ":lua require('telescope.builtin').lsp_references()<CR>", "List references" },
@@ -80,14 +79,8 @@ wk.register({
 		p = { ":cprev<CR>", "Go to previous item in quickfix list" },
 		q = { ":ccl<CR>", "Close quickfix list" },
 	},
-	-- Move lines up/down
-	-- Based on https://vim.fandom.com/wiki/Moving_lines_up_or_down
-	["<C-Down>"] = { ":m .+1<CR>==", "Move line down" },
-	["<C-Up>"] = { ":m .-2<CR>==", "Move line up" },
-	["<C-Down>"] = { "<Esc>:m .+1<CR>==gi", "Move line down", mode = "i" },
-	["<C-Up>"] = { "<Esc>:m .-2<CR>==gi", "Move line up", mode = "i" },
-	["<C-Down>"] = { ":m '>+1<CR>gv=gv", "Move line down", mode = "v" },
-	["<C-Up>"] = { ":m '<-2<CR>gv=gv", "Move line up", mode = "v" },
+
+	p = { '"_dP', "Paste without overwriting the register", mode = "x" },
 
 	-- Work with git hunks
 	["ih"] = { ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>', "Select hunk", mode = "o" },
