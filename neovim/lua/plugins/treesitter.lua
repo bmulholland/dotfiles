@@ -1,8 +1,26 @@
 require("nvim-treesitter.configs").setup({
-	ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+	ensure_installed = {
+		"dockerfile",
+		"graphql",
+		"html",
+		"http",
+		"javascript",
+		"json",
+		"json5",
+		"jsonc",
+		"lua",
+		"make",
+		"python",
+		"regex",
+		"ruby",
+		"svelte",
+		"vue",
+		"vim",
+		"yaml",
+	},
 	-- Courtesy of https://old.reddit.com/r/neovim/comments/r10llx/the_most_amazing_builtin_feature_nobody_ever/
 	highlight = {
-		enable = true, -- false will disable the whole extension
+		enable = true,
 	},
 	context_commentstring = {
 		enable = true,
