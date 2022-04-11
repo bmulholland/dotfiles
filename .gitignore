@@ -13,3 +13,6 @@ vim/bundle/*
 node_modules/
 package-lock.json
 Brewfile.lock.json
+
+# https://github.com/wbthomason/packer.nvim/issues/462
+packer_compiled.lua
