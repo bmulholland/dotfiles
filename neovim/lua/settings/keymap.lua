@@ -62,6 +62,7 @@ wk.register({
 		},
 		s = { ":lua vim.lsp.buf.document_symbol()<CR>", "List symbols in current docx" },
 		t = { ":lua require('plugins.telescope').project_files()<CR>", "Open project's files" },
+		T = { ":TroubleToggle<cr>", "Toggle Trouble" },
 		w = { ":w<CR>", "Save file" },
 		x = {
 			name = "+ trouble",
