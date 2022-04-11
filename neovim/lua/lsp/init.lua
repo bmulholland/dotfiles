@@ -49,8 +49,6 @@ vim.cmd("setlocal omnifunc=v:lua.vim.lsp.omnifunc")
 -- Auto format on save
 vim.cmd([[autocmd BufWritePre *.rb,*.rake,*.json,*.js,*.ts,*.vue,*.lua lua vim.lsp.buf.formatting_sync(null, 2000)]])
 
-local lsp_installer = require("nvim-lsp-installer")
-
 -- Install servesr I use
 local lsp_installer = require("nvim-lsp-installer")
 local servers = {
