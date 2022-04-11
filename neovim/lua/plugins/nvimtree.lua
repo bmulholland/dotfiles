@@ -1,5 +1,4 @@
 -- From https://github.com/crivotz/nv-ide/blob/master/lua/plugins/nvimtree.lua
-vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_icons = {
 	default = "",
 	symlink = "",
@@ -72,6 +71,9 @@ require("nvim-tree").setup({
 			custom_only = false,
 			-- list of mappings to set on the tree manually
 			list = {},
+		},
+		renderer = {
+			indent_markers = { enable = true },
 		},
 
 		actions = {
