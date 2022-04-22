@@ -1,5 +1,3 @@
-local nvim_lsp = require("lspconfig")
-
 -- -- From https://github.com/crivotz/nv-ide/blob/e4e2c8a45eab9729a2ff119adbc0b43c36db3e8f/lua/plugins/lspkind.lua
 -- require("lspkind").init({
 -- 	with_text = true,
