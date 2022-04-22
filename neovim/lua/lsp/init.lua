@@ -26,6 +26,7 @@
 -- })
 --
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+require("lsp-format").setup({})
 
 -- From https://github.com/hrsh7th/nvim-compe#how-to-use-lsp-snippet
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -43,9 +44,6 @@ vim.cmd("sign define LspDiagnosticsSignWarning text=")
 vim.cmd("sign define LspDiagnosticsSignInformation text=")
 vim.cmd("sign define LspDiagnosticsSignHint text=")
 vim.cmd("setlocal omnifunc=v:lua.vim.lsp.omnifunc")
-
--- Auto format on save
-vim.cmd([[autocmd BufWritePre *.rb,*.rake,*.json,*.js,*.ts,*.vue,*.lua lua vim.lsp.buf.formatting_sync(null, 2000)]])
 
 -- Install servesr I use
 local lsp_installer = require("nvim-lsp-installer")
@@ -85,6 +83,8 @@ lsp_installer.on_server_ready(function(server)
 			client.resolved_capabilities.document_formatting = false
 			client.resolved_capabilities.document_range_formatting = false
 		end
+	else
+		opts.on_attach = require("lsp-format").on_attach
 	end
 
 	-- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
@@ -104,6 +104,7 @@ local sources = {
 null_ls.setup({
 	sources = sources,
 	on_attach = function(client)
+		require "lsp-format".on_attach(client)
 		-- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
 		-- the resolved capabilities of the eslint server ourselves!
 		client.resolved_capabilities.document_formatting = true
