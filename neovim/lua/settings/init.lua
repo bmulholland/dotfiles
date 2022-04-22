@@ -5,8 +5,12 @@ local bo = vim.bo
 
 o.mouse = "a" -- Enable mouse support
 
+-- Enable lua-based filetype detection
+vim.cmd([[let g:do_filetype_lua = 1]])
+vim.cmd([[let g:did_load_filetypes = 0]])
+
 -- Sync Vim copy/paste with system copy/paste
-vim.cmd[[set clipboard+=unnamedplus]]
+vim.cmd([[set clipboard+=unnamedplus]])
 
 -- Recommended for nvim-cmp
 -- https://github.com/hrsh7th/nvim-cmp#recommended-configuration
