@@ -62,7 +62,7 @@ return require("packer").startup(function(use)
 	use("ray-x/lsp_signature.nvim") -- Display method signatures
 	use("onsails/lspkind-nvim") -- Nicer pictograms
 	-- Next commit breaks config: https://github.com/lukas-reineke/lsp-format.nvim/issues/39
-	use({"lukas-reineke/lsp-format.nvim", commit = "2d05114f171a6380bcd58bc0d6ef29268635bdfc"}) -- Formatting
+	use("lukas-reineke/lsp-format.nvim") -- Formatting
 	-- Nice rename UI
 	use({
 		"filipdutescu/renamer.nvim",
