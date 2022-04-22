@@ -83,7 +83,7 @@ lsp_installer.on_server_ready(function(server)
 			client.resolved_capabilities.document_formatting = false
 			client.resolved_capabilities.document_range_formatting = false
 		end
-	else
+	elseif server.name ~= "vuels" and server.name ~= "tailwindcss" then
 		opts.on_attach = require("lsp-format").on_attach
 	end
 
@@ -104,7 +104,7 @@ local sources = {
 null_ls.setup({
 	sources = sources,
 	on_attach = function(client)
-		require "lsp-format".on_attach(client)
+		require("lsp-format").on_attach(client)
 		-- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
 		-- the resolved capabilities of the eslint server ourselves!
 		client.resolved_capabilities.document_formatting = true
