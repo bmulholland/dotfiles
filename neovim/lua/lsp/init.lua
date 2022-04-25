@@ -26,7 +26,7 @@
 -- })
 --
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-require("lsp-format").setup({})
+require("lsp-format").setup({ sync = true })
 
 -- From https://github.com/hrsh7th/nvim-compe#how-to-use-lsp-snippet
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -84,6 +84,8 @@ lsp_installer.on_server_ready(function(server)
 			client.resolved_capabilities.document_range_formatting = false
 		end
 	elseif server.name ~= "vuels" and server.name ~= "tailwindcss" then
+		-- vue is formatted via eslint_d via null-ls, below
+		-- tailwind is formatted via esllint plugin
 		opts.on_attach = require("lsp-format").on_attach
 	end
 
@@ -118,6 +120,7 @@ require("lspconfig").sorbet.setup({
 })
 require("lspconfig").solargraph.setup({
 	capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities),
+	on_attach = require("lsp-format").on_attach,
 	settings = {
 		solargraph = {
 			diagnostics = true,
