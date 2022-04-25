@@ -42,6 +42,12 @@ return require("packer").startup(function(use)
 	use("AndrewRadev/splitjoin.vim") -- toggle between single-line and multi-line code things
 	use("tpope/vim-rails") -- Rails helpers
 
+	-- In-editor debugging
+	use("mfussenegger/nvim-dap")
+	use("suketa/nvim-dap-ruby")
+	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	use("theHamsta/nvim-dap-virtual-text")
+
 	-- Easier test running
 	use({ "rcarriga/vim-ultest", requires = { "janko/vim-test" }, run = ":UpdateRemotePlugins" })
 
