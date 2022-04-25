@@ -42,8 +42,6 @@ return require("packer").startup(function(use)
 	use("AndrewRadev/splitjoin.vim") -- toggle between single-line and multi-line code things
 	use("tpope/vim-rails") -- Rails helpers
 
-	use("hashivim/vim-terraform") -- Terraform support
-
 	-- Easier test running
 	use({ "rcarriga/vim-ultest", requires = { "janko/vim-test" }, run = ":UpdateRemotePlugins" })
 
