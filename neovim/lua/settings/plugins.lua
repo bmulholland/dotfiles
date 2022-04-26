@@ -97,6 +97,7 @@ return require("packer").startup(function(use)
 
 	use("tpope/vim-repeat") -- make dot-repeat work as expected with complex commands
 
+	use("tpope/vim-unimpaired") -- Convenient pairs of mappings, e.g. add a blank line
 	use("tpope/vim-surround") -- Easily change surrounding tags (e.g. in html)
 	use("windwp/nvim-autopairs") -- Autopair brackets
 
