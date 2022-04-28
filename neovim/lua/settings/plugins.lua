@@ -69,8 +69,8 @@ return require("packer").startup(function(use)
 	use("lukas-reineke/lsp-format.nvim") -- Formatting
 	-- Nice rename UI
 	use({
-		"filipdutescu/renamer.nvim",
-		branch = "master",
+		-- On a fork until neovim 0.7 support is merged https://github.com/filipdutescu/renamer.nvim/pull/118
+		"abzcoding/renamer.nvim",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
