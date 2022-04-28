@@ -19,7 +19,7 @@ require("nvim-tree").setup({
 	-- opens the tree when changing/opening a new tab if the tree wasn't previously opened
 	open_on_tab = false,
 	-- hijacks new directory buffers when they are opened.
-	update_to_buf_dir = {
+	hijack_directories = {
 		-- enable the feature
 		enable = true,
 		-- allow to open the tree if it was previously closed
@@ -63,8 +63,6 @@ require("nvim-tree").setup({
 		height = 30,
 		-- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
 		side = "left",
-		-- if true the tree will resize itself after opening a file
-		auto_resize = false,
 		mappings = {
 			-- custom only false will merge the list with the default mappings
 			-- if true, it will only use your list to set the mappings
@@ -72,12 +70,17 @@ require("nvim-tree").setup({
 			-- list of mappings to set on the tree manually
 			list = {},
 		},
-		renderer = {
-			indent_markers = { enable = true },
-		},
+	},
 
-		actions = {
-			open_file = { quit_on_open = true },
+	renderer = {
+		indent_markers = { enable = true },
+	},
+
+	actions = {
+		open_file = {
+			quit_on_open = true,
+			-- if true the tree will resize itself after opening a file
+			resize_window = false,
 		},
 	},
 })
