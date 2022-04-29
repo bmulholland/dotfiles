@@ -26,6 +26,7 @@
 -- })
 --
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 require("lsp-format").setup({ sync = true })
 
 -- From https://github.com/hrsh7th/nvim-compe#how-to-use-lsp-snippet
@@ -74,7 +75,7 @@ end
 lsp_installer.on_server_ready(function(server)
 	local opts = {}
 
-	opts.capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+	opts.capabilities = capabilities
 
 	-- (optional) Customize the options passed to the server
 	if server.name == "tsserver" then
@@ -116,10 +117,10 @@ null_ls.setup({
 
 -- Ruby
 require("lspconfig").sorbet.setup({
-	capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities),
+	capabilities = capabilities,
 })
 require("lspconfig").solargraph.setup({
-	capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities),
+	capabilities = capabilities,
 	on_attach = require("lsp-format").on_attach,
 	settings = {
 		solargraph = {
