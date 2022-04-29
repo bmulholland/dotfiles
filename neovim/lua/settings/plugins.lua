@@ -89,6 +89,9 @@ return require("packer").startup(function(use)
 	use("sindrets/diffview.nvim")
 
 	-- File and tag navigation
+
+	use({ "kevinhwang91/nvim-hlslens" })
+
 	-- use 'ludovicchabant/vim-gutentags' -- (re)generate tag files as you work
 	use("andymass/vim-matchup") -- Improved matchit; use % to navigate between paids of brackets, if/end, etc
 	-- use 'christoomey/vim-tmux-navigator' -- Consistently navigate between vim and tmux splits
