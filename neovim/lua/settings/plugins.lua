@@ -116,12 +116,7 @@ return require("packer").startup(function(use)
 
 	-- Vim UI stuff
 	-- situational awareness: scrollbar and indicate search results
-	use({
-		"petertriho/nvim-scrollbar",
-		config = function()
-			require("scrollbar").setup()
-		end,
-	})
+	use({ "petertriho/nvim-scrollbar" })
 	use({ -- Pretty status line
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
