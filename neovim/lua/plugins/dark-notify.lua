@@ -1,4 +1,6 @@
-require("dark_notify").run({
+local dark_notify = require("dark_notify")
+
+dark_notify.run({
 	schemes = {
 		dark = "sonokai",
 		light = "ayu",
@@ -11,3 +13,7 @@ require("dark_notify").run({
 		end,
 	},
 })
+
+-- Avoid flashing the wrong colour at startup:
+-- https://github.com/cormacrelf/dark-notify/issues/3#issuecomment-1074682252
+dark_notify.update()
