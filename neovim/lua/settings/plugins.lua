@@ -43,7 +43,7 @@ return require("packer").startup(function(use)
 	use("tpope/vim-rails") -- Rails helpers
 
 	-- In-editor debugging
-	use("mfussenegger/nvim-dap")
+	use({ "mfussenegger/nvim-dap", commit = "1de5f63" })
 	use("suketa/nvim-dap-ruby")
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 	use("theHamsta/nvim-dap-virtual-text")
@@ -115,6 +115,12 @@ return require("packer").startup(function(use)
 	})
 
 	-- Vim UI stuff
+	use({
+		"viebel/halonot", -- Easier window move operations
+		config = function()
+			require("halonot").setup({ main_key = "w" })
+		end,
+	})
 	-- situational awareness: scrollbar and indicate search results
 	use({ "petertriho/nvim-scrollbar" })
 	use({ -- Pretty status line
