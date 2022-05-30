@@ -1,11 +1,4 @@
 -- From https://github.com/crivotz/nv-ide/blob/master/lua/plugins/nvimtree.lua
-vim.g.nvim_tree_icons = {
-	default = "",
-	symlink = "",
-	git = { unstaged = "", staged = "✓", unmerged = "", renamed = "➜", untracked = "" },
-	folder = { default = "", open = "", empty = "", empty_open = "", symlink = "" },
-}
-
 -- following options are the default
 require("nvim-tree").setup({
 	-- disables netrw completely
@@ -74,6 +67,14 @@ require("nvim-tree").setup({
 
 	renderer = {
 		indent_markers = { enable = true },
+		icons = {
+			glyphs = {
+				default = "",
+				symlink = "",
+				git = { unstaged = "", staged = "✓", unmerged = "", renamed = "➜", untracked = "" },
+				folder = { default = "", open = "", empty = "", empty_open = "", symlink = "" },
+			},
+		},
 	},
 
 	actions = {
