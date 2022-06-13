@@ -49,7 +49,22 @@ return require("packer").startup(function(use)
 	use("theHamsta/nvim-dap-virtual-text")
 
 	-- Easier test running
-	use({ "rcarriga/vim-ultest", requires = { "janko/vim-test" }, run = ":UpdateRemotePlugins" })
+	use({
+		"nvim-neotest/neotest",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"antoinemadec/FixCursorHold.nvim",
+			"olimorris/neotest-rspec",
+		},
+		config = function()
+			require("neotest").setup({
+				adapters = {
+					require("neotest-rspec"),
+				},
+			})
+		end,
+	})
 
 	-- Autocomplete
 	use("hrsh7th/nvim-cmp")
