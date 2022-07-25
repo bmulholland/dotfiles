@@ -115,7 +115,14 @@ return require("packer").startup(function(use)
 	use("tpope/vim-repeat") -- make dot-repeat work as expected with complex commands
 
 	use("tpope/vim-unimpaired") -- Convenient pairs of mappings, e.g. add a blank line
-	use("tpope/vim-surround") -- Easily change surrounding tags (e.g. in html)
+	use({ -- Easily change surrounding tags (e.g. in html)
+		"kylechui/nvim-surround",
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end,
+	})
 	use("windwp/nvim-autopairs") -- Autopair brackets
 	-- wisely add "end" in ruby, Lua, Vimscript, etc.
 	use("RRethy/nvim-treesitter-endwise")
