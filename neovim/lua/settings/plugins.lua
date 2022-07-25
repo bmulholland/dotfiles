@@ -118,9 +118,7 @@ return require("packer").startup(function(use)
 	use({ -- Easily change surrounding tags (e.g. in html)
 		"kylechui/nvim-surround",
 		config = function()
-			require("nvim-surround").setup({
-				-- Configuration here, or leave empty to use defaults
-			})
+			require("nvim-surround").setup({})
 		end,
 	})
 	use("windwp/nvim-autopairs") -- Autopair brackets
@@ -131,6 +129,9 @@ return require("packer").startup(function(use)
 		config = function()
 			require("retrail").setup()
 		end,
+	})
+	use({ -- Show all LSP diagnostics, in lines BELOW the text
+		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 	})
 
 	-- Easily (un)comment out stuff
