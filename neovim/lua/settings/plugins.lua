@@ -126,6 +126,12 @@ return require("packer").startup(function(use)
 	use("windwp/nvim-autopairs") -- Autopair brackets
 	-- wisely add "end" in ruby, Lua, Vimscript, etc.
 	use("RRethy/nvim-treesitter-endwise")
+	use({ -- highlight and auto-trim trailing whitespace
+		"zakharykaplan/nvim-retrail",
+		config = function()
+			require("retrail").setup()
+		end,
+	})
 
 	-- Easily (un)comment out stuff
 	use("numToStr/Comment.nvim")
