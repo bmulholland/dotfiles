@@ -50,7 +50,7 @@ vim.cmd("setlocal omnifunc=v:lua.vim.lsp.omnifunc")
 require("nvim-lsp-installer").setup({
 	ensure_installed = {
 		"graphql",
-		"cucumber_language_server",
+		-- "cucumber_language_server",
 		-- Frontend/Vue
 		"tsserver",
 		"vuels",
@@ -69,10 +69,10 @@ lspconfig.graphql.setup({
 	capabilities = capabilities,
 	on_attach = require("lsp-format").on_attach,
 })
-lspconfig.cucumber_language_server.setup({
-	capabilities = capabilities,
-	on_attach = require("lsp-format").on_attach,
-})
+-- lspconfig.cucumber_language_server.setup({
+-- 	capabilities = capabilities,
+-- 	on_attach = require("lsp-format").on_attach,
+-- })
 lspconfig.html.setup({
 	capabilities = capabilities,
 	on_attach = require("lsp-format").on_attach,
