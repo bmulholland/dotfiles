@@ -110,12 +110,7 @@ return require("packer").startup(function(use)
 	use("andymass/vim-matchup") -- Improved matchit; use % to navigate between paids of brackets, if/end, etc
 	-- use 'christoomey/vim-tmux-navigator' -- Consistently navigate between vim and tmux splits
 	use("kshenoy/vim-signature") -- show location markers in the gutter
-	use({
-		"ggandor/leap.nvim", -- More powerful character-based movements
-		config = function()
-			require("leap").set_default_keymaps()
-		end,
-	})
+	use("ggandor/leap.nvim") -- More powerful character-based movements
 
 	use("tpope/vim-repeat") -- make dot-repeat work as expected with complex commands
 

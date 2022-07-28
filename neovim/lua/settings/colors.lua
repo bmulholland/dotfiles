@@ -5,6 +5,16 @@ end
 
 vim.cmd("syntax on")
 
+-- Customization of light theme
+local ayucolors = require("ayu.colors")
+ayucolors.generate() -- Pass `true` to enable mirage
+
+require("ayu").setup({
+	overrides = {
+		Cursor = { bg = ayucolors.line },
+	},
+})
+
 -- Customization of dark theme
 vim.g.sonokai_style = "shusia" -- variation inspired by Monokai Pro
 vim.g.sonokai_enable_italic = 1
