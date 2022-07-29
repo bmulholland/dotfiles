@@ -8,6 +8,12 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	execute("packadd packer.nvim")
 end
 
+require("packer").init({
+	-- Workaround: https://github.com/wbthomason/packer.nvim/issues/746
+	-- https://github.com/wbthomason/packer.nvim/issues/456
+	max_jobs = 50,
+})
+
 vim.cmd("autocmd BufWritePost plugins.lua PackerCompile") -- Auto compile when there are changes in plugins.lua
 
 return require("packer").startup(function(use)
