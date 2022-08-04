@@ -88,6 +88,9 @@ return require("packer").startup(function(use)
 	use("onsails/lspkind-nvim") -- Nicer pictograms
 	-- Next commit breaks config: https://github.com/lukas-reineke/lsp-format.nvim/issues/39
 	use("lukas-reineke/lsp-format.nvim") -- Formatting
+	use({ -- Show all LSP diagnostics, in lines BELOW the text
+		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+	})
 	-- Nice rename UI
 	use({
 		"filipdutescu/renamer.nvim",
@@ -135,9 +138,6 @@ return require("packer").startup(function(use)
 		config = function()
 			require("retrail").setup()
 		end,
-	})
-	use({ -- Show all LSP diagnostics, in lines BELOW the text
-		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 	})
 
 	-- Easily (un)comment out stuff
