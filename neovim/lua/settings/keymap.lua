@@ -86,7 +86,6 @@ wk.register({
 		h = { ":lua vim.lsp.buf.hover()<CR>", "open LSP hover" },
 		m = { ":lua require('telescope.builtin').marks()<CR>", "List marks" },
 		n = { ":NvimTreeToggle<cr>", "Open a file explorer" },
-		l = { ":lua require('lsp_lines').toggle<CR>", "Toggle lsp_lines" },
 		o = { ":%!python3 -m json.tool<CR>", "Pretty print JSON" },
 		["prj"] = { ":Telescope projects<CR>", "Open projects" },
 		q = { ":bd<CR>", "Close current buffer" },
