@@ -71,7 +71,8 @@ wk.register({
 			r = { ":lua require('telescope.builtin').live_grep()<CR>", "Grep code" },
 			t = {
 				name = "+ git",
-				b = { ":lua require('plugins.telescope').my_git_bcommits()<CR>", "List commits for this buffer" },
+				-- b = { ":lua require('plugins.telescope').my_git_bcommits()<CR>", "List commits for this buffer" },
+				b = { '<cmd>lua require"gitsigns".blame_line(true)<CR>', "Blame line" },
 				c = { ":lua require('plugins.telescope').my_git_commits()<CR>", "List all commits" },
 				g = { ":Neogit<CR>", "Neogit" },
 
@@ -80,7 +81,6 @@ wk.register({
 				r = { '<cmd>lua require"gitsigns".reset_hunk()<CR>', "Reset hunk" },
 				R = { '<cmd>lua require"gitsigns".reset_buffer()<CR>', "Reset buffer" },
 				p = { '<cmd>lua require"gitsigns".preview_hunk()<CR>', "Preview hunk" },
-				b = { '<cmd>lua require"gitsigns".blame_line(true)<CR>', "Blame line" },
 			},
 		},
 		h = { ":lua vim.lsp.buf.hover()<CR>", "open LSP hover" },
@@ -102,9 +102,9 @@ wk.register({
 			n = { ":w<CR>:lua require('neotest').run.run()<CR>", "Run nearest test" },
 			f = { ":w<CR>:lua require('neotest').run.run(vim.fn.expand('%'))<CR>", "Run file's tests" },
 			d = { ":w<CR>:lua require('neotest').run.run(){strategy = 'dap'})<CR>", "Run nearest (DAP)" },
-			s = { ":lua require('neotest').run.stop()<CR>", "Stop nearest" },
-			o = { ":lua require('neotest').output.open({ enter = true })<CR>", "Show test output" },
 			s = { ":lua require('neotest').summary.toggle()<CR>", "Toggle test summary" },
+			t = { ":lua require('neotest').run.stop()<CR>", "Stop nearest" },
+			o = { ":lua require('neotest').output.open({ enter = true })<CR>", "Show test output" },
 		},
 		s = { ":lua vim.lsp.buf.document_symbol()<CR>", "List symbols in current docx" },
 		t = { ":lua require('plugins.telescope').project_files()<CR>", "Open project's files" },
@@ -131,7 +131,6 @@ wk.register({
 
 	-- Work with git hunks
 	["ih"] = { ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>', "Select hunk", mode = "o" },
-	["ih"] = { ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>', "Select hunk", mode = "x" },
 
 	["]t"] = { "<Plug>(ultest-next-fail)", "Next failing test" },
 	["[t"] = { "<Plug>(ultest-prev-fail)", "Prev failing test" },
@@ -142,6 +141,7 @@ wk.register({
 })
 
 wk.register({
+	["ih"] = { ':<C-U>lua require"gitsigns.actions".select_hunk()<CR>', "Select hunk", mode = "x" },
 	["<leader>"] = {
 		g = {
 			name = "+ git",
