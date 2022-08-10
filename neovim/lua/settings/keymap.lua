@@ -66,6 +66,7 @@ wk.register({
 			},
 		},
 		e = { ":lua require('telescope.builtin').treesitter()<CR>", "Open treesitter" },
+		f = { ":lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>", "Fuzzy find in buffer" },
 		g = {
 			r = { ":lua require('telescope.builtin').live_grep()<CR>", "Grep code" },
 			t = {
@@ -85,7 +86,7 @@ wk.register({
 		h = { ":lua vim.lsp.buf.hover()<CR>", "open LSP hover" },
 		m = { ":lua require('telescope.builtin').marks()<CR>", "List marks" },
 		n = { ":NvimTreeToggle<cr>", "Open a file explorer" },
-		l = { ":lua require('telescope.builtin').current_buffer_fuzzy_find()<CR>", "Fuzzy find in buffer" },
+		l = { ":lua require('lsp_lines').toggle<CR>", "Toggle lsp_lines" },
 		o = { ":%!python3 -m json.tool<CR>", "Pretty print JSON" },
 		["prj"] = { ":Telescope projects<CR>", "Open projects" },
 		q = { ":bd<CR>", "Close current buffer" },
