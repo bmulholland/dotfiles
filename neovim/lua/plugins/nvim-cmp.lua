@@ -66,10 +66,23 @@ cmp.setup({
 		{ name = "treesitter" },
 		{ name = "tags" },
 	},
+	-- https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#how-to-get-types-on-the-left-and-offset-the-menu
+	window = {
+		completion = {
+			winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+			col_offset = -3,
+			side_padding = 0,
+		},
+	},
 	formatting = {
-		format = require("lspkind").cmp_format({
-			mode = "symbol_text",
-			maxwidth = 50,
-		}),
+		fields = { "kind", "abbr", "menu" },
+		format = function(entry, vim_item)
+			local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+			local strings = vim.split(kind.kind, "%s", { trimempty = true })
+			kind.kind = " " .. strings[1] .. " "
+			kind.menu = "    (" .. strings[2] .. ")"
+
+			return kind
+		end,
 	},
 })
