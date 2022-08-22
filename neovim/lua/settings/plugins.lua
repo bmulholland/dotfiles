@@ -49,7 +49,7 @@ return require("packer").startup(function(use)
 	use("tpope/vim-rails") -- Rails helpers
 
 	-- In-editor debugging
-	use({ "mfussenegger/nvim-dap", commit = "1de5f63" })
+	use({ "mfussenegger/nvim-dap" })
 	use("suketa/nvim-dap-ruby")
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 	use("theHamsta/nvim-dap-virtual-text")
