@@ -25,8 +25,9 @@ return require("packer").startup(function(use)
 
 	-- LSP
 	use({
+		"williamboman/mason.nvim",
 		"neovim/nvim-lspconfig",
-		"williamboman/nvim-lsp-installer",
+		"williamboman/mason-lspconfig.nvim",
 	})
 	use({
 		"jose-elias-alvarez/null-ls.nvim",

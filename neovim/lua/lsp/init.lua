@@ -46,25 +46,9 @@ vim.cmd("sign define LspDiagnosticsSignInformation text=")
 vim.cmd("sign define LspDiagnosticsSignHint text=")
 vim.cmd("setlocal omnifunc=v:lua.vim.lsp.omnifunc")
 
--- Auto-install servers I use
-require("nvim-lsp-installer").setup({
-	ensure_installed = {
-		"graphql",
-		-- "cucumber_language_server",
-		-- Frontend/Vue
-		"tsserver",
-		"vuels",
-		"tailwindcss",
-		"html",
-		-- Infra as code
-		"terraformls",
-		-- nvim config
-		"sumneko_lua",
-	},
-})
-
 local lspconfig = require("lspconfig")
 
+-- Servers installed in plugins/mason.lua
 lspconfig.graphql.setup({
 	capabilities = capabilities,
 	on_attach = require("lsp-format").on_attach,
