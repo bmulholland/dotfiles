@@ -42,7 +42,6 @@ return require("packer").startup(function(use)
 
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use("p00f/nvim-ts-rainbow") -- Different colours for nested parentheses
 
 	-- Ruby helpers
 	use("ecomba/vim-ruby-refactoring") -- Helper methods to refactor Ruby
@@ -191,6 +190,17 @@ return require("packer").startup(function(use)
 	-- Color theme
 	use("sainnhe/sonokai") -- dark color scheme
 	use("Shatur/neovim-ayu") -- light color scheme
+
+	use("p00f/nvim-ts-rainbow") -- Different colours for nested parentheses
+	use({
+		"mrshmllow/document-color.nvim",
+		config = function()
+			require("document-color").setup({
+				-- Default options
+				mode = "background", -- "background" | "foreground" | "single"
+			})
+		end,
+	})
 
 	-- Auto-switch to dark mode
 	use("cormacrelf/dark-notify")

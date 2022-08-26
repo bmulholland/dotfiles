@@ -12,6 +12,11 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 	},
 }
 
+-- Via https://github.com/mrshmllow/document-color.nvim
+capabilities.textDocument.colorProvider = {
+	dynamicRegistration = true,
+}
+
 -- Diagnostics symbols for display in the sign column.
 vim.cmd("sign define LspDiagnosticsSignError text=")
 vim.cmd("sign define LspDiagnosticsSignWarning text=")
@@ -55,7 +60,15 @@ lspconfig.tsserver.setup({
 -- needed
 lspconfig.vuels.setup({ capabilities = capabilities })
 -- tailwind is formatted via esllint plugin; no format attachment needed
-lspconfig.tailwindcss.setup({ capabilities = capabilities })
+lspconfig.tailwindcss.setup({
+	on_attach = function(client)
+		if client.server_capabilities.colorProvider then
+			-- Attach document colour support
+			require("document-color").buf_attach(bufnr)
+		end
+	end,
+	capabilities = capabilities,
+})
 
 -- Ruby
 lspconfig.sorbet.setup({
