@@ -191,7 +191,11 @@ return require("packer").startup(function(use)
 	use("sainnhe/sonokai") -- dark color scheme
 	use("Shatur/neovim-ayu") -- light color scheme
 
+	-- Auto-switch to dark mode
+	use("cormacrelf/dark-notify")
+
 	use("p00f/nvim-ts-rainbow") -- Different colours for nested parentheses
+	use("RRethy/vim-illuminate")
 	use({
 		"mrshmllow/document-color.nvim",
 		config = function()
@@ -201,7 +205,4 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
-
-	-- Auto-switch to dark mode
-	use("cormacrelf/dark-notify")
 end)
