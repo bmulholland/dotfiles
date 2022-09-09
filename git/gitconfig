@@ -17,6 +17,7 @@
   sshow = "!f() { git stash show stash^{/$*} -p; }; f"
   sapply = "!f() { git stash apply stash^{/$*}; }; f"
 [pager]
+  # Try this at some point: https://github.com/dandavison/delta/issues/447#issuecomment-1239398586
   diff = delta
   log = delta
   reflog = delta
