@@ -40,4 +40,6 @@ require("nvim-treesitter.configs").setup({
 			node_decremental = "<S-TAB>",
 		},
 	},
+	-- highlight same-name identifiers with the same color
+	markid = { enable = true },
 })

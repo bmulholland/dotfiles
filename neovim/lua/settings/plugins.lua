@@ -197,7 +197,7 @@ return require("packer").startup(function(use)
 
 	use("p00f/nvim-ts-rainbow") -- Different colours for nested parentheses
 	use("RRethy/vim-illuminate")
-	use({
+	use({ -- see the color tailwind classes apply
 		"mrshmllow/document-color.nvim",
 		config = function()
 			require("document-color").setup({
@@ -206,4 +206,5 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
+	use("David-Kunz/markid") -- highlight same-name identifiers with the same color
 end)
