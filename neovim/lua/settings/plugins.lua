@@ -42,6 +42,10 @@ return require("packer").startup(function(use)
 
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+	use({ -- improves nvim-surround support
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		requires = { "nvim-treesitter/nvim-treesitter" },
+	})
 
 	-- Ruby helpers
 	use("ecomba/vim-ruby-refactoring") -- Helper methods to refactor Ruby
@@ -123,6 +127,10 @@ return require("packer").startup(function(use)
 	use("tpope/vim-unimpaired") -- Convenient pairs of mappings, e.g. add a blank line
 	use({ -- Easily change surrounding tags (e.g. in html)
 		"kylechui/nvim-surround",
+		requires = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-treesitter/nvim-treesitter-textobjects",
+		},
 		config = function()
 			require("nvim-surround").setup({})
 		end,
