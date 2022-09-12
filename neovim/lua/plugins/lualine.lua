@@ -12,7 +12,12 @@ require("lualine").setup({
 		-- branch is too long and I never look at it
 		lualine_b = { "diff", { "diagnostics", sources = { "nvim_diagnostic" } } },
 		lualine_c = { { "filename", path = 1 } },
-		lualine_x = { "filetype" },
+		lualine_x = {
+			-- Some LSP servers take a while to initialize. This provides a nice
+			-- visual indicator to show which clients are ready to use.
+			"lsp_progress",
+			--"filetype"
+		},
 		lualine_z = { "location" },
 	},
 	inactive_sections = {

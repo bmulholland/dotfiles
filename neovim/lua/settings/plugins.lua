@@ -160,6 +160,10 @@ return require("packer").startup(function(use)
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
+	-- Some LSP servers take a while to initialize. This provides a nice visual
+	-- indicator to show which clients are ready to use.
+	use("WhoIsSethDaniel/lualine-lsp-progress")
+
 	use({ "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } }) -- Add a gutter that shows git additions/deletions/etc
 	use("kyazdani42/nvim-tree.lua") -- File Explorer
 	use("kyazdani42/nvim-web-devicons") -- Nicer icons
