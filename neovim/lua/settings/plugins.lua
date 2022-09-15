@@ -218,5 +218,4 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
-	use("David-Kunz/markid") -- highlight same-name identifiers with the same color
 end)
