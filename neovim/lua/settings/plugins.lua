@@ -64,7 +64,7 @@ return require("packer").startup(function(use)
 		requires = {
 			"nvim-lua/plenary.nvim",
 			"nvim-treesitter/nvim-treesitter",
-			"antoinemadec/FixCursorHold.nvim",
+			"antoinemadec/FixCursorHold.nvim", -- Fixed in neovim 0.8
 			"olimorris/neotest-rspec",
 		},
 		config = function()
