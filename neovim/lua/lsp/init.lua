@@ -52,8 +52,7 @@ lspconfig.tsserver.setup({
 	capabilities = capabilities,
 	-- Leave the formatting to ESLint_d via null_ls
 	on_attach = function(client)
-		client.resolved_capabilities.document_formatting = false
-		client.resolved_capabilities.document_range_formatting = false
+		client.server_capabilities.documentFormattingProvider = false -- 0.8 and later
 	end,
 })
 -- vue is formatted via eslint_d via null-ls, below; no format attachment
@@ -103,7 +102,6 @@ null_ls.setup({
 		require("lsp-format").on_attach(client)
 		-- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
 		-- the resolved capabilities of the eslint server ourselves!
-		client.resolved_capabilities.document_formatting = true
-		client.resolved_capabilities.document_range_formatting = true
+		client.server_capabilities.documentFormattingProvider = true
 	end,
 })

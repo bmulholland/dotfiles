@@ -5,9 +5,8 @@ local bo = vim.bo
 
 o.mouse = "a" -- Enable mouse support
 
--- Enable lua-based filetype detection
-vim.cmd([[let g:do_filetype_lua = 1]])
-vim.cmd([[let g:did_load_filetypes = 0]])
+-- Show command bar only when needed
+vim.cmd([[set cmdheight=0]])
 
 -- Sync Vim copy/paste with system copy/paste
 vim.cmd([[set clipboard+=unnamedplus]])
