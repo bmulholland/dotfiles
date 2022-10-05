@@ -55,6 +55,9 @@ o.splitright = true -- More natural split opening position
 -- Persistent undo
 bo.undofile = true
 
+-- Enable spellcheck for comments
+o.spell = true
+
 -- Give option to reload files when they've changed
 -- See discussion at:
 -- https://github.com/qvacua/vimr/issues/242
