@@ -183,11 +183,7 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use({ -- dim unused vars
-		-- Have to use a branch with a fix until PR merged:
-		--https://github.com/NarutoXY/dim.lua/pull/19
-		-- "narutoxy/dim.lua",
-		"Gelio/dim.lua",
-		branch = "fix-treesitter-api-function-name",
+		"narutoxy/dim.lua",
 		requires = { "nvim-treesitter/nvim-treesitter", "neovim/nvim-lspconfig" },
 		config = function()
 			require("dim").setup({})
