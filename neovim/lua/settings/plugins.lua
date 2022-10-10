@@ -33,6 +33,7 @@ return require("packer").startup(function(use)
 		"jose-elias-alvarez/null-ls.nvim",
 		requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
 	})
+	use("jose-elias-alvarez/typescript.nvim")
 
 	-- WhichKey: help remember and learn shortcuts
 	use("folke/which-key.nvim")

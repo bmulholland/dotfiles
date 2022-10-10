@@ -48,12 +48,14 @@ lspconfig.sumneko_lua.setup({
 	on_attach = require("lsp-format").on_attach,
 })
 
-lspconfig.tsserver.setup({
-	capabilities = capabilities,
-	-- Leave the formatting to ESLint_d via null_ls
-	on_attach = function(client)
-		client.server_capabilities.documentFormattingProvider = false -- 0.8 and later
-	end,
+require("typescript").setup({
+	server = {
+		capabilities = capabilities,
+		-- Leave the formatting to ESLint_d via null_ls
+		on_attach = function(client)
+			client.server_capabilities.documentFormattingProvider = false -- 0.8 and later
+		end,
+	},
 })
 -- vue is formatted via eslint_d via null-ls, below; no format attachment
 -- needed
