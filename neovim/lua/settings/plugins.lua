@@ -36,6 +36,8 @@ return require("packer").startup(function(use)
 
 	-- WhichKey: help remember and learn shortcuts
 	use("folke/which-key.nvim")
+	-- Delay repeat execution of certain keys
+	use("ja-ford/delaytrain.nvim")
 
 	-- autocompletion for wildmenu
 	use("gelguy/wilder.nvim")
