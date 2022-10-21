@@ -6,7 +6,7 @@ local bo = vim.bo
 o.mouse = "a" -- Enable mouse support
 
 -- Show command bar only when needed
-vim.cmd([[set cmdheight=0]])
+o.ch = 0
 
 -- Sync Vim copy/paste with system copy/paste
 vim.cmd([[set clipboard+=unnamedplus]])
