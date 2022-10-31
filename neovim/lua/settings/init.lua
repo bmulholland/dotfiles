@@ -59,7 +59,7 @@ o.splitright = true -- More natural split opening position
 bo.undofile = true
 
 -- Enable spellcheck for comments
-o.spell = true
+-- o.spell = true -- also highlighting strings, which clutters the UI
 
 -- Give option to reload files when they've changed
 -- See discussion at:
