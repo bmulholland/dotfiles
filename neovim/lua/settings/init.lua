@@ -8,6 +8,9 @@ o.mouse = "a" -- Enable mouse support
 -- Show command bar only when needed
 o.ch = 0
 
+-- Highlight current line
+vim.opt.cursorline = true
+
 -- Sync Vim copy/paste with system copy/paste
 vim.cmd([[set clipboard+=unnamedplus]])
 
