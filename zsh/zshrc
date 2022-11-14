@@ -101,7 +101,7 @@ NVM_AUTOLOAD=1
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # TODO: Go through these plugins and add commands to Anki so I memorize them
 # Syntax highlighting from https://github.com/zdharma/fast-syntax-highlighting
-plugins=(brew macos rails rake rake-fast ruby rvm git git-auto-fetch git-escape-magic aws colorize command-not-found common-aliases httpie nvm npm yarn terraform tmux zsh-autosuggestions you-should-use fast-syntax-highlighting z)
+plugins=(brew macos rails rake rake-fast ruby rvm git git-auto-fetch git-escape-magic aws colorize command-not-found common-aliases httpie nvm npm yarn pnpm terraform tmux zsh-autosuggestions you-should-use fast-syntax-highlighting z)
 
 source $ZSH/oh-my-zsh.sh
 
