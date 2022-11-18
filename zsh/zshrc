@@ -24,6 +24,7 @@ alias gch="git checkout"
 alias vim=nvim
 
 alias upgradeall="brew update && brew upgrade && brew upgrade --cask --greedy && brew cleanup && omz update --unattended && rvm get stable && rvm @global do gem update \`gem list | cut -d ' ' -f 1\` && pip3 install --upgrade pip && rvm-update && yarn global upgrade --latest && nvm install stable --default --reinstall-packages-from=current && nvm install-latest-npm && npm install -g npm && npm update -g && nvim -c 'UpdateRemotePlugins | PackerSync' && echo 'DONE UPGRADE' && omz reload"
+alias ua="upgradeall"
 
 # https://gist.github.com/hlissner/db74d23fc00bed81ff62
 function ag-replace() {
