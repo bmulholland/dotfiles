@@ -42,7 +42,7 @@ lspconfig.terraformls.setup({
 	capabilities = capabilities,
 	on_attach = require("lsp-format").on_attach,
 })
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
 	capabilities = capabilities,
 	on_attach = require("lsp-format").on_attach,
 })

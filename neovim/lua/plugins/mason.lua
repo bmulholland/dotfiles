@@ -12,6 +12,6 @@ require("mason-lspconfig").setup({
 		-- Infra as code
 		"terraformls",
 		-- nvim config
-		"sumneko_lua",
+		"lua_ls",
 	},
 })
