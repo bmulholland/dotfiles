@@ -23,7 +23,7 @@ alias gch="git checkout"
 # alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias vim=nvim
 
-alias upgradeall="brew update && brew upgrade && brew upgrade --cask --greedy && brew cleanup && omz update --unattended && rvm get stable && rvm @global do gem update \`gem list | cut -d ' ' -f 1\` && pip3 install --upgrade pip && rvm-update && yarn global upgrade --latest && nvm install stable --default --reinstall-packages-from=current && nvm install-latest-npm && npm install -g npm && npm update -g && nvim -c 'UpdateRemotePlugins' && echo 'DONE UPGRADE' && omz reload"
+alias upgradeall="brew update && brew upgrade && brew upgrade --cask --greedy && brew cleanup && omz update --unattended && asdf update && asdf plugin update --all && pip3 install --upgrade pip && yarn global upgrade --latest && npm install -g npm && npm update -g && nvim -c 'UpdateRemotePlugins' && echo 'DONE UPGRADE' && omz reload"
 alias ua="upgradeall"
 
 # https://gist.github.com/hlissner/db74d23fc00bed81ff62
@@ -93,21 +93,14 @@ ZSH_THEME="wezm"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
-# Auto-set nvm if there is a .nvmrc file
-# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm#settings
-zstyle ':omz:plugins:nvm' autoload true
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # TODO: Go through these plugins and add commands to Anki so I memorize them
 # Syntax highlighting from https://github.com/zdharma/fast-syntax-highlighting
-plugins=(brew macos rails rake rake-fast ruby rvm git git-auto-fetch git-escape-magic aws colorize command-not-found common-aliases httpie nvm npm yarn pnpm terraform tmux zsh-autosuggestions you-should-use fast-syntax-highlighting z)
+plugins=(brew macos rails rake rake-fast ruby git git-auto-fetch git-escape-magic aws colorize command-not-found common-aliases httpie npm yarn asdf terraform tmux zsh-autosuggestions you-should-use fast-syntax-highlighting z)
 
 source $ZSH/oh-my-zsh.sh
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
