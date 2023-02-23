@@ -10,6 +10,8 @@ setopt APPEND_HISTORY
 # Maybe this is better these days?
 # unsetopt correct_all
 
+alias arst="asdf" # support colemak layout
+
 RAILS_ENV=development
 alias be="bundle exec"
 alias bi="bundle install"
