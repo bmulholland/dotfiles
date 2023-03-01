@@ -16,3 +16,6 @@ bm_solargem_helpers.rb
 .vscode/
 
 .solargraph.yml
+
+# asdf file, shouldn't expose to others
+.tool-versions
