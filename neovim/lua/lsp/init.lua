@@ -73,6 +73,9 @@ lspconfig.tailwindcss.setup({
 -- Ruby
 lspconfig.sorbet.setup({
 	capabilities = capabilities,
+	init_options = {
+		highlightUntyped = true,
+	},
 })
 lspconfig.solargraph.setup({
 	capabilities = capabilities,
