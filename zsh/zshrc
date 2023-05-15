@@ -78,7 +78,8 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# Have to manually point to Postgres 15 binaries, see https://github.com/Homebrew/homebrew-core/issues/121043
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/bmulholland/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
