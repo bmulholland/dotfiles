@@ -51,13 +51,13 @@ require("lazy").setup({
 
   -- Ruby helpers
   "ecomba/vim-ruby-refactoring", -- Helper methods to refactor Ruby
-  "AndrewRadev/splitjoin.vim",   -- toggle between single-line and multi-line code things
-  "tpope/vim-rails",             -- Rails helpers
+  "AndrewRadev/splitjoin.vim", -- toggle between single-line and multi-line code things
+  "tpope/vim-rails", -- Rails helpers
 
   -- In-editor debugging
   { "mfussenegger/nvim-dap" },
   "suketa/nvim-dap-ruby",
-  { "rcarriga/nvim-dap-ui",                     dependencies = { "mfussenegger/nvim-dap" } },
+  { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
   "theHamsta/nvim-dap-virtual-text",
 
   -- Easier test running
@@ -89,8 +89,8 @@ require("lazy").setup({
   "hrsh7th/cmp-vsnip",
   "hrsh7th/vim-vsnip",
 
-  "ray-x/lsp_signature.nvim",      -- Display method signatures
-  "onsails/lspkind-nvim",          -- Nicer pictograms
+  "ray-x/lsp_signature.nvim", -- Display method signatures
+  "onsails/lspkind-nvim", -- Nicer pictograms
   -- Next commit breaks config: https://github.com/lukas-reineke/lsp-format.nvim/issues/39
   "lukas-reineke/lsp-format.nvim", -- Formatting
   -- Nice rename UI
@@ -100,13 +100,13 @@ require("lazy").setup({
   },
 
   -- Fuzzy file search
-  { "nvim-telescope/telescope.nvim",            dependencies = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } },
+  { "nvim-telescope/telescope.nvim", dependencies = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } },
   { "nvim-telescope/telescope-fzf-native.nvim", build = "make" }, -- Faster sorting
-  "ahmedkhalf/project.nvim",                                      -- keep track of porjects, and cd to the correct dir
+  "ahmedkhalf/project.nvim", -- keep track of porjects, and cd to the correct dir
   "fhill2/telescope-ultisnips.nvim",
 
   -- Documentation lookups
-  { "mrjones2014/dash.nvim",  dependencies = { "nvim-telescope/telescope.nvim" }, build = "make install" },
+  { "mrjones2014/dash.nvim", dependencies = { "nvim-telescope/telescope.nvim" }, build = "make install" },
 
   -- Git
   "tpope/vim-fugitive", -- Git helper commands
@@ -116,13 +116,13 @@ require("lazy").setup({
   -- File and tag navigation
 
   { "kevinhwang91/nvim-hlslens" },
-  "andymass/vim-matchup",  -- Improved matchit; use % to navigate between paids of brackets, if/end, etc
+  "andymass/vim-matchup", -- Improved matchit; use % to navigate between paids of brackets, if/end, etc
   "kshenoy/vim-signature", -- show location markers in the gutter
-  "ggandor/leap.nvim",     -- More powerful character-based movements
+  "ggandor/leap.nvim", -- More powerful character-based movements
 
-  "tpope/vim-repeat",      -- make dot-repeat work as expected with complex commands
+  "tpope/vim-repeat", -- make dot-repeat work as expected with complex commands
 
-  "tpope/vim-unimpaired",  -- Convenient pairs of mappings, e.g. add a blank line
+  "tpope/vim-unimpaired", -- Convenient pairs of mappings, e.g. add a blank line
   {
     -- Easily change surrounding tags (e.g. in html,
     "kylechui/nvim-surround",
@@ -172,10 +172,10 @@ require("lazy").setup({
   -- Some LSP servers take a while to initialize. This provides a nice visual
   -- indicator to show which clients are ready to use.
   "WhoIsSethDaniel/lualine-lsp-progress",
-  { "lewis6991/gitsigns.nvim",  dependencies = { "nvim-lua/plenary.nvim" } }, -- Add a gutter that shows git additions/deletions/etc
-  "kyazdani42/nvim-tree.lua",                                                 -- File Explorer
-  "kyazdani42/nvim-web-devicons",                                             -- Nicer icons
-  "lukas-reineke/indent-blankline.nvim",                                      -- Indentation guide lines
+  { "lewis6991/gitsigns.nvim", dependencies = { "nvim-lua/plenary.nvim" } }, -- Add a gutter that shows git additions/deletions/etc
+  "kyazdani42/nvim-tree.lua", -- File Explorer
+  "kyazdani42/nvim-web-devicons", -- Nicer icons
+  "lukas-reineke/indent-blankline.nvim", -- Indentation guide lines
   { "kevinhwang91/nvim-bqf", ft = "qf" },
   {
     -- Keep the window stable when opening quickfix/Trouble
@@ -192,7 +192,7 @@ require("lazy").setup({
     config = function()
       require("neodim").setup({
         refresh_delay = 75, -- time in ms to wait after typing before refresh diagnostics
-        alpha = .75,
+        alpha = 0.75,
         blend_color = "#000000",
         hide = { underline = true, virtual_text = true, signs = true },
         disable = {}, -- table of filetypes to disable neodim
@@ -200,11 +200,10 @@ require("lazy").setup({
     end,
   },
 
-
   "f-person/git-blame.nvim",
-  "folke/todo-comments.nvim",                                                 -- Highlight TODOs
-  "kosayoda/nvim-lightbulb",                                                  -- Show a lightbulb when a code fix is available
-  { "folke/trouble.nvim",    dependencies = "kyazdani42/nvim-web-devicons" }, -- improved diagnostics ui
+  "folke/todo-comments.nvim", -- Highlight TODOs
+  "kosayoda/nvim-lightbulb", -- Show a lightbulb when a code fix is available
+  { "folke/trouble.nvim", dependencies = "kyazdani42/nvim-web-devicons" }, -- improved diagnostics ui
   {
     -- More code action into
     "weilbith/nvim-code-action-menu",
@@ -212,7 +211,7 @@ require("lazy").setup({
   },
 
   -- Color theme
-  "sainnhe/sonokai",   -- dark color scheme
+  "sainnhe/sonokai", -- dark color scheme
   "Shatur/neovim-ayu", -- light color scheme
 
   -- Auto-switch to dark mode
