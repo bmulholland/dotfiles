@@ -14,8 +14,7 @@ require("gitsigns").setup({
 	},
 	numhl = true,
 	linehl = false,
-	-- Set dirsectly in keymap config so which-key knows about them
-	keymaps = {},
+	-- Set directly in keymap config so which-key knows about them
 	watch_gitdir = {
 		interval = 1000,
 	},
