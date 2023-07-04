@@ -110,7 +110,7 @@ require("lazy").setup({
 
   -- Git
   "tpope/vim-fugitive", -- Git helper commands
-  { "TimUntersberger/neogit", dependencies = "nvim-lua/plenary.nvim" },
+  { "NeogitOrg/neogit", dependencies = "nvim-lua/plenary.nvim" },
   "sindrets/diffview.nvim",
 
   -- File and tag navigation
