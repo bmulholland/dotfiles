@@ -27,10 +27,9 @@ require("nvim-treesitter.configs").setup({
 	context_commentstring = {
 		enable = true,
 	},
-	--https://github.com/andymass/vim-matchup/issues/307
-	-- matchup = {
-	-- 	enable = true,
-	-- },
+	matchup = {
+		enable = true,
+	},
 	endwise = {
 		enable = true,
 	},
