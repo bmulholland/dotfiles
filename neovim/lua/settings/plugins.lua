@@ -220,7 +220,7 @@ require("lazy").setup({
 	-- Auto-switch to dark mode
 	"cormacrelf/dark-notify",
 
-	"p00f/nvim-ts-rainbow", -- Different colours for nested parentheses
+	"HiPhish/rainbow-delimiters.nvim", -- Different colours for nested parentheses
 	"RRethy/vim-illuminate",
 	{
 		-- see the color tailwind classes apply
