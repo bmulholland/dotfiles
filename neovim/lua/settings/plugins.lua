@@ -232,6 +232,9 @@ require("lazy").setup({
 			})
 		end,
 	},
+
+	-- AI coding
+	"github/copilot.vim",
 }, {
 	checker = {
 		-- automatically check for plugin updates
