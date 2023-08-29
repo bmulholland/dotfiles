@@ -15,9 +15,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	-- Packer can manage itself as an optional plugin
-	"wbthomason/packer.nvim",
-
 	-- Auto-set line and spacing params
 	"editorconfig/editorconfig-vim",
 
