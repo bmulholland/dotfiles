@@ -91,7 +91,6 @@ require("lazy").setup({
 
 	"ray-x/lsp_signature.nvim", -- Display method signatures
 	"onsails/lspkind-nvim", -- Nicer pictograms
-	-- Next commit breaks config: https://github.com/lukas-reineke/lsp-format.nvim/issues/39
 	"lukas-reineke/lsp-format.nvim", -- Formatting
 	-- Nice rename UI
 	{
