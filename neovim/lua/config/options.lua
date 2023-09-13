@@ -3,3 +3,6 @@
 -- Add any additional options here
 
 vim.o.guifont = "VictorMono Nerd Font:h13"
+
+vim.opt.wrap = true
+vim.wo.colorcolumn = "+1"
