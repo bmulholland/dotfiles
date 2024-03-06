@@ -18,8 +18,7 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.lang.ruby" }, -- forked this to remove solargraph
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.terraform" },
-    -- I use volar for TS
-    -- { import = "lazyvim.plugins.extras.lang.typescript" },
+    { import = "lazyvim.plugins.extras.lang.typescript" },
 
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
