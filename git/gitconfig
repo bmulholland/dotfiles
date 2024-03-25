@@ -1,6 +1,6 @@
 [user]
   name = Brendan Mulholland
-	email = brendan@recital.software
+	email = brendan@recitalapp.com
 [core]
   editor = nvim
   autocrlf = input
@@ -16,7 +16,18 @@
   # Find git stashes by name
   sshow = "!f() { git stash show stash^{/$*} -p; }; f"
   sapply = "!f() { git stash apply stash^{/$*}; }; f"
+  dft = difftool
+
+[diff]
+  tool = difftastic
+  external = difft
+[difftool]
+  prompt = false
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
+
 [pager]
+  difftool = true
   # Try this at some point: https://github.com/dandavison/delta/issues/447#issuecomment-1239398586
   diff = delta
   log = delta
