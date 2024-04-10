@@ -12,7 +12,9 @@ return {
     opts = {
       servers = {
         sorbet = {},
-        rubocop = {},
+        rubocop = {
+          cmd = { "bundle", "exec", "rubocop", "--lsp" },
+        },
       },
     },
   },
