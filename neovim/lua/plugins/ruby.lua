@@ -11,7 +11,9 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        sorbet = {},
+        sorbet = {
+          cmd = { "bundle", "exec", "srb", "tc", "--lsp" },
+        },
         rubocop = {
           cmd = { "bundle", "exec", "rubocop", "--lsp" },
         },
@@ -29,7 +31,6 @@ return {
   },
   {
     "mfussenegger/nvim-dap",
-    optional = true,
     dependencies = {
       "suketa/nvim-dap-ruby",
       config = function()
@@ -39,7 +40,6 @@ return {
   },
   {
     "nvim-neotest/neotest",
-    optional = true,
     dependencies = {
       "olimorris/neotest-rspec",
     },
@@ -47,7 +47,7 @@ return {
       adapters = {
         ["neotest-rspec"] = {
           rspec_cmd = function()
-            return vim.tbl_flatten({
+            return vim.tbl_extend("force", {
               "bundle",
               "exec",
               "rspec",
