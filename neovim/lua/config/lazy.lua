@@ -14,6 +14,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.test.core" },
 
+    { import = "lazyvim.plugins.extras.lang.git" },
+
     { import = "lazyvim.plugins.extras.lang.json" },
     -- { import = "lazyvim.plugins.extras.lang.ruby" }, -- forked this to remove solargraph
     { import = "lazyvim.plugins.extras.lang.tailwind" },
@@ -29,8 +31,10 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.coding.mini-surround" },
     { import = "lazyvim.plugins.extras.coding.yanky" },
     { import = "lazyvim.plugins.extras.editor.leap" },
+    { import = "lazyvim.plugins.extras.editor.inc-rename" },
 
     { import = "lazyvim.plugins.extras.coding.copilot" },
+    { import = "lazyvim.plugins.extras.coding.copilot-chat" },
 
     { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
 
