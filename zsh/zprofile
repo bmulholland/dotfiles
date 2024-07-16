@@ -1,0 +1,26 @@
+
+export RAILS_ENV=development
+
+export EDITOR=nvim
+
+export PATH="/usr/local/sbin:$PATH"
+
+# Show tmux window titles in tmux tabs
+export DISABLE_AUTO_TITLE=true
+
+# Homebrew on Apple Silicon is installed in a non-path location
+if [[ $OSTYPE == darwin* && $CPUTYPE == arm64 ]]; then
+	export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+fi
+
+# Add pyenv to the path for management of Python versions
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
+# Have to manually point to Postgres 15 binaries, see https://github.com/Homebrew/homebrew-core/issues/121043
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+# Set up asdf outside consoles, like in neovide
+source /opt/homebrew/opt/asdf/libexec/asdf.sh

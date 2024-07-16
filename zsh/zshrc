@@ -12,7 +12,6 @@ setopt APPEND_HISTORY
 
 alias arst="asdf" # support colemak layout
 
-RAILS_ENV=development
 alias be="bundle exec"
 alias bi="bundle install"
 alias bu="bundle update"
@@ -50,14 +49,9 @@ function mvgit() {
   nvimr -n $(git status -s | awk '{print $2}')
 }
 
-export EDITOR=nvim
-
 # Shortcuts to jump forward/back a word with Alt+Arrow
 bindkey '[C' forward-word
 bindkey '[D' backward-word
-
-# Show tmux window titles in tmux tabs
-export DISABLE_AUTO_TITLE=true
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -65,21 +59,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 if [ -f ~/.zshrcsecrets ]; then
   source ~/.zshrcsecrets
 fi
-
-export PATH="/usr/local/sbin:$PATH"
-
-# Homebrew on Apple Silicon is installed in a non-path location
-if [[ $OSTYPE == darwin* && $CPUTYPE == arm64 ]]; then
-	export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-fi
-
-# Add pyenv to the path for management of Python versions
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-# Have to manually point to Postgres 15 binaries, see https://github.com/Homebrew/homebrew-core/issues/121043
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/bmulholland/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
@@ -116,23 +95,4 @@ __delta_dark_mode_preexec_function () {
 }
 typeset -ag preexec_functions;
 preexec_functions=( __delta_dark_mode_preexec_function ${preexec_functions[@]} )
-
-###-begin-envkey-completions-###
-#
-# yargs command completion script
-#
-# Installation: usr/local/bin/envkey completion >> ~/.zshrc
-#    or usr/local/bin/envkey completion >> ~/.zsh_profile on OSX.
-#
-_envkey_yargs_completions()
-{
-  local reply
-  local si=$IFS
-  IFS=$'
-' reply=($(COMP_CWORD="$((CURRENT-1))" COMP_LINE="$BUFFER" COMP_POINT="$CURSOR" usr/local/bin/envkey --get-yargs-completions "${words[@]}"))
-  IFS=$si
-  _describe 'values' reply
-}
-compdef _envkey_yargs_completions envkey
-###-end-envkey-completions-###
 
