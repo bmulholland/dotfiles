@@ -23,4 +23,4 @@ eval "$(pyenv virtualenv-init -)"
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
 # Set up asdf outside consoles, like in neovide
-source /opt/homebrew/opt/asdf/libexec/asdf.sh
+. "$HOME/.asdf/asdf.sh"
