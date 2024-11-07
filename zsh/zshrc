@@ -68,7 +68,7 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # TODO: Go through these plugins and add commands to Anki so I memorize them
 # Syntax highlighting from https://github.com/zdharma/fast-syntax-highlighting
-plugins=(macos rails rake rake-fast ruby git git-auto-fetch git-escape-magic aws colorize command-not-found common-aliases httpie yarn pnpm asdf terraform tmux zsh-autosuggestions you-should-use fast-syntax-highlighting z)
+plugins=(macos rails rake rake-fast ruby git git-auto-fetch git-escape-magic aws colorize command-not-found common-aliases httpie yarn pnpm asdf terraform tmux zsh-autosuggestions you-should-use fast-syntax-highlighting z bundler)
 
 # heroku autocomplete setup
 HEROKU_AC_ZSH_SETUP_PATH=/Users/bmulholland/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
