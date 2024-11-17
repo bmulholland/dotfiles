@@ -96,3 +96,4 @@ __delta_dark_mode_preexec_function () {
 typeset -ag preexec_functions;
 preexec_functions=( __delta_dark_mode_preexec_function ${preexec_functions[@]} )
 
+export PATH=$PATH:$HOME/.hounddog/bin

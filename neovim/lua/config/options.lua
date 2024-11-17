@@ -7,3 +7,6 @@ vim.o.guifont = "VictorMono Nerd Font:h13"
 vim.opt.wrap = true
 vim.wo.colorcolumn = "+1"
 vim.opt.ignorecase = false
+
+vim.g.lazyvim_ruby_lsp = "sorbet" -- no solargraph
+vim.g.lazyvim_ruby_formatter = "rubocop"
