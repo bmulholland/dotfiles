@@ -6,9 +6,6 @@ return {
     opts = {
       format_notify = true,
       servers = {
-        ruby_lsp = {
-          enabled = false,
-        },
         sorbet = {
           mason = false,
           cmd = { "bundle", "exec", "srb", "tc", "--lsp" },
@@ -22,14 +19,4 @@ return {
       },
     },
   },
-  -- {
-  --   "stevearc/conform.nvim",
-  --   opts = {
-  --     formatters = {
-  --       rubocop = {
-  --         command = "bundle exec rubocop --lsp",
-  --       },
-  --     },
-  --   },
-  -- },
 }
