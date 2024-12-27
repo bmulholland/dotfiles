@@ -10,3 +10,6 @@ vim.opt.ignorecase = false
 
 vim.g.lazyvim_ruby_lsp = "sorbet" -- no solargraph
 vim.g.lazyvim_ruby_formatter = "rubocop"
+
+-- Prepend mise shims to PATH, to load rubocop etc in neovide
+vim.env.PATH = vim.env.HOME .. "/.local/share/mise/shims:" .. vim.env.PATH

@@ -13,7 +13,7 @@ return {
         },
         rubocop = {
           mason = false,
-          cmd = { "bundle", "exec", "rubocop", "--lsp" },
+          cmd = { "bundle", "exec", "rubocop" },
           root_dir = lspconfig.util.root_pattern("Gemfile", ".git", "."),
         },
       },
