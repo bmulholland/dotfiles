@@ -1,26 +1,4 @@
 return {
-  {
-    "sainnhe/sonokai",
-    config = function()
-      vim.g.sonokai_style = "shusia" -- variation inspired by Monokai Pro
-      vim.g.sonokai_enable_italic = 1
-    end,
-  }, -- dark color scheme
-  {
-    "Shatur/neovim-ayu",
-    config = function()
-      require("ayu").setup({
-        -- A dictionary of group names, each associated with a dictionary of parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
-        overrides = {
-          -- These are the cursor values from ayu colors
-          IlluminatedWordText = { bg = "#EFF0F1" },
-          IlluminatedWordRead = { bg = "#EFF0F1" },
-          IlluminatedWordWrite = { bg = "#EFF0F1" },
-        },
-      })
-    end,
-  }, -- light color scheme
-
   -- Auto-switch to dark mode
   {
     "cormacrelf/dark-notify",
@@ -29,15 +7,16 @@ return {
 
       dark_notify.run({
         schemes = {
-          dark = "sonokai",
-          light = "ayu",
-          onchange = function(mode)
-            if mode == "dark" then
-              require("lualine").setup({ options = { theme = "sonokai" } })
-            else
-              require("lualine").setup({ options = { theme = "ayu" } })
-            end
-          end,
+          -- Yes, they're the same, but it does actually do something when these change
+          dark = "catppuccin",
+          light = "catppuccin",
+          -- onchange = function(mode)
+          --   if mode == "dark" then
+          --     require("lualine").setup({ options = { theme = "sonokai" } })
+          --   else
+          --     require("lualine").setup({ options = { theme = "ayu" } })
+          --   end
+          -- end,
         },
       })
 
@@ -47,11 +26,10 @@ return {
     end,
   },
 
-  -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = { "ayu" },
+      colorscheme = "catppuccin",
     },
   },
 }
