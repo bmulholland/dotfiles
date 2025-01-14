@@ -25,7 +25,7 @@ alias gch="git checkout"
 # alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias vim=nvim
 
-alias upgradeall="brew update && brew upgrade && brew upgrade --cask --greedy && brew cleanup && omz update --unattended && echo 'DONE UPGRADE' && omz reload"
+alias upgradeall="brew update && brew upgrade && brew upgrade --cask --greedy && brew cleanup && omz update --unattended && mise up --bump && echo 'DONE UPGRADE' && omz reload"
 alias ua="upgradeall"
 
 # https://gist.github.com/hlissner/db74d23fc00bed81ff62

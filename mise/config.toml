@@ -1,0 +1,10 @@
+[tools]
+node = "23.6.0"
+python = "3.13.1"
+ruby = "3.4.1"
+usage = "latest"
+
+[env]
+# Activate automatic virtualenv support
+#https://mise.jdx.dev/lang/python.html#automatic-virtualenv-activation
+_.python.venv = ".venv" # relative to this file's directory
