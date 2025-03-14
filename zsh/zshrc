@@ -10,6 +10,9 @@ setopt APPEND_HISTORY
 # Maybe this is better these days?
 # unsetopt correct_all
 
+# Needs to be first, so these are available for OMZ plugins
+export PATH=$PATH:~/.local/bin
+
 alias asdf="mise" # switched from asdf to mise
 alias arst="mise" # support colemak layout
 
@@ -31,6 +34,7 @@ upgradeall() {
   brew upgrade --cask --greedy && \
   brew cleanup && \
   "$ZSH/tools/upgrade.sh" && \
+  mise self-update && \
   mise up --bump && \
   echo 'DONE UPGRADE' && \
   omz reload
@@ -105,5 +109,3 @@ __delta_dark_mode_preexec_function () {
 }
 typeset -ag preexec_functions;
 preexec_functions=( __delta_dark_mode_preexec_function ${preexec_functions[@]} )
-
-export PATH=$PATH:$HOME/.hounddog/bin
