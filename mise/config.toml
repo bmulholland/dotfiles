@@ -1,10 +1,15 @@
 [tools]
-node = "23.9.0"
-python = "3.13.2"
-ruby = "3.4.1"
+node = "24.4.1"
+python = "3.13.5"
+ruby = "3.4.5"
 usage = "latest"
+terraform = "latest"
+kubectl = "latest"
+helm = "latest"
 
 [env]
-# Activate automatic virtualenv support
-#https://mise.jdx.dev/lang/python.html#automatic-virtualenv-activation
-_.python.venv = ".venv" # relative to this file's directory
+# Removed automatic venv activation to avoid warnings in non-Python projects
+# Use project-specific .mise.toml files with _.python.venv for Python projects that need it
+
+[settings]
+idiomatic_version_file_enable_tools = ["python"]
