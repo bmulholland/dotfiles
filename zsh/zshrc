@@ -6,9 +6,8 @@
 # specified by $SAVEHIST (see also the HIST SAVE BY COPY option).
 setopt APPEND_HISTORY
 
-# Autocorrect was breaking too much stuff
-# Maybe this is better these days?
-# unsetopt correct_all
+# Enable safer command correction (corrects commands, not arguments)
+setopt correct
 
 # Needs to be first, so these are available for OMZ plugins
 export PATH=$PATH:~/.local/bin
@@ -94,9 +93,12 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="wezm"
+# ZSH_THEME="wezm" # Disabled for starship
 
 source $ZSH/oh-my-zsh.sh
+
+# Initialize starship prompt
+eval "$(starship init zsh)"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
