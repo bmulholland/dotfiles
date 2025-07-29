@@ -42,9 +42,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.editor.leap" },
     { import = "lazyvim.plugins.extras.editor.inc-rename" },
 
-    { import = "lazyvim.plugins.extras.ai.copilot" },
-    { import = "lazyvim.plugins.extras.ai.copilot-chat" },
-
     { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
 
     -- import/override with your plugins
