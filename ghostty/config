@@ -8,3 +8,4 @@ font-family-bold = Victor Mono Bold Nerd Font Complete Mono
 font-family-italic = Victor Mono Thin Italic Nerd Font Complete Mono
 font-family-bold-italic = Victor Mono Bold Italic Nerd Font Complete Mono
 macos-titlebar-style = tabs
+cursor-style = block
