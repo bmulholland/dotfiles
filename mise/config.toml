@@ -1,10 +1,9 @@
 [tools]
-node = "24.4.1"
-python = "3.13.5"
+node = "24.7.0"
+python = "3.13.7"
 ruby = "3.4.5"
 usage = "latest"
 terraform = "latest"
-kubectl = "latest"
 helm = "latest"
 
 [env]
@@ -12,4 +11,4 @@ helm = "latest"
 # Use project-specific .mise.toml files with _.python.venv for Python projects that need it
 
 [settings]
-idiomatic_version_file_enable_tools = ["python"]
+idiomatic_version_file_enable_tools = ["python", "ruby"]
