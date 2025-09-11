@@ -1,0 +1,38 @@
+# Two-line layout with git branch on right
+format = "$directory$git_status$fill$git_branch$cmd_duration\n$character"
+
+[directory]
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+symbol = ""
+
+[git_status]
+format = '[$all_status$ahead_behind]($style) '
+conflicted = '⚡'
+ahead = '⇡'
+behind = '⇣'  
+diverged = '⇕'
+up_to_date = '✓'
+untracked = '?'
+stashed = '📦'
+modified = '!'
+staged = '+'
+renamed = '»'
+deleted = '✘'
+
+[character]
+success_symbol = '[❯](green) '
+error_symbol = '[❯](red) '
+
+[fill]
+symbol = " "
+
+
+# Show command duration for slow commands
+[cmd_duration]
+min_time = 2000
+format = "[$duration]($style) "
+
