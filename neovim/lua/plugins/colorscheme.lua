@@ -1,4 +1,11 @@
 return {
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin",
+    },
+  },
+
   -- Auto-switch to dark mode
   {
     "cormacrelf/dark-notify",
@@ -7,29 +14,22 @@ return {
 
       dark_notify.run({
         schemes = {
-          -- Yes, they're the same, but it does actually do something when these change
+          -- You can use different colorschemes for light/dark mode
           dark = "catppuccin",
           light = "catppuccin",
-          -- onchange = function(mode)
-          --   if mode == "dark" then
-          --     require("lualine").setup({ options = { theme = "sonokai" } })
-          --   else
-          --     require("lualine").setup({ options = { theme = "ayu" } })
-          --   end
-          -- end,
         },
       })
-
-      -- Avoid flashing the wrong colour at startup:
-      -- https://github.com/cormacrelf/dark-notify/issues/3#issuecomment-1074682252
-      dark_notify.update()
     end,
   },
 
+  -- Temp patch: https://github.com/LazyVim/LazyVim/pull/6354
   {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin",
-    },
+    "akinsho/bufferline.nvim",
+    init = function()
+      local bufline = require("catppuccin.groups.integrations.bufferline")
+      function bufline.get()
+        return bufline.get_theme()
+      end
+    end,
   },
 }
