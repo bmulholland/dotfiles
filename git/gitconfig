@@ -1,22 +1,27 @@
 [user]
-  name = Brendan Mulholland
+	name = Brendan Mulholland
 	email = brendan@recitalapp.com
+
 [core]
-  editor = nvim
-  autocrlf = input
-  excludesfile = ~/.gitignore
+	editor = nvim
+	autocrlf = input
+	excludesfile = ~/.gitignore
 	attributesfile = /Users/bmulholland/.gitattributes
+	pager = delta
+
 [color]
-  ui = auto
+	ui = auto
+
 [push]
-  default = current
+	default = current
+
 [alias]
-  # Pretty git log
-  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  # Find git stashes by name
-  sshow = "!f() { git stash show stash^{/$*} -p; }; f"
-  sapply = "!f() { git stash apply stash^{/$*}; }; f"
-  dft = difftool
+	# Pretty git log
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	# Find git stashes by name
+	sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+	sapply = "!f() { git stash apply stash^{/$*}; }; f"
+	dft = difftool
 
 [diff]
   tool = difftastic
@@ -27,23 +32,28 @@
   cmd = difft "$LOCAL" "$REMOTE"
 
 [pager]
-  difftool = true
-  # Try this at some point: https://github.com/dandavison/delta/issues/447#issuecomment-1239398586
-  diff = delta
-  log = delta
-  reflog = delta
-  show = delta
+	difftool = true
+	# Try this at some point: https://github.com/dandavison/delta/issues/447#issuecomment-1239398586
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
+
 [interactive]
-  diffFilter = delta --color-only --features=interactive
+	diffFilter = delta --color-only
+
 [delta]
-  features = decorations
-  navigate = true
+	features = decorations
+	navigate = true
+
 [delta "interactive"]
-  keep-plus-minus-markers = false
+	keep-plus-minus-markers = false
 	colorMoved = default # enable support to color moved text
+
 [delta "light-mode"]
-  light = true
-  syntax-theme = GitHub
+	light = true
+	syntax-theme = GitHub
+
 [delta "dark-mode"]
   dark = true
   syntax-theme = Monokai Extended
@@ -53,6 +63,7 @@
   prompt = false
 [pull]
 	rebase = false
+
 [secrets]
 	providers = git secrets --aws-provider
 	patterns = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
