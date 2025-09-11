@@ -13,7 +13,7 @@ symbol = ""
 format = '[$all_status$ahead_behind]($style) '
 conflicted = '⚡'
 ahead = '⇡'
-behind = '⇣'  
+behind = '⇣'
 diverged = '⇕'
 up_to_date = '✓'
 untracked = '?'
@@ -30,9 +30,7 @@ error_symbol = '[❯](red) '
 [fill]
 symbol = " "
 
-
 # Show command duration for slow commands
 [cmd_duration]
 min_time = 2000
 format = "[$duration]($style) "
-

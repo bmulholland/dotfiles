@@ -1,0 +1,131 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+  .:
+    devDependencies:
+      '@prettier/plugin-lua':
+        specifier: '*'
+        version: 0.0.3(prettier@3.6.2)
+      prettier:
+        specifier: '*'
+        version: 3.6.2
+      prettier-plugin-sh:
+        specifier: '*'
+        version: 0.14.0(prettier@3.6.2)
+      prettier-plugin-toml:
+        specifier: '*'
+        version: 2.0.6(prettier@3.6.2)
+
+packages:
+  '@prettier/plugin-lua@0.0.3':
+    resolution:
+      {
+        integrity: sha512-Fn7rf/9BTisEShgSN7iSKxgBo3MkHnAptNI7+4JC7E3wi2ElfzcR194QswblbY6X0fTdaHz3yG0GQcuwtxZKoQ==,
+      }
+    engines: { node: '>=10.13.0' }
+    peerDependencies:
+      prettier: '>=2.0.0'
+
+  '@taplo/core@0.2.0':
+    resolution:
+      {
+        integrity: sha512-r8bl54Zj1In3QLkiW/ex694bVzpPJ9EhwqT9xkcUVODnVUGirdB1JTsmiIv0o1uwqZiwhi8xNnTOQBRQCpizrQ==,
+      }
+
+  '@taplo/lib@0.5.0':
+    resolution:
+      {
+        integrity: sha512-+xIqpQXJco3T+VGaTTwmhxLa51qpkQxCjRwezjFZgr+l21ExlywJFcDfTrNmL6lG6tqb0h8GyJKO3UPGPtSCWg==,
+      }
+
+  luaparse@0.2.1:
+    resolution:
+      {
+        integrity: sha512-VKBcryd5nJte4ZNR29NOk8F/UkMipjeb4yoxcSS51z6QAzg9DXUC2WsfLniS0J1eh3pr/ZL3e9ha6V8fhoLbBQ==,
+      }
+    hasBin: true
+
+  mvdan-sh@0.10.1:
+    resolution:
+      {
+        integrity: sha512-kMbrH0EObaKmK3nVRKUIIya1dpASHIEusM13S4V1ViHFuxuNxCo+arxoa6j/dbV22YBGjl7UKJm9QQKJ2Crzhg==,
+      }
+    deprecated: See https://github.com/mvdan/sh/issues/1145
+
+  prettier-plugin-sh@0.14.0:
+    resolution:
+      {
+        integrity: sha512-hfXulj5+zEl/ulrO5kMuuTPKmXvOg0bnLHY1hKFNN/N+/903iZbNp8NyZBTsgI8dtkSgFfAEIQq0IQTyP1ZVFQ==,
+      }
+    engines: { node: '>=16.0.0' }
+    peerDependencies:
+      prettier: ^3.0.3
+
+  prettier-plugin-toml@2.0.6:
+    resolution:
+      {
+        integrity: sha512-12N/wBuHa9jd/KVy9pRP20NMKxQfQLMseQCt66lIbLaPLItvGUcSIryE1eZZMJ7loSws6Ig3M2Elc2EreNh76w==,
+      }
+    engines: { node: '>=16.0.0' }
+    peerDependencies:
+      prettier: ^3.0.3
+
+  prettier@3.6.2:
+    resolution:
+      {
+        integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==,
+      }
+    engines: { node: '>=14' }
+    hasBin: true
+
+  sh-syntax@0.4.2:
+    resolution:
+      {
+        integrity: sha512-/l2UZ5fhGZLVZa16XQM9/Vq/hezGGbdHeVEA01uWjOL1+7Ek/gt6FquW0iKKws4a9AYPYvlz6RyVvjh3JxOteg==,
+      }
+    engines: { node: '>=16.0.0' }
+
+  tslib@2.8.1:
+    resolution:
+      {
+        integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==,
+      }
+
+snapshots:
+  '@prettier/plugin-lua@0.0.3(prettier@3.6.2)':
+    dependencies:
+      luaparse: 0.2.1
+      prettier: 3.6.2
+
+  '@taplo/core@0.2.0': {}
+
+  '@taplo/lib@0.5.0':
+    dependencies:
+      '@taplo/core': 0.2.0
+
+  luaparse@0.2.1: {}
+
+  mvdan-sh@0.10.1: {}
+
+  prettier-plugin-sh@0.14.0(prettier@3.6.2):
+    dependencies:
+      mvdan-sh: 0.10.1
+      prettier: 3.6.2
+      sh-syntax: 0.4.2
+
+  prettier-plugin-toml@2.0.6(prettier@3.6.2):
+    dependencies:
+      '@taplo/lib': 0.5.0
+      prettier: 3.6.2
+
+  prettier@3.6.2: {}
+
+  sh-syntax@0.4.2:
+    dependencies:
+      tslib: 2.8.1
+
+  tslib@2.8.1: {}

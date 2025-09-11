@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.npm/
+.yarn/
+
+# Build outputs
+dist/
+build/
+
+# Git
+.git/
+
+# Lock files
+*.lock
+*.lock.json
+lazy-lock.json
+
+# Binary files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.svg
+*.itermcolors
+
+# Specific config files that shouldn't be formatted
+slate/slate
+ghostty/config
+Brewfile
+ruby/gemrc
+pry/pryrc
+
+# Files with parsing issues
+neovim/lua/plugins/example.lua
+zsh/zshrc
+
+# Neovim external files
+neovim/LICENSE

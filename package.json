@@ -1,0 +1,16 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "prettier --check ."
+  },
+  "devDependencies": {
+    "@prettier/plugin-lua": "*",
+    "prettier": "*",
+    "prettier-plugin-sh": "*",
+    "prettier-plugin-toml": "*"
+  }
+}
