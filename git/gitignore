@@ -15,7 +15,13 @@ bm_solargem_helpers.rb
 # VSCode files
 .vscode/
 
+# Claude config files
+.claude/
+
 .solargraph.yml
 
 # asdf file, shouldn't expose to others
 .tool-versions
+
+# File to configure Overmind, adding PATH to fix mise
+.overmind.env
