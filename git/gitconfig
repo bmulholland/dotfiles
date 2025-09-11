@@ -24,12 +24,7 @@
 	dft = difftool
 
 [diff]
-  tool = difftastic
-  external = difft
-[difftool]
-  prompt = false
-[difftool "difftastic"]
-  cmd = difft "$LOCAL" "$REMOTE"
+	colormoved = default
 
 [pager]
 	difftool = true
@@ -55,12 +50,9 @@
 	syntax-theme = GitHub
 
 [delta "dark-mode"]
-  dark = true
-  syntax-theme = Monokai Extended
-[merge]
-  tool = gvimdiff
-  conflictstyle = diff3
-  prompt = false
+	dark = true
+	syntax-theme = Monokai Extended
+
 [pull]
 	rebase = false
 
@@ -71,19 +63,30 @@
 	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
 	allowed = AKIAIOSFODNN7EXAMPLE
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+
 # define command which will be used when "nvim" is set as a merge tool
 [mergetool "nvim"]
-  cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+	cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+
 # set "nvim" as tool for merging
 [merge]
-  tool = nvim
+	tool = nvim
+	conflictStyle = zdiff3
+
 # automatically launch merge tool without displaying a prompt
 [mergetool]
-  prompt = false
+	prompt = false
+
 [init]
 	defaultBranch = main
+
+# https://mergiraf.org/usage.html
+[merge "mergiraf"]
+	name = mergiraf
+	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
