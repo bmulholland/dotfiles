@@ -6,8 +6,11 @@
 # specified by $SAVEHIST (see also the HIST SAVE BY COPY option).
 setopt APPEND_HISTORY
 
-# Enable safer command correction (corrects commands, not arguments)
-setopt correct
+# Enable safer command correction (corrects commands, not arguments), but
+# disable it inside Cursor/VSC so it doesn't block the AI terminal.
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+  setopt correct
+fi
 
 # Cursor's VS Code terminal struggles with pagers, so skip less/git output there.
 if [[ "$TERM_PROGRAM" == "vscode" ]]; then
