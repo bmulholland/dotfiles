@@ -3,12 +3,7 @@ HISTFILE=~/.zsh_history
 HISTSIZE=50000
 SAVEHIST=50000
 
-# APPEND_HISTORY If this is set, zsh sessions will append their history list to
-# the history file, rather than replace it. Thus, multiple parallel zsh sessions
-# will all have the new entries from their history lists added to the history
-# file, in the order that they exit. The file will still be periodically
-# re-written to trim it when the number of lines grows 20% beyond the value
-# specified by $SAVEHIST (see also the HIST SAVE BY COPY option).
+# Append to history file instead of replacing it
 setopt APPEND_HISTORY
 setopt SHARE_HISTORY          # Share history between sessions
 setopt HIST_IGNORE_DUPS       # Don't record duplicates
@@ -108,7 +103,7 @@ bindkey '^[[1;3D' backward-word
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Secret environment variables - passwords etc.
-if [ -f ~/.zshrcsecrets ]; then
+if [[ -f ~/.zshrcsecrets ]]; then
   source ~/.zshrcsecrets
 fi
 
@@ -125,7 +120,7 @@ if [[ "$TERM_PROGRAM" != "vscode" ]]; then
 fi
 
 # heroku autocomplete setup (only source when cache file exists)
-HEROKU_AC_ZSH_SETUP_PATH=/Users/bmulholland/Library/Caches/heroku/autocomplete/zsh_setup
+HEROKU_AC_ZSH_SETUP_PATH=$HOME/Library/Caches/heroku/autocomplete/zsh_setup
 if [[ -f $HEROKU_AC_ZSH_SETUP_PATH ]]; then
   source $HEROKU_AC_ZSH_SETUP_PATH
 fi
