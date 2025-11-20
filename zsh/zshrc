@@ -9,8 +9,16 @@ setopt APPEND_HISTORY
 # Enable safer command correction (corrects commands, not arguments)
 setopt correct
 
-# Needs to be first, so these are available for OMZ plugins
-export PATH=$PATH:~/.local/bin
+# Cursor's VS Code terminal struggles with pagers, so skip less/git output there.
+if [[ "$TERM_PROGRAM" == "vscode" ]]; then
+  export PAGER=cat
+  export GIT_PAGER=cat
+fi
+
+# Protect sensitive commands from going into history and allow manual opt-outs
+# by prefixing a space.
+setopt HIST_IGNORE_SPACE
+HIST_IGNORE_PATTERN='*secret*|*password*|*token*|aws configure*'
 
 alias asdf="mise" # switched from asdf to mise
 alias arst="mise" # support colemak layout

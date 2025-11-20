@@ -1,17 +1,36 @@
 export EDITOR=nvim
 
-export PATH="/usr/local/sbin:$PATH"
-
-# Show tmux window titles in tmux tabs
+# Show tmux window titles in tmux tabs; setting it here applies to login shells.
 export DISABLE_AUTO_TITLE=true
+
+# Use the path array so duplicates are removed while we prepend directories.
+typeset -gU path
+
+# Small helper to keep PATH manipulation readable.
+path_prepend() {
+  local dir="$1"
+  [[ -d "$dir" ]] || return
+  path=("$dir" $path)
+}
+
+# Keep system admin binaries and user-local tools in PATH before Homebrew.
+path_prepend "/usr/local/sbin"
+path_prepend "$HOME/.local/bin"
 
 # Homebrew on Apple Silicon is installed in a non-path location
 if [[ $OSTYPE == darwin* && $CPUTYPE == arm64 ]]; then
-  export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+  path_prepend "/opt/homebrew/bin"
+  path_prepend "/opt/homebrew/sbin"
 fi
 
-# Use dynamic PostgreSQL path detection
-export PATH="$(brew --prefix postgresql@17)/bin:$PATH"
+# Detect PostgreSQL paths dynamically while avoiding an error when the formula
+# or Homebrew are missing. Falls back to the standard opt prefix when available.
+if command -v brew >/dev/null 2>&1; then
+  if POSTGRES_PREFIX="$(brew --prefix postgresql@17 2>/dev/null)" && [[ -d "$POSTGRES_PREFIX/bin" ]]; then
+    path_prepend "$POSTGRES_PREFIX/bin"
+  fi
+elif [[ -d /opt/homebrew/opt/postgresql@17/bin ]]; then
+  path_prepend "/opt/homebrew/opt/postgresql@17/bin"
+fi
 
-# Disable history for sensitive commands
-export HISTIGNORE="*secret*:*password*:*token*:aws configure*"
+unset -f path_prepend
