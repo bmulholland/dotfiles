@@ -3,6 +3,10 @@ export EDITOR=nvim
 # Show tmux window titles in tmux tabs; setting it here applies to login shells.
 export DISABLE_AUTO_TITLE=true
 
+# Keep oh-my-zsh from prompting about updates, especially inside Cursor; `ua`
+# still calls `$ZSH/tools/upgrade.sh`, so manual runs install updates.
+export DISABLE_UPDATE_PROMPT=true
+
 # Use the path array so duplicates are removed while we prepend directories.
 typeset -gU path
 
