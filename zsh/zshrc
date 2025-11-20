@@ -85,20 +85,6 @@ function vag() {
   nvim -n "${files[@]}"
 }
 
-# Open all modified files in git with nvimr, respecting spaces/renames.
-function mvgit() {
-  if ! command -v git >/dev/null 2>&1 || ! command -v nvimr >/dev/null 2>&1; then
-    echo "mvgit: requires git and nvimr" >&2
-    return 1
-  fi
-  local entry files=()
-  while IFS= read -r -d '' entry; do
-    files+=("${entry:3}")
-  done < <(git status --porcelain -z)
-  (( ${#files[@]} )) || return 0
-  nvimr -n "${files[@]}"
-}
-
 # Shortcuts to jump forward/back a word with Alt+Arrow (ESC+arrow in most terms)
 bindkey '^[[1;3C' forward-word
 bindkey '^[[1;3D' backward-word
