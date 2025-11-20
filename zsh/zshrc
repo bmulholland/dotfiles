@@ -49,30 +49,59 @@ upgradeall() {
 alias ua="upgradeall"
 
 # https://gist.github.com/hlissner/db74d23fc00bed81ff62
+# Guard against missing silver searcher and keep replacements safe.
 function ag-replace() {
-  ag -0 -l $1 | xargs -0 sed -ri.bak -e "s/$1/$2/g"
+  if ! command -v ag >/dev/null 2>&1; then
+    echo "ag-replace: silver searcher (ag) not installed" >&2
+    return 1
+  fi
+  if (( $# < 2 )); then
+    echo "usage: ag-replace <pattern> <replacement>" >&2
+    return 1
+  fi
+  ag -0 -l -- "$1" | xargs -0 sed -ri.bak -e "s/$1/$2/g"
 }
 
-# Search for all files with contents using silver searcher,
-# then open them in MacVim
+# Search for files then open them in MacVim (vimr), preserving spaces/newlines.
+# mapfile + null delimiters stop weird filenames from breaking the command.
 function mvag() {
-  vimr -n `ag -l $@` --cur-env
+  if ! command -v ag >/dev/null 2>&1 || ! command -v vimr >/dev/null 2>&1; then
+    echo "mvag: requires ag and vimr" >&2
+    return 1
+  fi
+  mapfile -d '' -t files < <(ag -0 -l -- "$@") || return
+  (( ${#files[@]} )) || return 0
+  vimr -n --cur-env "${files[@]}"
 }
 
-# Search for all files with contents using silver searcher,
-# then open them in Vim
+# Search for files then open them in Neovim using the same null-delimited trick.
 function vag() {
-  nvim -n `ag -l $@`
+  if ! command -v ag >/dev/null 2>&1 || ! command -v nvim >/dev/null 2>&1; then
+    echo "vag: requires ag and nvim" >&2
+    return 1
+  fi
+  mapfile -d '' -t files < <(ag -0 -l -- "$@") || return
+  (( ${#files[@]} )) || return 0
+  nvim -n "${files[@]}"
 }
 
-# Open all modified files in git
+# Open all modified files in git with nvimr, respecting spaces/renames.
 function mvgit() {
-  nvimr -n $(git status -s | awk '{print $2}')
+  if ! command -v git >/dev/null 2>&1 || ! command -v nvimr >/dev/null 2>&1; then
+    echo "mvgit: requires git and nvimr" >&2
+    return 1
+  fi
+  local entry files=()
+  while IFS= read -r -d '' entry; do
+    files+=("${entry:3}")
+  done < <(git status --porcelain -z)
+  (( ${#files[@]} )) || return 0
+  nvimr -n "${files[@]}"
 }
 
-# Shortcuts to jump forward/back a word with Alt+Arrow
-bindkey '[C' forward-word
-bindkey '[D' backward-word
+# Shortcuts to jump forward/back a word with Alt+Arrow (ESC+arrow in most terms)
+bindkey '^[[1;3C' forward-word
+bindkey '^[[1;3D' backward-word
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -91,8 +120,11 @@ COMPLETION_WAITING_DOTS="true"
 # Syntax highlighting from https://github.com/zdharma/fast-syntax-highlighting
 plugins=(macos rails rake rake-fast ruby git git-auto-fetch git-escape-magic aws colorize command-not-found common-aliases httpie yarn pnpm mise terraform tmux zsh-autosuggestions you-should-use fast-syntax-highlighting z bundler)
 
-# heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH=/Users/bmulholland/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+# heroku autocomplete setup (only source when cache file exists)
+HEROKU_AC_ZSH_SETUP_PATH=/Users/bmulholland/Library/Caches/heroku/autocomplete/zsh_setup
+if [[ -f $HEROKU_AC_ZSH_SETUP_PATH ]]; then
+  source $HEROKU_AC_ZSH_SETUP_PATH
+fi
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -112,17 +144,24 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
-# Initialize starship prompt
-eval "$(starship init zsh)"
+# Initialize starship prompt when the binary is installed
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/terraform terraform
+# Tie terraform completion to whichever terraform binary we find
+if command -v terraform >/dev/null 2>&1; then
+  complete -o nospace -C "$(command -v terraform)" terraform
+fi
 
-# Switch delta (diff viewer) between dark and light mode. Requires matching
-# config in gitconfig:
+# Switch delta (diff viewer) between dark and light mode when dark-notify is
+# present. Requires matching config in gitconfig:
 # https://github.com/dandavison/delta/issues/447
-__delta_dark_mode_preexec_function () {
-    export DELTA_FEATURES="$(dark-notify -e)-mode"
-}
-typeset -ag preexec_functions;
-preexec_functions=( __delta_dark_mode_preexec_function ${preexec_functions[@]} )
+if command -v dark-notify >/dev/null 2>&1; then
+  __delta_dark_mode_preexec_function () {
+      export DELTA_FEATURES="$(dark-notify -e)-mode"
+  }
+  typeset -ag preexec_functions;
+  preexec_functions=( __delta_dark_mode_preexec_function ${preexec_functions[@]} )
+fi
