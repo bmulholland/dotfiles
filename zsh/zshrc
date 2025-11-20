@@ -1,3 +1,8 @@
+# History configuration
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+
 # APPEND_HISTORY If this is set, zsh sessions will append their history list to
 # the history file, rather than replace it. Thus, multiple parallel zsh sessions
 # will all have the new entries from their history lists added to the history
@@ -5,6 +10,9 @@
 # re-written to trim it when the number of lines grows 20% beyond the value
 # specified by $SAVEHIST (see also the HIST SAVE BY COPY option).
 setopt APPEND_HISTORY
+setopt SHARE_HISTORY          # Share history between sessions
+setopt HIST_IGNORE_DUPS       # Don't record duplicates
+setopt HIST_FIND_NO_DUPS      # Don't show duplicates in search
 
 # Enable safer command correction (corrects commands, not arguments), but
 # disable it inside Cursor/VSC so it doesn't block the AI terminal.
@@ -18,10 +26,8 @@ if [[ "$TERM_PROGRAM" == "vscode" ]]; then
   export GIT_PAGER=cat
 fi
 
-# Protect sensitive commands from going into history and allow manual opt-outs
-# by prefixing a space.
+# Protect sensitive commands from going into history by prefixing a space.
 setopt HIST_IGNORE_SPACE
-HIST_IGNORE_PATTERN='*secret*|*password*|*token*|aws configure*'
 
 alias asdf="mise" # switched from asdf to mise
 alias arst="mise" # support colemak layout
@@ -33,9 +39,6 @@ alias bu="bundle update"
 alias gs="git status"
 alias gch="git checkout"
 
-# System VIM sucks and doesn't even have Python; use the one from MacVim
-# Going to try using neovim
-# alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias vim=nvim
 
 upgradeall() {
@@ -62,7 +65,7 @@ function ag-replace() {
     echo "usage: ag-replace <pattern> <replacement>" >&2
     return 1
   fi
-  ag -0 -l -- "$1" | xargs -0 sed -ri.bak -e "s/$1/$2/g"
+  ag -0 -l -- "$1" | xargs -0 sed -Ei.bak -e "s/$1/$2/g"
 }
 
 # Search for files then open them in MacVim (vimr), preserving spaces/newlines.
