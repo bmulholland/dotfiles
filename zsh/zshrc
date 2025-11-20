@@ -117,7 +117,12 @@ fi
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # TODO: Go through these plugins and add commands to Anki so I memorize them
 # Syntax highlighting from https://github.com/zdharma/fast-syntax-highlighting
-plugins=(macos rails rake rake-fast ruby git git-auto-fetch git-escape-magic aws colorize command-not-found common-aliases httpie yarn pnpm mise terraform tmux zsh-autosuggestions you-should-use fast-syntax-highlighting z bundler)
+plugins=(macos rails rake rake-fast ruby git git-escape-magic aws colorize common-aliases httpie yarn pnpm mise terraform tmux zsh-autosuggestions fast-syntax-highlighting z bundler)
+# Cursor sessions shouldn't run chatty/background plugins, but keep them for
+# human terminals.
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+  plugins+=(git-auto-fetch you-should-use command-not-found)
+fi
 
 # heroku autocomplete setup (only source when cache file exists)
 HEROKU_AC_ZSH_SETUP_PATH=/Users/bmulholland/Library/Caches/heroku/autocomplete/zsh_setup
