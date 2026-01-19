@@ -1,5 +1,7 @@
 # Two-line layout with git branch on right
 format = "$directory$git_status$fill$git_branch$cmd_duration\n$character"
+# Cap per-module commands (mostly git) so a slow repo can't stall the prompt
+command_timeout = 200
 
 [directory]
 truncation_length = 3
