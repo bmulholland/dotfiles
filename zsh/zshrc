@@ -80,7 +80,7 @@ function mvag() {
     echo "mvag: requires ag and vimr" >&2
     return 1
   fi
-  mapfile -d '' -t files < <(ag -0 -l -- "$@") || return
+  files=("${(@0)$(ag -0 -l -- "$@")}") || return
   (( ${#files[@]} )) || return 0
   vimr -n --cur-env "${files[@]}"
 }
@@ -91,7 +91,7 @@ function vag() {
     echo "vag: requires ag and nvim" >&2
     return 1
   fi
-  mapfile -d '' -t files < <(ag -0 -l -- "$@") || return
+  files=("${(@0)$(ag -0 -l -- "$@")}") || return
   (( ${#files[@]} )) || return 0
   nvim -n "${files[@]}"
 }
