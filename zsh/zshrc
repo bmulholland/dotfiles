@@ -73,16 +73,16 @@ function ag-replace() {
   ag -0 -l -- "$1" | xargs -0 sed -Ei.bak -e "s/$1/$2/g"
 }
 
-# Search for files then open them in MacVim (vimr), preserving spaces/newlines.
+# Search for files then open them in Neovide, preserving spaces/newlines.
 # mapfile + null delimiters stop weird filenames from breaking the command.
 function mvag() {
-  if ! command -v ag >/dev/null 2>&1 || ! command -v vimr >/dev/null 2>&1; then
-    echo "mvag: requires ag and vimr" >&2
+  if ! command -v ag >/dev/null 2>&1 || ! command -v neovide >/dev/null 2>&1; then
+    echo "mvag: requires ag and neovide" >&2
     return 1
   fi
   files=("${(@0)$(ag -0 -l -- "$@")}") || return
   (( ${#files[@]} )) || return 0
-  vimr -n --cur-env "${files[@]}"
+  neovide -- "${files[@]}"
 }
 
 # Search for files then open them in Neovim using the same null-delimited trick.
