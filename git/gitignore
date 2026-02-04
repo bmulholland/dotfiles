@@ -16,7 +16,10 @@ bm_solargem_helpers.rb
 .vscode/
 
 # Claude config files
-.claude/
+.claude/settings.local.json
+
+# Serena semantic search project settings
+.serena/
 
 .solargraph.yml
 
