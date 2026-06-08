@@ -1,8 +1,6 @@
 # Add mise shims FIRST, before Homebrew or anything else can override.
 # Shims work in all contexts (scripts, overmind, non-interactive shells).
-if [[ -d "$HOME/.local/share/mise/shims" ]]; then
-  export PATH="$HOME/.local/share/mise/shims:$PATH"
-fi
+eval "$(mise activate zsh --shims)"
 
 # Keep Cargo on PATH when Rust tooling is installed (but skip if absent).
 if [[ -r "$HOME/.cargo/env" ]]; then
@@ -12,7 +10,5 @@ fi
 export RUBY_YJIT_ENABLE=1
 
 # mise provides shims for pnpm/overmind/etc., so ensure it activates whenever
-# zsh starts, but only if the binary exists.
-if [[ -x "$HOME/.local/bin/mise" ]]; then
-  eval "$("$HOME/.local/bin/mise" activate zsh)"
-fi
+# zsh starts
+eval "$(mise activate zsh)"

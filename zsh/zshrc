@@ -46,7 +46,6 @@ upgradeall() {
   brew upgrade --cask --greedy && \
   brew cleanup && \
   "$ZSH/tools/upgrade.sh" && \
-  mise self-update && \
   mise up --bump && \
   echo 'DONE UPGRADE' && \
   omz reload
