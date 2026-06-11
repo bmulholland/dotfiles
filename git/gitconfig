@@ -6,7 +6,7 @@
 	editor = nvim
 	autocrlf = input
 	excludesfile = ~/.gitignore
-	attributesfile = /Users/bmulholland/.gitattributes
+	attributesfile = ~/.gitattributes
 	pager = delta
 
 [color]
@@ -85,6 +85,15 @@
 
 [init]
 	defaultBranch = main
+
+# Automatically remove remote-tracking branches that no longer exist on the remote.
+[fetch]
+	prune = true
+
+# Remember how conflicts were resolved so git can replay the resolution on future
+# rebases or merges that hit the same conflict.
+[rerere]
+	enabled = true
 
 # https://mergiraf.org/usage.html
 [merge "mergiraf"]

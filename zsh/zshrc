@@ -6,7 +6,7 @@ SAVEHIST=50000
 # Append to history file instead of replacing it
 setopt APPEND_HISTORY
 setopt SHARE_HISTORY          # Share history between sessions
-setopt HIST_IGNORE_DUPS       # Don't record duplicates
+setopt HIST_IGNORE_ALL_DUPS   # Don't record duplicates anywhere in history
 setopt HIST_FIND_NO_DUPS      # Don't show duplicates in search
 
 # Enable safer command correction (corrects commands, not arguments), but
@@ -61,15 +61,15 @@ fi
 # https://gist.github.com/hlissner/db74d23fc00bed81ff62
 # Guard against missing silver searcher and keep replacements safe.
 function ag-replace() {
-  if ! command -v ag >/dev/null 2>&1; then
-    echo "ag-replace: silver searcher (ag) not installed" >&2
+  if ! command -v ag >/dev/null 2>&1 || ! command -v gsed >/dev/null 2>&1; then
+    echo "ag-replace: requires ag and gsed (gnu-sed)" >&2
     return 1
   fi
   if (( $# < 2 )); then
     echo "usage: ag-replace <pattern> <replacement>" >&2
     return 1
   fi
-  ag -0 -l -- "$1" | xargs -0 sed -Ei.bak -e "s/$1/$2/g"
+  ag -0 -l -- "$1" | xargs -0 gsed -Ei -e "s/$1/$2/g"
 }
 
 # Search for files then open them in Neovide, preserving spaces/newlines.
@@ -106,6 +106,9 @@ if [[ -f ~/.zshrcsecrets ]]; then
   source ~/.zshrcsecrets
 fi
 
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -124,9 +127,6 @@ if [[ -f $HEROKU_AC_ZSH_SETUP_PATH ]]; then
   source $HEROKU_AC_ZSH_SETUP_PATH
 fi
 
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -134,6 +134,9 @@ ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="wezm" # Disabled for starship
 
 source $ZSH/oh-my-zsh.sh
+
+# Full mise activation for interactive shells (.zshenv loads shims-only for all shells)
+eval "$(mise activate zsh)"
 
 # Force block cursor in all modes outside Cursor, which owns its caret style, so
 # we don't fight the editor over caret appearance.

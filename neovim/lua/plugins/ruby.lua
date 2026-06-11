@@ -1,5 +1,3 @@
-local lspconfig = require('lspconfig')
-
 return { {
   'neovim/nvim-lspconfig',
   opts = {
@@ -8,13 +6,19 @@ return { {
       sorbet = {
         mason = false,
         cmd = { 'bundle', 'exec', 'srb', 'tc', '--lsp' },
-        root_dir = lspconfig.util.root_pattern('Gemfile', '.git', '.'),
+        -- Deferred require so lspconfig is only loaded after lazy has set it up,
+        -- not at spec-file parse time.
+        root_dir = function(fname)
+          return require('lspconfig').util.root_pattern('Gemfile', '.git', '.')(fname)
+        end,
       },
       rubocop = {
         mason = false,
         cmd = { 'bundle', 'exec', 'rubocop', '--lsp' },
         filetypes = { 'ruby' },
-        root_dir = lspconfig.util.root_pattern('Gemfile', '.git', '.'),
+        root_dir = function(fname)
+          return require('lspconfig').util.root_pattern('Gemfile', '.git', '.')(fname)
+        end,
       },
     },
   },
