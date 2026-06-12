@@ -1,7 +1,3 @@
-[user]
-	name = Brendan Mulholland
-	email = brendan@recitalapp.com
-
 [core]
 	editor = nvim
 	autocrlf = input
@@ -99,3 +95,7 @@
 [merge "mergiraf"]
 	name = mergiraf
 	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
+
+# Machine-local overrides: [user] email/name, work-specific remotes, etc.
+[include]
+	path = ~/.gitconfig.local
