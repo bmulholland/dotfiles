@@ -1,7 +1,13 @@
 # Shims-only activation runs in every shell context (interactive, non-interactive,
 # scripts, Overmind workers, Claude Code subshells). Full activation with hooks
 # belongs in .zshrc, which only runs for interactive shells.
-eval "$(mise activate zsh --shims)"
+# .zshenv runs before .zprofile sets up PATH, so find mise by its known install
+# locations rather than relying on PATH.
+if [[ -x /opt/homebrew/bin/mise ]]; then
+  eval "$(/opt/homebrew/bin/mise activate zsh --shims)"
+elif [[ -x "$HOME/.local/bin/mise" ]]; then
+  eval "$($HOME/.local/bin/mise activate zsh --shims)"
+fi
 
 # Keep Cargo on PATH when Rust tooling is installed (but skip if absent).
 if [[ -r "$HOME/.cargo/env" ]]; then
